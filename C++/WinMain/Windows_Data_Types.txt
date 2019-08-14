@@ -1,0 +1,22 @@
+WINAPI, CALLBACK, APIENTRY -> The calling convention for system function
+	The type is declared in WinDef.h as ( #define WINAPI __stdcall; )
+
+HMODULE or HINSTANCE -> A handle to an instance. This is the base address of the module in memory.
+
+PWSTR -> A pointer to a null-terminated string of 16-bit Unicode character.
+	This type is declared in WinNT.h as ( typedef WCHAR *PWSTR; )
+
+LRESULT -> Signed result of message processing. 
+	This type is decleared in WinDef.h as ( typedef LONG_PTR LRESULT; )
+
+HWND -> A handle to a window.
+	This type is decleared in WinDef.h as ( typedef HANDLE HWND )
+
+UINT -> An unsingned INT. The range is 0 through 4 294 967 295 decimal.
+	This type is decleared in WinDef.h as ( typedef unsigned int UINT; )
+
+WPARAM -> A message parameter.
+	This type is decleared in WinDef.h ad ( typedef UINT_PTR WPARAM; )
+
+LPARAM -> A message parameter.
+	This type is decleared in WinDef.h as ( typedef LONG_PTR LPARAM; )
