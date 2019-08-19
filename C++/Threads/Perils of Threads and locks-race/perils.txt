@@ -6,12 +6,6 @@ Data race:
     A data race is a situation, in which at least two threads access a shared variable at the same time. 
 At least on thread tries to modify the variable
 
-A memory barrier:
-    Also known as a membar, memory fence or fence instruction, is a type of barrier instruction 
-that causes a central processing unit or compiler to enforce an ordering constraint on memory operations issued 
-before and after the barrier instruction. This typically means that operations issued prior to the barrier are 
-guaranteed to be performed before operations issued after the barrier.
-
 Deadlock:
     In concurrent computing, a deadlock is a state in which each member of a group is waiting for another member, 
 including itself, to take action, such as sending a message or more commonly releasing a lock. 
