@@ -24,7 +24,7 @@ class Storage
         void SetContent(int val)
         {
             if (content > 0)
-                content -= content;
+                content = 0;
 
             content = val;
         }
