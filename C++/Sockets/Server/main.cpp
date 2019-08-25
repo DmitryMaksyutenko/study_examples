@@ -38,9 +38,10 @@ int __cdecl main(void)
     }
 
     ZeroMemory(&hints, sizeof(hints));
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_protocol = IPPROTO_TCP;
+    hints.ai_family = AF_INET;       // IPv4 address family
+    hints.ai_socktype = SOCK_STREAM; // Provides sequenced, reliable, two-way, connection-based byte streams.
+    hints.ai_protocol = IPPROTO_TCP; // The Transmission Control Protocol.
+    // Flag indicates the caller intends to use the returned socket address structure in a call to the bind function.
     hints.ai_flags = AI_PASSIVE;
 
     // Resolve the server address and port
@@ -72,6 +73,7 @@ int __cdecl main(void)
 
     freeaddrinfo(result);
 
+    // Set the backlog to a maximum reasonable value.
     iResult = listen(ListenSocket, SOMAXCONN);
     if (iResult == SOCKET_ERROR) {
         printf("listen failed with error: %d\n", WSAGetLastError());
