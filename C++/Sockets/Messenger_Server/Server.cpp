@@ -10,6 +10,9 @@ Server::Server()
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_protocol = IPPROTO_TCP;
     hints.ai_flags = AI_PASSIVE;
+
+    clients.reserve(2);
+    client_counter = 0;
 }
 
 void Server::BuildSocket()
@@ -49,7 +52,24 @@ void Server::BuildSocket()
 
 void Server::ListenLoop()
 {
+    iResult = listen(server_socket, SOMAXCONN);
+    if (iResult == SOCKET_ERROR)
+    {
+        closesocket(server_socket);
+        WSACleanup();
+        throw std::exception("listen failed\n");
+    }
 
+    clients.push_back(accept(server_socket, NULL, NULL));
+    client_counter++;
+    if (clients.empty() || 
+        clients[client_counter] == INVALID_SOCKET)
+    {
+        clients.pop_back();
+        closesocket(server_socket);
+        WSACleanup();
+        throw std::exception("accept client failed\n");
+    }
 }
 
 void Server::GetMessasge()
@@ -66,6 +86,7 @@ void Server::ResendMessage()
 void Server::RunServer()
 {
     BuildSocket();
+    ListenLoop();
 }
 
 void Server::StopServer()
@@ -75,10 +96,13 @@ void Server::StopServer()
 
 int Server::GetClientsCount()
 {
-    return 0;
+    return clients.size();
 }
 
 std::string Server::GetServerIP()
 {
-    return "";
+    char addr[20]{};
+    inet_ntop(result->ai_family, result->ai_addr, addr, 20);
+
+    return addr;
 }

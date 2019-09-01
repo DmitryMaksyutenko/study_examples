@@ -10,6 +10,8 @@
 #include <WS2tcpip.h>
 #include <iostream>
 #include <string>
+#include <vector>
+#include <thread>
 
 #pragma comment(lib, "Ws2_32.lib")
 
@@ -20,11 +22,13 @@ class Server {
     
     private: 
         int iResult; 
+        int client_counter;
         WSADATA wsa_data;
         SOCKET server_socket;
         struct addrinfo *result; 
         struct addrinfo hints;
         char message_buf[DEFAULT_BUF];
+        std::vector<SOCKET> clients;
 
         void BuildSocket();
         void ListenLoop();
