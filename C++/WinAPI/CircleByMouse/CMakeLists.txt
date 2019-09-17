@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(circleByMouse)
+project(Circle)
 
-add_executable(circleByMouse main.cpp)
+add_executable(Circle Main.cpp MainWindow.cpp)
