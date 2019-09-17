@@ -16,5 +16,5 @@ from .models import Db
 
 def index(request):
     """Start page function"""
-    bbs = Db.objects.order_by('-published')
+    bbs = Db.objects.all()
     return render(request, 'bboard/index.html', {'bbs': bbs})
