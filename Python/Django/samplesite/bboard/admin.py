@@ -1,5 +1,12 @@
 from django.contrib import admin
 
 from .models import Db
+from .models import Rubric
 
-admin.site.register(Db)
+class DbAdmin(admin.ModelAdmin):
+    list_display = ('title', 'content', 'price', 'published')
+    list_display_links = ('title', 'content')
+    search_fields = ('title', 'content', )
+
+admin.site.register(Db, DbAdmin)
+admin.site.register(Rubric)
