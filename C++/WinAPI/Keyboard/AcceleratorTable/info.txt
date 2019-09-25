@@ -1,0 +1,14 @@
+An ACCELERATOR table is a data resource that maps keyboard combinations to applicatin commands. 
+
+A RESOURSE is a data blob that is build into an application binary.
+    Resources store data that are needed by the application, 
+    such as menus, cursors, icons, images, text strings, or any custom application data.
+    The application loads the resource data from the binary at run time. 
+    To include resources in a binary, do the following:
+
+    1. Create a resource definition (.rc) file. This file defines the types of resources and their identifiers. 
+        The resource definition file may include references to other files. For example, an icon resource is 
+        declared in the .rc file, but the icon image is stored in a separate file.
+    2.Use the Microsoft Windows Resource Compiler (RC) to compile the resource definition file into 
+        a compiled resource (.res) file. The RC compiler is provided with Visual Studio and also the Windows SDK.
+    3. Link the compiled resource file to the binary file.
