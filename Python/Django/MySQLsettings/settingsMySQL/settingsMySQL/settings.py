@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'showWorld'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'settingsMySQL.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['showWorld/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,9 +65,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
         },
-    },
+    }
 ]
-
 WSGI_APPLICATION = 'settingsMySQL.wsgi.application'
 
 
@@ -77,7 +77,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
+            'read_default_file': '/home/dima/study_examples/Python/Django/MySQLsettings/settingsMySQL/db.cnf',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'init_command': 'SET default_storage_engine=INNODB',
             },
     }
 }
@@ -98,15 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
+    }, ] # Internationalization # https://docs.djangoproject.com/en/2.2/topics/i18n/ LANGUAGE_CODE = 'en-us' 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
