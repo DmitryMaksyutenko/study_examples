@@ -1,5 +1,28 @@
 {% extends "templates/layout/base.html" %}
 
 {% block content %}
-<h1>The New World</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Countrycode</th>
+                <th>District</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for city in cities %}
+            <tr>
+                <td>{{ city.id }}</td>
+                <td>{{ city.name }}</td>
+                <td>{{ city.countrycode.code }}</td>
+                <td>{{ city.district }}</td>
+                <td>{{ city.population }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
 {% endblock %}
