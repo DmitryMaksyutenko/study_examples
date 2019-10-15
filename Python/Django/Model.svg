@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="648" version="1.1" width="1600" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="55" x="742" y="14"/>
+<text font-family="Dialog" font-size="18" x="743" y="32">
+Model</text>
+<polygon fill="#ffffc8" points="14,14 285,14 295,24 295,454 14,454 14,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,14 285,14 295,24 295,454 14,454 14,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="285,14 295,24 285,24 285,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="285,14 295,24 285,24 285,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="29">
+Model is a class that describes </text>
+<text font-family="Dialog" font-size="12" x="17" y="44">
+an entity stored in the database </text>
+<text font-family="Dialog" font-size="12" x="17" y="59">
+(representation of the table or its record).</text>
+<text font-family="Dialog" font-size="12" x="17" y="89">
+The models defines at the level of </text>
+<text font-family="Dialog" font-size="12" x="17" y="104">
+separate application.</text>
+<text font-family="Dialog" font-size="12" x="17" y="134">
+The class itself is all entities related to </text>
+<text font-family="Dialog" font-size="12" x="17" y="149">
+this class that stored in the database.</text>
+<text font-family="Dialog" font-size="12" x="17" y="179">
+An instance of the model represents </text>
+<text font-family="Dialog" font-size="12" x="17" y="194">
+a separate entity of this class, </text>
+<text font-family="Dialog" font-size="12" x="17" y="209">
+retrieved from the database. </text>
+<text font-family="Dialog" font-size="12" x="17" y="239">
+The class describes a set of </text>
+<text font-family="Dialog" font-size="12" x="17" y="254">
+separate fields, including into </text>
+<text font-family="Dialog" font-size="12" x="17" y="269">
+this class.</text>
+<text font-family="Dialog" font-size="12" x="17" y="299">
+The class provides tools for </text>
+<text font-family="Dialog" font-size="12" x="17" y="314">
+handling of all entities.</text>
+<text font-family="Dialog" font-size="12" x="17" y="344">
+The set of retrieved from database </text>
+<text font-family="Dialog" font-size="12" x="17" y="359">
+entities represents a sequence of </text>
+<text font-family="Dialog" font-size="12" x="17" y="374">
+instances of the corresponding class.</text>
+<text font-family="Dialog" font-size="12" x="17" y="404">
+The separate field that included </text>
+<text font-family="Dialog" font-size="12" x="17" y="419">
+in the instance, declared as a class </text>
+<text font-family="Dialog" font-size="12" x="17" y="434">
+instance of the field of the required </text>
+<text font-family="Dialog" font-size="12" x="17" y="449">
+type(date, time, character, etc.).</text>
+<polygon fill="#ffffc8" points="14,478 291,478 301,488 301,633 14,633 14,478" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,478 291,478 301,488 301,633 14,633 14,478" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="291,478 301,488 291,488 291,478" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="291,478 301,488 291,488 291,478" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="493">
+Conditions that satisfy of the classes models:</text>
+<text font-family="Dialog" font-size="12" x="17" y="523">
+Inheritance from django.db.models.Model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="553">
+The codes of the classes stored in the </text>
+<text font-family="Dialog" font-size="12" x="17" y="568">
+models.py module of the application.</text>
+<text font-family="Dialog" font-size="12" x="17" y="598">
+The application that stores the models, </text>
+<text font-family="Dialog" font-size="12" x="17" y="613">
+must be registered in the list of a</text>
+<text font-family="Dialog" font-size="12" x="17" y="628">
+pplications of the project.  </text>
+<polygon fill="#ffffc8" points="350,14 603,14 613,24 613,499 350,499 350,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="350,14 603,14 613,24 613,499 350,499 350,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="603,14 613,24 603,24 603,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="603,14 613,24 603,24 603,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="353" y="29">
+Parameters are maintainable of </text>
+<text font-family="Dialog" font-size="12" x="353" y="44">
+all types of the fields:</text>
+<text font-family="Dialog" font-size="12" x="353" y="74">
+verbose_name - field name for </text>
+<text font-family="Dialog" font-size="12" x="353" y="89">
+the administrative site.</text>
+<text font-family="Dialog" font-size="12" x="353" y="119">
+help_text - additional explaining text.</text>
+<text font-family="Dialog" font-size="12" x="353" y="149">
+default - a record in the field.</text>
+<text font-family="Dialog" font-size="12" x="353" y="179">
+unique - if True, field can be </text>
+<text font-family="Dialog" font-size="12" x="353" y="194">
+only unique in the table.</text>
+<text font-family="Dialog" font-size="12" x="353" y="209">
+unique_for_date</text>
+<text font-family="Dialog" font-size="12" x="353" y="224">
+unique_for_month</text>
+<text font-family="Dialog" font-size="12" x="353" y="239">
+unique_for_year</text>
+<text font-family="Dialog" font-size="12" x="353" y="269">
+black - if True, it can be empty.</text>
+<text font-family="Dialog" font-size="12" x="353" y="299">
+choices - the sequence of values </text>
+<text font-family="Dialog" font-size="12" x="353" y="314">
+that the user can make choice.</text>
+<text font-family="Dialog" font-size="12" x="353" y="329">
+KINDS = (('a', 'buy'),</text>
+<text font-family="Dialog" font-size="12" x="353" y="344">
+('b', 'sale'),</text>
+<text font-family="Dialog" font-size="12" x="353" y="359">
+('c', 'exchange'),)</text>
+<text font-family="Dialog" font-size="12" x="353" y="389">
+db_index - if True, in table will be </text>
+<text font-family="Dialog" font-size="12" x="353" y="404">
+created index to it the field.</text>
+<text font-family="Dialog" font-size="12" x="353" y="434">
+primary_key - if True, this field </text>
+<text font-family="Dialog" font-size="12" x="353" y="449">
+will be a key.</text>
+<text font-family="Dialog" font-size="12" x="353" y="479">
+editable - if True, will printed in </text>
+<text font-family="Dialog" font-size="12" x="353" y="494">
+to screen in form.</text>
+<polygon fill="#ffffc8" points="662,54 900,54 910,64 910,479 662,479 662,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="662,54 900,54 910,64 910,479 662,479 662,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="900,54 910,64 900,64 900,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="900,54 910,64 900,64 900,54" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="665" y="69">
+One-to-many:</text>
+<text font-family="Dialog" font-size="12" x="665" y="99">
+It allows binding one record from </text>
+<text font-family="Dialog" font-size="12" x="665" y="114">
+the primary model with many </text>
+<text font-family="Dialog" font-size="12" x="665" y="129">
+records from secondary.</text>
+<text font-family="Dialog" font-size="12" x="665" y="159">
+For this purpose in a class of </text>
+<text font-family="Dialog" font-size="12" x="665" y="174">
+secondary model need to </text>
+<text font-family="Dialog" font-size="12" x="665" y="189">
+define the field of ForeignKey type.</text>
+<text font-family="Dialog" font-size="12" x="665" y="204">
+ForeingKey(&lt;bind primary model&gt;, </text>
+<text font-family="Dialog" font-size="12" x="665" y="219">
+on_delete=&lt;delete behevior&gt;[,</text>
+<text font-family="Dialog" font-size="12" x="665" y="234">
+&lt;other&gt;])</text>
+<text font-family="Dialog" font-size="12" x="665" y="264">
+on_delete:</text>
+<text font-family="Dialog" font-size="12" x="665" y="279">
+CASCADE - delete all related records</text>
+<text font-family="Dialog" font-size="12" x="665" y="294">
+of the secondary model.</text>
+<text font-family="Dialog" font-size="12" x="665" y="324">
+PROTECT - raises exception </text>
+<text font-family="Dialog" font-size="12" x="665" y="339">
+ProtectError from django.db.models, </text>
+<text font-family="Dialog" font-size="12" x="665" y="354">
+prevents deletion.</text>
+<text font-family="Dialog" font-size="12" x="665" y="384">
+SET_NULL - set foreign key as null.</text>
+<text font-family="Dialog" font-size="12" x="665" y="414">
+SET_DEFAULT - set default value.</text>
+<text font-family="Dialog" font-size="12" x="665" y="444">
+SET - set value to field.</text>
+<text font-family="Dialog" font-size="12" x="665" y="474">
+DO_NOTHING - within the meaning of.</text>
+<polygon fill="#ffffc8" points="958,14 1188,14 1198,24 1198,229 958,229 958,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="958,14 1188,14 1198,24 1198,229 958,229 958,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1188,14 1198,24 1188,24 1188,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1188,14 1198,24 1188,24 1188,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="961" y="29">
+One-to-one:</text>
+<text font-family="Dialog" font-size="12" x="961" y="59">
+Connects one record from a prime </text>
+<text font-family="Dialog" font-size="12" x="961" y="74">
+model with one record of a </text>
+<text font-family="Dialog" font-size="12" x="961" y="89">
+secondary.</text>
+<text font-family="Dialog" font-size="12" x="961" y="119">
+That connection is created in the </text>
+<text font-family="Dialog" font-size="12" x="961" y="134">
+class of a secondary model as the </text>
+<text font-family="Dialog" font-size="12" x="961" y="149">
+field of OneToOneField type.</text>
+<text font-family="Dialog" font-size="12" x="961" y="164">
+OneToOneField(&lt;the prime model&gt;,</text>
+<text font-family="Dialog" font-size="12" x="961" y="179">
+on_delete=&lt;behavior on delete&gt;[,</text>
+<text font-family="Dialog" font-size="12" x="961" y="194">
+&lt;other&gt;])</text>
+<polygon fill="#ffffc8" points="1246,14 1575,14 1585,24 1585,379 1246,379 1246,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1246,14 1575,14 1585,24 1585,379 1246,379 1246,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1575,14 1585,24 1575,24 1575,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1575,14 1585,24 1575,24 1575,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="1249" y="29">
+Many-to-many:</text>
+<text font-family="Dialog" font-size="12" x="1249" y="59">
+Allows to binds an arbitrary set </text>
+<text font-family="Dialog" font-size="12" x="1249" y="74">
+of records of one model with another.</text>
+<text font-family="Dialog" font-size="12" x="1249" y="104">
+For the creation of that connection </text>
+<text font-family="Dialog" font-size="12" x="1249" y="119">
+needs to define in one model </text>
+<text font-family="Dialog" font-size="12" x="1249" y="134">
+(not in both!) the field of the foreign </text>
+<text font-family="Dialog" font-size="12" x="1249" y="149">
+key of type ManyToManyField.</text>
+<text font-family="Dialog" font-size="12" x="1249" y="179">
+ManyToManyField(&lt;second model for bind&gt;[,</text>
+<text font-family="Dialog" font-size="12" x="1249" y="194">
+ &lt;other&gt;])</text>
+<text font-family="Dialog" font-size="12" x="1249" y="224">
+The model in which defined the field of the </text>
+<text font-family="Dialog" font-size="12" x="1249" y="239">
+foreign key is leading, the second m odel is a slave.</text>
+<text font-family="Dialog" font-size="12" x="1249" y="269">
+In the database level for the realization of the </text>
+<text font-family="Dialog" font-size="12" x="1249" y="284">
+relation of that type creates the table, </text>
+<text font-family="Dialog" font-size="12" x="1249" y="299">
+with default name type </text>
+<text font-family="Dialog" font-size="12" x="1249" y="314">
+&lt;alias of the application&gt;_</text>
+<text font-family="Dialog" font-size="12" x="1249" y="329">
+&lt;leading class name&gt;_</text>
+<text font-family="Dialog" font-size="12" x="1249" y="344">
+&lt;slave class name&gt;(connect table). </text>
+<text font-family="Dialog" font-size="12" x="1249" y="359">
+It will keep the key field id, and one field for </text>
+<text font-family="Dialog" font-size="12" x="1249" y="374">
+each &lt;class name&gt;_id.</text>
+<polygon fill="#ffffc8" points="958,254 1203,254 1213,264 1213,517 958,517 958,254" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="958,254 1203,254 1213,264 1213,517 958,517 958,254" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1203,254 1213,264 1203,264 1203,254" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1203,254 1213,264 1203,264 1203,254" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="961" y="269">
+Model parameters:</text>
+<text font-family="Dialog" font-size="12" x="961" y="299">
+Described in class Meta, that nested </text>
+<text font-family="Dialog" font-size="12" x="961" y="314">
+in a class and not inherit from any.</text>
+<text font-family="Dialog" font-size="12" x="961" y="344">
+attributes:</text>
+<text font-family="Dialog" font-size="12" x="961" y="374">
+verbose_name - name for print.</text>
+<text font-family="Dialog" font-size="12" x="961" y="404">
+verbose_name_plural - set of entities </text>
+<text font-family="Dialog" font-size="12" x="961" y="419">
+for print.</text>
+<text font-family="Dialog" font-size="12" x="961" y="449">
+unique_together - set of unique </text>
+<text font-family="Dialog" font-size="12" x="961" y="464">
+names for the table.</text>
+<text font-family="Dialog" font-size="12" x="961" y="494">
+ordering - parameters of ordering.</text>
+</svg>
