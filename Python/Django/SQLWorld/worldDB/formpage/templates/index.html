@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'formpage/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+    <form action="" method="GET">
+        <label for="table">Make choice</label>
+        <select name="tables" id="select_tables">
+            <option value="{{ country }}">Country</option>
+            <option value="{{ country_languag}}">Country_language</option>
+            <option value="{{ city }}">City</option>
+        </select>
+        <input type="submit" value="show">
+    </form>
+
+</body>
+</html>
