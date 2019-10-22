@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'formpage/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+    <h1>{{ title }}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                {% for column in columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+
+    {% for table in tables %}
+        <tr>
+            <td>{{ table.code }}</td>
+            <td>{{ table.name }}</td>
+            <td>{{ table.continent }}</td>
+            <td>{{ table.region }}</td>
+            <td>{{ table.surfacearea }}</td>
+            <td>{{ table.indepyear}}</td>
+            <td>{{ table.population }}</td>
+            <td>{{ table.lifeexpectancy }}</td>
+            <td>{{ table.gnp }}</td>
+            <td>{{ table.gnpold }}</td>
+            <td>{{ table.localname }}</td>
+            <td>{{ table.governmetform }}</td>
+            <td>{{ table.headofstate }}</td>
+            <td>{{ table.capital }}</td>
+            <td>{{ table.code2 }}</td>
+        </tr>
+    {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -11,13 +11,9 @@
 </head>
 <body>
 
-    <form action="" method="GET">
-        <label for="table">Make choice</label>
-        <select name="tables" id="select_tables">
-            <option value="{{ country }}">Country</option>
-            <option value="{{ country_languag}}">Country_language</option>
-            <option value="{{ city }}">City</option>
-        </select>
+    <form action="/table" method="POST">
+    {% csrf_token %}
+        {{ form }}
         <input type="submit" value="show">
     </form>
 

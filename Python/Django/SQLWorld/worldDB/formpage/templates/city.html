@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'formpage/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+    <h1>{{ title }}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                {% for column in columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+
+    {% for table in tables %}
+        <tr>
+            <td>{{ table.id }}</td>
+            <td>{{ table.name }}</td>
+            <td>{{ table.countrycode.code }}</td>
+            <td>{{ table.district }}</td>
+            <td>{{ table.population }}</td>
+        </tr>
+    {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>

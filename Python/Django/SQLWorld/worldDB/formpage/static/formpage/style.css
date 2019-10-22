@@ -7,6 +7,10 @@ body {
     background-color: #ccc;
 }
 
+h1 {
+    text-align: center;
+}
+
 form {
     margin: 15% 45% ;
     border: 1px solid black;
@@ -26,4 +30,18 @@ form > select {
 
 form > input {
     margin: 0 30%;
+}
+
+table {
+    margin: 3% 6%;
+    border: 1px solid black;
+}
+
+th {
+    font-size: 16px;
+    border: 2px solid black;
+}
+
+td {
+    border: 1px solid black;
 }
