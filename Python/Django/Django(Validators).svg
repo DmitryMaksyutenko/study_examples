@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="284" version="1.1" width="844" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="25" stroke="#000000" stroke-width="1" width="119" x="350" y="14"/>
+<text font-family="Dialog" font-size="18" x="365" y="33">
+Validators</text>
+<polygon fill="#ffffc8" points="14,54 243,54 253,64 253,269 14,269 14,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,54 243,54 253,64 253,269 14,269 14,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="243,54 253,64 243,64 243,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="243,54 253,64 243,64 243,54" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="69">
+A validator is a callable that takes </text>
+<text font-family="Dialog" font-size="12" x="17" y="84">
+a value and raises a ValidationError </text>
+<text font-family="Dialog" font-size="12" x="17" y="99">
+if it doesn't meet some criteria.</text>
+<text font-family="Dialog" font-size="12" x="17" y="129">
+The django.core.validators module </text>
+<text font-family="Dialog" font-size="12" x="17" y="144">
+contains a collection of callable </text>
+<text font-family="Dialog" font-size="12" x="17" y="159">
+validators for use with model and </text>
+<text font-family="Dialog" font-size="12" x="17" y="174">
+form fields.</text>
+<text font-family="Dialog" font-size="12" x="17" y="189">
+They're used internally but are </text>
+<text font-family="Dialog" font-size="12" x="17" y="204">
+available for use with own fields, too.</text>
+<text font-family="Dialog" font-size="12" x="17" y="234">
+The validators are defined in the</text>
+<text font-family="Dialog" font-size="12" x="17" y="249">
+ parameter 'validators' of the class </text>
+<text font-family="Dialog" font-size="12" x="17" y="264">
+constructor of the field.</text>
+<polygon fill="#ffffc8" points="302,54 499,54 509,64 509,269 302,269 302,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="302,54 499,54 509,64 509,269 302,269 302,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="499,54 509,64 499,64 499,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="499,54 509,64 499,64 499,54" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="305" y="69">
+Built-in validators:</text>
+<text font-family="Dialog" font-size="12" x="305" y="99">
+classes</text>
+<text font-family="Dialog" font-size="12" x="305" y="129">
+RegexValidator,</text>
+<text font-family="Dialog" font-size="12" x="305" y="144">
+EmailValidators,</text>
+<text font-family="Dialog" font-size="12" x="305" y="159">
+URLValidators,</text>
+<text font-family="Dialog" font-size="12" x="305" y="174">
+MaxValueValidator,</text>
+<text font-family="Dialog" font-size="12" x="305" y="189">
+MinValueValidator,</text>
+<text font-family="Dialog" font-size="12" x="305" y="204">
+MaxLengthValidator,</text>
+<text font-family="Dialog" font-size="12" x="305" y="219">
+MinLengthValidator,</text>
+<text font-family="Dialog" font-size="12" x="305" y="234">
+DecimalValidator,</text>
+<text font-family="Dialog" font-size="12" x="305" y="249">
+FileExtensionVAlidator,</text>
+<text font-family="Dialog" font-size="12" x="305" y="264">
+ProhibitNullCharactersValidator</text>
+<polygon fill="#ffffc8" points="558,54 819,54 829,64 829,269 558,269 558,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="558,54 819,54 829,64 829,269 558,269 558,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="819,54 829,64 819,64 819,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="819,54 829,64 819,64 819,54" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="561" y="69">
+The function validators:</text>
+<text font-family="Dialog" font-size="12" x="561" y="99">
+validate_email()</text>
+<text font-family="Dialog" font-size="12" x="561" y="114">
+validate_slug()</text>
+<text font-family="Dialog" font-size="12" x="561" y="129">
+validate_unicode_slug()</text>
+<text font-family="Dialog" font-size="12" x="561" y="144">
+validete_ipv4_address()</text>
+<text font-family="Dialog" font-size="12" x="561" y="159">
+validate_ipv6_address()</text>
+<text font-family="Dialog" font-size="12" x="561" y="174">
+validate_ipv46_addresses()</text>
+<text font-family="Dialog" font-size="12" x="561" y="189">
+validate_comma_separated_integer_list()</text>
+<text font-family="Dialog" font-size="12" x="561" y="204">
+int_list_validator()</text>
+<text font-family="Dialog" font-size="12" x="561" y="219">
+MaxValueValidator()</text>
+<text font-family="Dialog" font-size="12" x="561" y="234">
+MinValueValidator()</text>
+<text font-family="Dialog" font-size="12" x="561" y="249">
+MaxLengthValidator()</text>
+<text font-family="Dialog" font-size="12" x="561" y="264">
+MinLengthValidator()</text>
+</svg>
