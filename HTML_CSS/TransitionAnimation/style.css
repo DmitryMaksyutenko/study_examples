@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body > input {
+    display: block;
+    margin: 10px;
+}
+
+input {
+    width: 100px;
+    height:100px;
+    background-color: red;
+    text-align: center;
+    color: green;
+    transition: all;
+    transition-duration: 1s;
+}
+
+#t1:hover {
+    width:200px;
+    height: 200px;
+    background-color: green;
+    color:red;
+    transform: rotate(180deg);
+}
+
+#t2:hover {
+    width: 500px;
+    background-color: yellow;
+    color: black;
+}
+
+#t3:hover {
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#t4:hover {
+    border: 0.5px black;
+    color: black;
+    /* offset-X, offset-Y, blur-tadius, spread-radius, color */
+    box-shadow: 3px 2px 5px 3px gray;
+}
+
+#t5:focus {
+    /* duration, timing-function, delay, iteration-count, direction, fill-mode, play-state, name */
+    animation: 3s linear 0s 2 alternate move;
+}
+
+@keyframes move {from { margin-left: 0%; } to { margin-left: 100% }}
