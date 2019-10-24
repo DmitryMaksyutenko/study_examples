@@ -8,3 +8,7 @@ Python:
   Basics of language
   Django
   Tkinter
+
+JavaScript:
+  Basics of language
+  Angular
