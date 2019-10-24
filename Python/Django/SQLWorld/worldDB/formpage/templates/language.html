@@ -13,7 +13,7 @@
 
     <h1>{{ title }}</h1>
 
-    <table>
+    <table id="language">
         <thead>
             <tr>
                 {% for column in columns %}
@@ -25,10 +25,10 @@
 
     {% for table in tables %}
         <tr>
-            <td>{{ table.countrycode_id.code }}</td>
-            <td>{{ table }}</td>
-            <td>{{ table }}</td>
-            <td>{{ table }}</td>
+            <td>{{ table.countrycode.code }}</td>
+            <td>{{ table.language }}</td>
+            <td>{{ table.isofficial }}</td>
+            <td>{{ table.percentage }}</td>
         </tr>
     {% endfor %}
 

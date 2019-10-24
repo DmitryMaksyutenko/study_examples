@@ -17,6 +17,16 @@ form {
     height: 130px;
 }
 
+#city {
+    margin: 3% 34%;
+    border: 1px solid black;
+}
+
+#language {
+    margin: 3% 36%;
+    border: 1px solid black;
+}
+
 form > label {
     display: block;
     margin-top: 10px;
