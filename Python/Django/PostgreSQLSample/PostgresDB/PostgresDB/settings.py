@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import psycopg2.extensions
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*t5hv2k@yt5%b&y$l-(wmzv-0yw_f3$3+yitegp@v(=syeq8q^'
+SECRET_KEY = 'l%=f=t)zj5-r1&cb!z6^y-#0=2@123co$i5m9_9k^lv=d!o&1x*m!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'personsdb',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,15 @@ WSGI_APPLICATION = 'PostgresDB.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dima',
+        'USER': 'dima',
+        'PASSWORD': '0000',
+        'HOST': 'localhost',
+        'OPTIONS':{
+            'client_encoding': 'UTF8',
+            'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_READ_COMMITTED,
+        },
     }
 }
 
