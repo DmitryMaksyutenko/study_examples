@@ -8,6 +8,15 @@
 from django.db import models
 
 
+class Personaddress(models.Model):
+    address = models.CharField(max_length=50)
+    person = models.OneToOneField('Persons', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'personaddress'
+
+
 class Persons(models.Model):
     name = models.CharField(max_length=20, blank=True, null=True)
     surname = models.CharField(max_length=30, blank=True, null=True)
@@ -17,15 +26,21 @@ class Persons(models.Model):
         db_table = 'persons'
 
 
-class PLanguages(models.Model):
-    LANGUAGES = (
-        ('JS', 'JavaScript'),
-        ('CPP', 'C++'),
-        ('Py', 'Python'),
-    )
-    person = models.ForeignKey(Persons, on_delete=models.PROTECT)
-    name = models.CharField(max_length=20, null=True, choices=LANGUAGES)
-    typeofl = models.CharField(max_length=7, null=True)
+class Planguages(models.Model):
+    name = models.CharField(max_length=20, blank=True, null=True)
+    typeofl = models.CharField(max_length=7, blank=True, null=True)
+    person = models.ForeignKey(Persons, models.DO_NOTHING)
 
     class Meta:
-        db_table = "planguages"
+        managed = False
+        db_table = 'planguages'
+
+class Shoes(models.Model):
+    person = models.ManyToManyField(Persons)
+    shoes = models.BooleanField(default=False)
+    sneakers = models.BooleanField(default=False)
+    winter_shoes = models.BooleanField(default=False)
+    slippers = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = "shoes"
