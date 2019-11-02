@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="652" version="1.1" width="1581" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="23" stroke="#000000" stroke-width="1" width="318" x="626" y="14"/>
+<text font-family="Dialog" font-size="18" x="627" y="32">
+Retrieve the values from the fields.</text>
+<polygon fill="#ffffc8" points="14,26 354,26 364,36 364,466 14,466 14,26" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,26 354,26 364,36 364,466 14,466 14,26" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="354,26 364,36 354,36 354,26" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="354,26 364,36 354,36 354,26" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="41">
+Retrieve the values from the fields is wide theme.</text>
+<text font-family="Dialog" font-size="12" x="17" y="56">
+It is not only retrieving all records from the model,</text>
+<text font-family="Dialog" font-size="12" x="17" y="71">
+but it is also search of a single record by it's 'id' </text>
+<text font-family="Dialog" font-size="12" x="17" y="86">
+number or corresponding field, or filtration of </text>
+<text font-family="Dialog" font-size="12" x="17" y="101">
+records by criteria, checking and soon.</text>
+<text font-family="Dialog" font-size="12" x="17" y="131">
+Retrieving from fields of Models.</text>
+<text font-family="Dialog" font-size="12" x="17" y="146">
+pk - stores the value of the key of the current record.</text>
+<text font-family="Dialog" font-size="12" x="17" y="176">
+One-To-Many relation:</text>
+<text font-family="Dialog" font-size="12" x="17" y="191">
+in the secondary model use the ForeignKey attribute.</text>
+<text font-family="Dialog" font-size="12" x="17" y="206">
+in the primary model use </text>
+<text font-family="Dialog" font-size="12" x="17" y="221">
+&lt;related secondary model name&gt;_set,</text>
+<text font-family="Dialog" font-size="12" x="17" y="236">
+it stores RelatedManager inherited from Manager.</text>
+<text font-family="Dialog" font-size="12" x="17" y="266">
+One-To-One relation:</text>
+<text font-family="Dialog" font-size="12" x="17" y="281">
+From the secondary model is possible to get </text>
+<text font-family="Dialog" font-size="12" x="17" y="296">
+record from the </text>
+<text font-family="Dialog" font-size="12" x="17" y="311">
+primary via a class attribute of ForeignKey.</text>
+<text font-family="Dialog" font-size="12" x="17" y="326">
+From the primary model use the attribute </text>
+<text font-family="Dialog" font-size="12" x="17" y="341">
+of the model that name</text>
+<text font-family="Dialog" font-size="12" x="17" y="356">
+coincides with the secondary model class name. </text>
+<text font-family="Dialog" font-size="12" x="17" y="386">
+Many-To-Many relation:</text>
+<text font-family="Dialog" font-size="12" x="17" y="401">
+Via attribute of the leading model (ForeignKey)</text>
+<text font-family="Dialog" font-size="12" x="17" y="416">
+accessible the ManyRelateManager as</text>
+<text font-family="Dialog" font-size="12" x="17" y="431">
+set of driven model records.</text>
+<text font-family="Dialog" font-size="12" x="17" y="446">
+In the driven model present attribute</text>
+<text font-family="Dialog" font-size="12" x="17" y="461">
+&lt;the leading model name&gt;_set</text>
+<polygon fill="#ffffc8" points="410,62 711,62 721,72 721,472 410,472 410,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="410,62 711,62 721,72 721,472 410,472 410,62" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="711,62 721,72 711,72 711,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="711,62 721,72 711,72 711,62" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="413" y="77">
+These methods maintained by  </text>
+<text font-family="Dialog" font-size="12" x="413" y="92">
+Manager, QuerySet, RelatedManager classes.</text>
+<text font-family="Dialog" font-size="12" x="413" y="122">
+Get all records: </text>
+<text font-family="Dialog" font-size="12" x="413" y="137">
+all();</text>
+<text font-family="Dialog" font-size="12" x="413" y="167">
+Retrieve one record:</text>
+<text font-family="Dialog" font-size="12" x="413" y="197">
+first() return first record or None. !By order!</text>
+<text font-family="Dialog" font-size="12" x="413" y="227">
+last() return last record or None. !By order!</text>
+<text font-family="Dialog" font-size="12" x="413" y="257">
+earliest([field name], ..., [n field name])</text>
+<text font-family="Dialog" font-size="12" x="413" y="272">
+return the record whose date most earliest. </text>
+<text font-family="Dialog" font-size="12" x="413" y="287">
+Or raises exception DoesNotExist.</text>
+<text font-family="Dialog" font-size="12" x="413" y="317">
+latest([field name], ..., [n filed name])</text>
+<text font-family="Dialog" font-size="12" x="413" y="332">
+return latest date.</text>
+<text font-family="Dialog" font-size="12" x="413" y="362">
+Get a set of records and count:</text>
+<text font-family="Dialog" font-size="12" x="413" y="377">
+! These methods are fast !</text>
+<text font-family="Dialog" font-size="12" x="413" y="407">
+exists() True if record present or False.</text>
+<text font-family="Dialog" font-size="12" x="413" y="422">
+some.objects.filter(attribute=value).exists()</text>
+<text font-family="Dialog" font-size="12" x="413" y="452">
+count() return number of records.</text>
+<polygon fill="#ffffc8" points="1186,30 1556,30 1566,40 1566,635 1186,635 1186,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1186,30 1556,30 1566,40 1566,635 1186,635 1186,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1556,30 1566,40 1556,40 1556,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1556,30 1566,40 1556,40 1556,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="1189" y="45">
+Filtration:</text>
+<text font-family="Dialog" font-size="12" x="1189" y="60">
+Get records satisfying criteria.</text>
+<text font-family="Dialog" font-size="12" x="1189" y="90">
+filter(&lt;conditions of filtration&gt;) filter from current set.</text>
+<text font-family="Dialog" font-size="12" x="1189" y="120">
+exclude(&lt;conditions of filtration&gt;) filter from a current set</text>
+<text font-family="Dialog" font-size="12" x="1189" y="135">
+does not satisfy conditions.</text>
+<text font-family="Dialog" font-size="12" x="1189" y="165">
+The filter conditions:</text>
+<text font-family="Dialog" font-size="12" x="1189" y="180">
+&lt;field name&gt;=&lt;value&gt;</text>
+<text font-family="Dialog" font-size="12" x="1189" y="210">
+modificators:</text>
+<text font-family="Dialog" font-size="12" x="1189" y="225">
+&lt;field naem&gt;__&lt;mod&gt;</text>
+<text font-family="Dialog" font-size="12" x="1189" y="240">
+exact -&gt; with register considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="255">
+iexact -&gt; without refgister considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="270">
+contains -&gt; with register considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="285">
+icontains -&gt; without refgister considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="300">
+startswith -&gt; with register considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="315">
+istartswith -&gt; without refgister considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="330">
+endwith -&gt; with register considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="345">
+iendwith -&gt; without refgister considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="360">
+lt -&gt; less then</text>
+<text font-family="Dialog" font-size="12" x="1189" y="375">
+lte -&gt; less or iqual</text>
+<text font-family="Dialog" font-size="12" x="1189" y="390">
+gt -&gt; greater then</text>
+<text font-family="Dialog" font-size="12" x="1189" y="405">
+gte -&gt; greate or equal</text>
+<text font-family="Dialog" font-size="12" x="1189" y="420">
+range -&gt; value in range</text>
+<text font-family="Dialog" font-size="12" x="1189" y="435">
+date -&gt; full date</text>
+<text font-family="Dialog" font-size="12" x="1189" y="450">
+year -&gt; only year</text>
+<text font-family="Dialog" font-size="12" x="1189" y="465">
+month -&gt; only month</text>
+<text font-family="Dialog" font-size="12" x="1189" y="480">
+day -&gt; only day</text>
+<text font-family="Dialog" font-size="12" x="1189" y="495">
+week -&gt; get weel from date</text>
+<text font-family="Dialog" font-size="12" x="1189" y="510">
+week_day -&gt; day of week</text>
+<text font-family="Dialog" font-size="12" x="1189" y="525">
+quarter -&gt; 1 - 4</text>
+<text font-family="Dialog" font-size="12" x="1189" y="540">
+time -&gt; get time</text>
+<text font-family="Dialog" font-size="12" x="1189" y="555">
+hour -&gt; only hour</text>
+<text font-family="Dialog" font-size="12" x="1189" y="570">
+minute -&gt; nly minute</text>
+<text font-family="Dialog" font-size="12" x="1189" y="585">
+isnull -&gt; True/False</text>
+<text font-family="Dialog" font-size="12" x="1189" y="600">
+in -&gt; is in</text>
+<text font-family="Dialog" font-size="12" x="1189" y="615">
+regex -&gt; with register considered</text>
+<text font-family="Dialog" font-size="12" x="1189" y="630">
+iregex -&gt; without refgister considered</text>
+<polygon fill="#ffffc8" points="770,62 1112,62 1122,72 1122,352 770,352 770,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="770,62 1112,62 1122,72 1122,352 770,352 770,62" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1112,62 1122,72 1112,72 1112,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1112,62 1122,72 1112,72 1112,62" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="773" y="77">
+The search for records:</text>
+<text font-family="Dialog" font-size="12" x="773" y="107">
+get(&lt;[attribute name] = [value for search]&gt;)</text>
+<text font-family="Dialog" font-size="12" x="773" y="122">
+return record or raise DoesNotExsist exception.</text>
+<text font-family="Dialog" font-size="12" x="773" y="152">
+If there are more then one record raise</text>
+<text font-family="Dialog" font-size="12" x="773" y="167">
+MultipleObjectsReturned.</text>
+<text font-family="Dialog" font-size="12" x="773" y="197">
+There can be several search conditions.</text>
+<text font-family="Dialog" font-size="12" x="773" y="212">
+Separated by commas.</text>
+<text font-family="Dialog" font-size="12" x="773" y="242">
+If the model keeps DateField or DateTimeField:</text>
+<text font-family="Dialog" font-size="12" x="773" y="257">
+get_next_by_&lt;field name&gt;()</text>
+<text font-family="Dialog" font-size="12" x="773" y="272">
+get_previous_by&lt;field name&gt;([&lt;search conditions&gt;])</text>
+<text font-family="Dialog" font-size="12" x="773" y="302">
+If current model is secondary and has </text>
+<text font-family="Dialog" font-size="12" x="773" y="317">
+order_with_respect_to:</text>
+<text font-family="Dialog" font-size="12" x="773" y="332">
+get_next_in_order()</text>
+<text font-family="Dialog" font-size="12" x="773" y="347">
+get_previous_in_order()</text>
+<polygon fill="#ffffc8" points="770,366 1151,366 1161,376 1161,613 770,613 770,366" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="770,366 1151,366 1161,376 1161,613 770,613 770,366" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1151,366 1161,376 1151,376 1151,366" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1151,366 1161,376 1151,376 1151,366" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="773" y="381">
+Filtration by values of bonded model:</text>
+<text font-family="Dialog" font-size="12" x="773" y="396">
+&lt;fk name&gt;__&lt;name of primary model field&gt;</text>
+<text font-family="Dialog" font-size="12" x="773" y="426">
+From the primary model:</text>
+<text font-family="Dialog" font-size="12" x="773" y="441">
+&lt;name secondary model&gt;__&lt;filed name secondary model&gt;</text>
+<text font-family="Dialog" font-size="12" x="773" y="471">
+F class from django.db.models used for</text>
+<text font-family="Dialog" font-size="12" x="773" y="486">
+comparison of other fields of the same record.</text>
+<text font-family="Dialog" font-size="12" x="773" y="501">
+f = F("fieldName")</text>
+<text font-family="Dialog" font-size="12" x="773" y="531">
+The Q class from django.db.models used for</text>
+<text font-family="Dialog" font-size="12" x="773" y="546">
+complex filtrations</text>
+<text font-family="Dialog" font-size="12" x="773" y="561">
+q = Q(&lt;condition of filtration&gt;)</text>
+<polygon fill="#ffffc8" points="18,486 359,486 369,496 369,637 18,637 18,486" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="18,486 359,486 369,496 369,637 18,637 18,486" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="359,486 369,496 359,496 359,486" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="359,486 369,496 359,496 359,486" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="21" y="501">
+Unique records:</text>
+<text font-family="Dialog" font-size="12" x="21" y="516">
+distinct([field name], ... , [field name n])</text>
+<text font-family="Dialog" font-size="12" x="21" y="546">
+Records can be sliced:</text>
+<text font-family="Dialog" font-size="12" x="21" y="561">
+Model.objects.all()[0:n]</text>
+<text font-family="Dialog" font-size="12" x="21" y="591">
+Sort the records:</text>
+<text font-family="Dialog" font-size="12" x="21" y="606">
+order_by([field name], ... , [field name n])</text>
+<text font-family="Dialog" font-size="12" x="21" y="621">
+"-" for reverse order.</text>
+</svg>
