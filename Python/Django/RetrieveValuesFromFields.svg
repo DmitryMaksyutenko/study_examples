@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="512" version="1.1" width="1230" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="30" stroke="#000000" stroke-width="1" width="148" x="38" y="14"/>
+<text font-family="Dialog" font-size="24" x="39" y="38">
+Aggregation</text>
+<polygon fill="#ffffc8" points="14,86 275,86 285,96 285,497 14,497 14,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,86 275,86 285,96 285,497 14,497 14,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="275,86 285,96 275,96 275,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="275,86 285,96 275,96 275,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="101">
+Aggregate computation is the facility to </text>
+<text font-family="Dialog" font-size="12" x="17" y="116">
+impact the value of the field of all records </text>
+<text font-family="Dialog" font-size="12" x="17" y="131">
+in the model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="146">
+Every possible action represented by a </text>
+<text font-family="Dialog" font-size="12" x="17" y="161">
+particular function.</text>
+<text font-family="Dialog" font-size="12" x="17" y="176">
+For the aggregation use the method </text>
+<text font-family="Dialog" font-size="12" x="17" y="191">
+aggregate() on the model. It accepts the </text>
+<text font-family="Dialog" font-size="12" x="17" y="206">
+instances of the special classes from </text>
+<text font-family="Dialog" font-size="12" x="17" y="221">
+django.db.models and returns python </text>
+<text font-family="Dialog" font-size="12" x="17" y="236">
+dictionary.</text>
+<text font-family="Dialog" font-size="12" x="17" y="266">
+aggregate(&lt;function 1&gt;,&lt;function 2&gt;,</text>
+<text font-family="Dialog" font-size="12" x="17" y="281">
+                 &lt;function n&gt;)</text>
+<text font-family="Dialog" font-size="12" x="17" y="311">
+In the case of computation by groups </text>
+<text font-family="Dialog" font-size="12" x="17" y="326">
+of records use the annotate() method. </text>
+<text font-family="Dialog" font-size="12" x="17" y="341">
+It returns the new QuerySet.</text>
+<text font-family="Dialog" font-size="12" x="17" y="371">
+Functions:</text>
+<text font-family="Dialog" font-size="12" x="17" y="386">
+Count()</text>
+<text font-family="Dialog" font-size="12" x="17" y="401">
+Sum()</text>
+<text font-family="Dialog" font-size="12" x="17" y="416">
+Min()</text>
+<text font-family="Dialog" font-size="12" x="17" y="431">
+Max()</text>
+<text font-family="Dialog" font-size="12" x="17" y="446">
+Avg()</text>
+<text font-family="Dialog" font-size="12" x="17" y="461">
+StdDev()</text>
+<text font-family="Dialog" font-size="12" x="17" y="476">
+Variance()</text>
+<polygon fill="#ffffc8" points="358,86 699,86 709,96 709,496 358,496 358,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="358,86 699,86 709,96 709,496 358,496 358,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="699,86 709,96 699,96 699,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="699,86 709,96 699,96 699,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="361" y="101">
+Computed fields. Computed by powers of DBMS.</text>
+<text font-family="Dialog" font-size="12" x="361" y="116">
+Use annotate() method. F class to assign the </text>
+<text font-family="Dialog" font-size="12" x="361" y="131">
+value to the computing field. +, -, *, /, // operators.</text>
+<text font-family="Dialog" font-size="12" x="361" y="146">
+Value() - for string constant assign.</text>
+<text font-family="Dialog" font-size="12" x="361" y="161">
+ExpressionWrapper(&lt;expression&gt;,&lt;returning type&gt;) </text>
+<text font-family="Dialog" font-size="12" x="361" y="191">
+Set of the DBMS functions from </text>
+<text font-family="Dialog" font-size="12" x="361" y="206">
+django.db.models.functions</text>
+<text font-family="Dialog" font-size="12" x="361" y="236">
+Coalesce()</text>
+<text font-family="Dialog" font-size="12" x="361" y="251">
+Greatest()</text>
+<text font-family="Dialog" font-size="12" x="361" y="266">
+Least()</text>
+<text font-family="Dialog" font-size="12" x="361" y="281">
+Cast()</text>
+<text font-family="Dialog" font-size="12" x="361" y="296">
+Concat()</text>
+<text font-family="Dialog" font-size="12" x="361" y="311">
+Lower()</text>
+<text font-family="Dialog" font-size="12" x="361" y="326">
+Upper()</text>
+<text font-family="Dialog" font-size="12" x="361" y="341">
+Length()</text>
+<text font-family="Dialog" font-size="12" x="361" y="356">
+StrIndex()</text>
+<text font-family="Dialog" font-size="12" x="361" y="371">
+SubIndex()</text>
+<text font-family="Dialog" font-size="12" x="361" y="386">
+Substr()</text>
+<text font-family="Dialog" font-size="12" x="361" y="401">
+Left()</text>
+<text font-family="Dialog" font-size="12" x="361" y="416">
+Right()</text>
+<text font-family="Dialog" font-size="12" x="361" y="431">
+Replace()</text>
+<text font-family="Dialog" font-size="12" x="361" y="446">
+Repeat()</text>
+<text font-family="Dialog" font-size="12" x="361" y="461">
+LPad()</text>
+<text font-family="Dialog" font-size="12" x="361" y="476">
+RPad()</text>
+<text font-family="Dialog" font-size="12" x="361" y="491">
+....</text>
+<rect fill="none" height="30" stroke="#000000" stroke-width="1" width="447" x="302" y="14"/>
+<text font-family="Dialog" font-size="24" x="303" y="38">
+Computed fields and DBMS functions</text>
+<rect fill="none" height="30" stroke="#000000" stroke-width="1" width="277" x="838" y="14"/>
+<text font-family="Dialog" font-size="24" x="839" y="38">
+Subqueries and unions</text>
+<polygon fill="#ffffc8" points="838,78 1205,78 1215,88 1215,269 838,269 838,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="838,78 1205,78 1215,88 1215,269 838,269 838,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1205,78 1215,88 1205,88 1205,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1205,78 1215,88 1205,88 1205,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="841" y="93">
+Full functional query </text>
+<text font-family="Dialog" font-size="12" x="841" y="108">
+Subquery(&lt;nested records set&gt;)</text>
+<text font-family="Dialog" font-size="12" x="841" y="123">
+Check for existing</text>
+<text font-family="Dialog" font-size="12" x="841" y="138">
+Exists(&lt;nested records set&gt;)</text>
+<text font-family="Dialog" font-size="12" x="841" y="168">
+union(&lt;set of records&gt;, &lt;set of records n&gt;)</text>
+<text font-family="Dialog" font-size="12" x="841" y="183">
+method unites the two or more sets of records.</text>
+<text font-family="Dialog" font-size="12" x="841" y="198">
+intersection() returns only the records present in all sets.</text>
+<text font-family="Dialog" font-size="12" x="841" y="213">
+difference() returns the records in one any from the sets.</text>
+</svg>
