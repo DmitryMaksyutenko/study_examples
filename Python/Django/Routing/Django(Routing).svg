@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="644" version="1.1" width="1624" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="183" x="526" y="14"/>
+<text font-family="Dialog" font-size="24" x="571" y="39">
+Routing</text>
+<polygon fill="#ffffc8" points="14,46 331,46 341,56 341,426 14,426 14,46" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,46 331,46 341,56 341,426 14,426 14,46" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="331,46 341,56 331,56 331,46" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="331,46 341,56 331,56 331,46" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="61">
+The routing in Django it's a process </text>
+<text font-family="Dialog" font-size="12" x="17" y="76">
+of finding the relevant controller to </text>
+<text font-family="Dialog" font-size="12" x="17" y="91">
+execute on the client addressed request. </text>
+<text font-family="Dialog" font-size="12" x="17" y="121">
+It works relied on the list of routes. </text>
+<text font-family="Dialog" font-size="12" x="17" y="136">
+Every element of list is a rout, that </text>
+<text font-family="Dialog" font-size="12" x="17" y="151">
+makes the connection between i</text>
+<text font-family="Dialog" font-size="12" x="17" y="166">
+nternet-address of some format and </text>
+<text font-family="Dialog" font-size="12" x="17" y="181">
+controller.</text>
+<text font-family="Dialog" font-size="12" x="17" y="211">
+Algorithm of routing:</text>
+<text font-family="Dialog" font-size="12" x="17" y="226">
+1) From the request extract the internet-address </text>
+<text font-family="Dialog" font-size="12" x="17" y="241">
+that the user required.</text>
+<text font-family="Dialog" font-size="12" x="17" y="256">
+2) From the address removes the protocol, </text>
+<text font-family="Dialog" font-size="12" x="17" y="271">
+domain name (or IP-address) of the host, </text>
+<text font-family="Dialog" font-size="12" x="17" y="286">
+TCP-port number,  GET-parameters set and </text>
+<text font-family="Dialog" font-size="12" x="17" y="301">
+name of the anchor. Get only the path.</text>
+<text font-family="Dialog" font-size="12" x="17" y="316">
+3) The path is compared with the templates </text>
+<text font-family="Dialog" font-size="12" x="17" y="331">
+of all addresses in the list of routes consistently.</text>
+<text font-family="Dialog" font-size="12" x="17" y="346">
+4) Once the template address satisfies the path:</text>
+<text font-family="Dialog" font-size="12" x="17" y="361">
+ - executes the controller if specified.</text>
+<text font-family="Dialog" font-size="12" x="17" y="376">
+ - lookup the routes of a nested list. </text>
+<text font-family="Dialog" font-size="12" x="17" y="391">
+5) Send the 404 page to the user if no one </text>
+<text font-family="Dialog" font-size="12" x="17" y="406">
+addresses satisfy.</text>
+<polygon fill="#ffffc8" points="14,446 380,446 390,456 390,573 14,573 14,446" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,446 380,446 390,456 390,573 14,573 14,446" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="380,446 390,456 380,456 380,446" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="380,446 390,456 380,456 380,446" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="461">
+The lists of routes of the project level and application level. </text>
+<text font-family="Dialog" font-size="12" x="17" y="491">
+The project routes:</text>
+<text font-family="Dialog" font-size="12" x="17" y="506">
+ - routes to the separate site section (apps)</text>
+<text font-family="Dialog" font-size="12" x="17" y="521">
+The app routes:</text>
+<text font-family="Dialog" font-size="12" x="17" y="536">
+ - routes to the separate controllers of the app.</text>
+<polygon fill="#ffffc8" points="430,86 756,86 766,96 766,526 430,526 430,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="430,86 756,86 766,96 766,526 430,526 430,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="756,86 766,96 756,96 756,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="756,86 766,96 756,96 756,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="433" y="101">
+The routes declaration.</text>
+<text font-family="Dialog" font-size="12" x="433" y="131">
+Any lists of routes, the application or the project </text>
+<text font-family="Dialog" font-size="12" x="433" y="146">
+use the similar declaration rules.</text>
+<text font-family="Dialog" font-size="12" x="433" y="176">
+The list of routes is the Python list assigned to the </text>
+<text font-family="Dialog" font-size="12" x="433" y="191">
+"urlpatterns" variable. In that variable, </text>
+<text font-family="Dialog" font-size="12" x="433" y="206">
+Django will lookup the routes list.</text>
+<text font-family="Dialog" font-size="12" x="433" y="236">
+Every list element is the result of the </text>
+<text font-family="Dialog" font-size="12" x="433" y="251">
+django.urls.path() function returns.</text>
+<text font-family="Dialog" font-size="12" x="433" y="281">
+path(&lt;"template path"/&gt;, &lt;controller&gt; | </text>
+<text font-family="Dialog" font-size="12" x="433" y="296">
+&lt;nested routs list&gt; [,&lt;additional params&gt;] </text>
+<text font-family="Dialog" font-size="12" x="433" y="311">
+[, name=&lt;routes name&gt;])</text>
+<text font-family="Dialog" font-size="12" x="433" y="341">
+URL-parameters in template path:</text>
+<text font-family="Dialog" font-size="12" x="433" y="356">
+&lt; [&lt;format spec&gt;:] &lt;URL-param name&gt; &gt;</text>
+<text font-family="Dialog" font-size="12" x="433" y="371">
+str - any not empty string.</text>
+<text font-family="Dialog" font-size="12" x="433" y="386">
+int - positive number include zero.</text>
+<text font-family="Dialog" font-size="12" x="433" y="401">
+slug - string slag.</text>
+<text font-family="Dialog" font-size="12" x="433" y="416">
+uuid - unique-uniwersal identificator.</text>
+<text font-family="Dialog" font-size="12" x="433" y="431">
+path - not empy string include slashes.</text>
+<text font-family="Dialog" font-size="12" x="433" y="461">
+Nested list of the routes specifies by the </text>
+<text font-family="Dialog" font-size="12" x="433" y="476">
+django.urls.include() function.</text>
+<text font-family="Dialog" font-size="12" x="433" y="506">
+include(&lt;path to module&gt; | &lt;list of the routes&gt; [,</text>
+<text font-family="Dialog" font-size="12" x="433" y="521">
+namespace=&lt;prefix if the internet address&gt;])</text>
+<polygon fill="#ffffc8" points="822,22 1155,22 1165,32 1165,213 822,213 822,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="822,22 1155,22 1165,32 1165,213 822,213 822,22" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1155,22 1165,32 1155,32 1155,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1155,22 1165,32 1155,32 1155,22" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="825" y="37">
+Pass data to the controller.</text>
+<text font-family="Dialog" font-size="12" x="825" y="67">
+The controller function gets the value of URL-param.</text>
+<text font-family="Dialog" font-size="12" x="825" y="82">
+path('&lt;int:id&gt;/', controllerName)</text>
+<text font-family="Dialog" font-size="12" x="825" y="97">
+def controllerName(request, id):</text>
+<text font-family="Dialog" font-size="12" x="825" y="112">
+...</text>
+<text font-family="Dialog" font-size="12" x="825" y="127">
+Another way is to declare the Python dictionary.</text>
+<text font-family="Dialog" font-size="12" x="825" y="142">
+vals = {'mode': 'index'}</text>
+<text font-family="Dialog" font-size="12" x="825" y="157">
+path('&lt;int:id&gt;/', controllerName, vals)</text>
+<text font-family="Dialog" font-size="12" x="825" y="172">
+def controllerName(request, id, mode):</text>
+<text font-family="Dialog" font-size="12" x="825" y="187">
+...</text>
+<polygon fill="#ffffc8" points="806,238 1186,238 1196,248 1196,438 806,438 806,238" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="806,238 1186,238 1196,248 1196,438 806,438 806,238" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1186,238 1196,248 1186,248 1186,238" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1186,238 1196,248 1186,248 1186,238" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="809" y="253">
+Named routes.</text>
+<text font-family="Dialog" font-size="12" x="809" y="283">
+In the path() function any route may be specified via </text>
+<text font-family="Dialog" font-size="12" x="809" y="298">
+the "name" parameter. And use the reverse of the </text>
+<text font-family="Dialog" font-size="12" x="809" y="313">
+internet-addresses.</text>
+<text font-family="Dialog" font-size="12" x="809" y="343">
+urlpattersn = [</text>
+<text font-family="Dialog" font-size="12" x="809" y="358">
+    path('&lt;int:id&gt;/', controllerName, name='controllerName')</text>
+<text font-family="Dialog" font-size="12" x="809" y="373">
+]</text>
+<text font-family="Dialog" font-size="12" x="809" y="388">
+url = reverse('controllerName', kwargs={'id': 2})</text>
+<text font-family="Dialog" font-size="12" x="809" y="418">
+It can be used in template code.</text>
+<text font-family="Dialog" font-size="12" x="809" y="433">
+&lt;a href=" {% url 'controllerName' id=2 %} "&gt;</text>
+<polygon fill="#ffffc8" points="1214,30 1599,30 1609,40 1609,413 1214,413 1214,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1214,30 1599,30 1609,40 1609,413 1214,413 1214,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1599,30 1609,40 1599,40 1599,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1599,30 1609,40 1599,40 1599,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="1217" y="45">
+Namespaces, root application.</text>
+<text font-family="Dialog" font-size="12" x="1217" y="75">
+Namespace declares in the module with the routes list. </text>
+<text font-family="Dialog" font-size="12" x="1217" y="90">
+The string with the app name must be assigned to the </text>
+<text font-family="Dialog" font-size="12" x="1217" y="105">
+''app_name" variable.</text>
+<text font-family="Dialog" font-size="12" x="1217" y="120">
+app_name = 'applicationName'</text>
+<text font-family="Dialog" font-size="12" x="1217" y="135">
+urlpatterns = [</text>
+<text font-family="Dialog" font-size="12" x="1217" y="150">
+    ...</text>
+<text font-family="Dialog" font-size="12" x="1217" y="165">
+]</text>
+<text font-family="Dialog" font-size="12" x="1217" y="195">
+The namespaces need to be specified to all applications i</text>
+<text font-family="Dialog" font-size="12" x="1217" y="210">
+n the project.</text>
+<text font-family="Dialog" font-size="12" x="1217" y="240">
+Use the colon to specify the route in the particular namespace.</text>
+<text font-family="Dialog" font-size="12" x="1217" y="255">
+url = {'applicationName:index'}</text>
+<text font-family="Dialog" font-size="12" x="1217" y="270">
+&lt;a href=" {% url 'applicationName:index' %} "&gt;</text>
+<text font-family="Dialog" font-size="12" x="1217" y="300">
+To specify the root application:</text>
+<text font-family="Dialog" font-size="12" x="1217" y="330">
+Use the empty row as template internet-address and the </text>
+<text font-family="Dialog" font-size="12" x="1217" y="345">
+new prefix in include() function.</text>
+<text font-family="Dialog" font-size="12" x="1217" y="375">
+urlpatterns = [</text>
+<text font-family="Dialog" font-size="12" x="1217" y="390">
+    path('', include(applicationName.urls, namespace=''))</text>
+<text font-family="Dialog" font-size="12" x="1217" y="405">
+]</text>
+<polygon fill="#ffffc8" points="806,454 1179,454 1189,464 1189,629 806,629 806,454" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="806,454 1179,454 1189,464 1189,629 806,629 806,454" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1179,454 1189,464 1179,464 1179,454" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1179,454 1189,464 1179,464 1179,454" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="809" y="469">
+The regular expressions as templates path.</text>
+<text font-family="Dialog" font-size="12" x="809" y="499">
+Use the re_path() function.</text>
+<text font-family="Dialog" font-size="12" x="809" y="529">
+re_path(&lt;regExp&gt;, &lt;controller&gt; | &lt;nested rout list&gt;[,</text>
+<text font-family="Dialog" font-size="12" x="809" y="544">
+&lt;additional parameters&gt;][, name=&lt;rout name&gt;].)</text>
+<text font-family="Dialog" font-size="12" x="809" y="574">
+urlpatterns = [</text>
+<text font-family="Dialog" font-size="12" x="809" y="589">
+    re_path(r'^index/$', modelName.index, name='index')</text>
+<text font-family="Dialog" font-size="12" x="809" y="604">
+]</text>
+</svg>
