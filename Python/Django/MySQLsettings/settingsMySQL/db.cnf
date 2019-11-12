@@ -1,6 +1,0 @@
-[client]
-database = world
-user = dima
-password = 0000
-port = 3306
-dafault-character-set = utf-8
