@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="764" version="1.1" width="2078" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="30" stroke="#000000" stroke-width="1" width="261" x="438" y="14"/>
+<text font-family="Dialog" font-size="24" x="439" y="38">
+Controllers-functions.</text>
+<polygon fill="#ffffc8" points="22,46 342,46 352,56 352,369 22,369 22,46" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="22,46 342,46 352,56 352,369 22,369 22,46" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="342,46 352,56 342,56 342,46" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="342,46 352,56 342,56 342,46" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="25" y="61">
+The controllers are the program modules. </text>
+<text font-family="Dialog" font-size="12" x="25" y="76">
+They execute all work about data retrieving </text>
+<text font-family="Dialog" font-size="12" x="25" y="91">
+from DB, preparing to display, process the </text>
+<text font-family="Dialog" font-size="12" x="25" y="106">
+data passed by the user, saving data into </text>
+<text font-family="Dialog" font-size="12" x="25" y="121">
+the DB and construct the web-page.</text>
+<text font-family="Dialog" font-size="12" x="25" y="151">
+The controllers implemented as Python functions.</text>
+<text font-family="Dialog" font-size="12" x="25" y="181">
+These functions must accept the next parameters:</text>
+<text font-family="Dialog" font-size="12" x="25" y="196">
+The HttpRequest class instance (from django.http), </text>
+<text font-family="Dialog" font-size="12" x="25" y="211">
+stores the information about the client request </text>
+<text font-family="Dialog" font-size="12" x="25" y="226">
+(the "request" traditional named parameter.).</text>
+<text font-family="Dialog" font-size="12" x="25" y="241">
+The set of the named parameters, these names </text>
+<text font-family="Dialog" font-size="12" x="25" y="256">
+coincide with the URL-parameters names, </text>
+<text font-family="Dialog" font-size="12" x="25" y="271">
+defined in the corresponding controller route.</text>
+<text font-family="Dialog" font-size="12" x="25" y="301">
+The controller must return the instance of the </text>
+<text font-family="Dialog" font-size="12" x="25" y="316">
+HttpResponse or subclass of it.</text>
+<text font-family="Dialog" font-size="12" x="25" y="331">
+The code of the controllers located in the views.py </text>
+<text font-family="Dialog" font-size="12" x="25" y="346">
+module of the application.</text>
+<polygon fill="#ffffc8" points="382,542 699,542 709,552 709,645 382,645 382,542" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="382,542 699,542 709,552 709,645 382,645 382,542" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="699,542 709,552 699,552 699,542" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="699,542 709,552 699,552 699,542" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="385" y="557">
+One-task controller.</text>
+<text font-family="Dialog" font-size="12" x="385" y="572">
+The simple Python function.</text>
+<text font-family="Dialog" font-size="12" x="385" y="602">
+Several-task controller.</text>
+<text font-family="Dialog" font-size="12" x="385" y="617">
+The controller executes several tasks in </text>
+<text font-family="Dialog" font-size="12" x="385" y="632">
+one function (form processing).</text>
+<polygon fill="#ffffc8" points="382,54 787,54 797,64 797,524 382,524 382,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="382,54 787,54 797,64 797,524 382,524 382,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="787,54 797,64 787,64 787,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="787,54 797,64 787,64 787,54" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="385" y="69">
+Response shaping.</text>
+<text font-family="Dialog" font-size="12" x="385" y="99">
+The main purpose of the controller is make the </text>
+<text font-family="Dialog" font-size="12" x="385" y="114">
+response to the user (usually the web-page).</text>
+<text font-family="Dialog" font-size="12" x="385" y="144">
+Low-level tools:</text>
+<text font-family="Dialog" font-size="12" x="385" y="159">
+HttpResponse([content][,][content_type=None]</text>
+<text font-family="Dialog" font-size="12" x="385" y="174">
+[,][status=200][,][reason=None])</text>
+<text font-family="Dialog" font-size="12" x="385" y="189">
+content - string/bytes</text>
+<text font-family="Dialog" font-size="12" x="385" y="204">
+content_type - MIME-type (default text/html)</text>
+<text font-family="Dialog" font-size="12" x="385" y="219">
+status - the code of the response</text>
+<text font-family="Dialog" font-size="12" x="385" y="234">
+reason - status as string (deafault "OK")</text>
+<text font-family="Dialog" font-size="12" x="385" y="249">
+charset - character settings</text>
+<text font-family="Dialog" font-size="12" x="385" y="264">
+...</text>
+<text font-family="Dialog" font-size="12" x="385" y="294">
+Templates:</text>
+<text font-family="Dialog" font-size="12" x="385" y="309">
+django.template.loader</text>
+<text font-family="Dialog" font-size="12" x="385" y="324">
+get_template(&lt;template path&gt;)</text>
+<text font-family="Dialog" font-size="12" x="385" y="339">
+Loads the template and returns the instance </text>
+<text font-family="Dialog" font-size="12" x="385" y="354">
+of the Template class</text>
+<text font-family="Dialog" font-size="12" x="385" y="369">
+from django.template.</text>
+<text font-family="Dialog" font-size="12" x="385" y="384">
+select_template(&lt;secuence of the templates paths&gt;)</text>
+<text font-family="Dialog" font-size="12" x="385" y="399">
+Sort through the set, tries to load the template.</text>
+<text font-family="Dialog" font-size="12" x="385" y="414">
+If no matching returns the TemlateDoesNotExist.</text>
+<text font-family="Dialog" font-size="12" x="385" y="429">
+render([context=&lt;data context&gt;][,][request=&lt;request&gt;])</text>
+<text font-family="Dialog" font-size="12" x="385" y="444">
+Makes render, combine the template with data context.</text>
+<text font-family="Dialog" font-size="12" x="385" y="459">
+Returns the HTML code of the page.</text>
+<text font-family="Dialog" font-size="12" x="385" y="489">
+TemplateResponce class</text>
+<text font-family="Dialog" font-size="12" x="385" y="504">
+django.template.response</text>
+<text font-family="Dialog" font-size="12" x="385" y="519">
+Allows the puts off the render of the template until it is needed.</text>
+<polygon fill="#ffffc8" points="830,30 1179,30 1189,40 1189,621 830,621 830,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="830,30 1179,30 1189,40 1189,621 830,621 830,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1179,30 1189,40 1179,40 1179,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1179,30 1189,40 1179,40 1179,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="833" y="45">
+Get the request info.</text>
+<text font-family="Dialog" font-size="12" x="833" y="75">
+Received from the user request represents the </text>
+<text font-family="Dialog" font-size="12" x="833" y="90">
+instance of the HttpRequest class. It stores v</text>
+<text font-family="Dialog" font-size="12" x="833" y="105">
+arious information about the request.</text>
+<text font-family="Dialog" font-size="12" x="833" y="135">
+GET - dictionary of the GET-parameters.</text>
+<text font-family="Dialog" font-size="12" x="833" y="150">
+POST - dictionary of the POST-parameters.</text>
+<text font-family="Dialog" font-size="12" x="833" y="165">
+FILES - dictionary of the loaded files.</text>
+<text font-family="Dialog" font-size="12" x="833" y="180">
+method - the string represents the send method.</text>
+<text font-family="Dialog" font-size="12" x="833" y="195">
+scheme - the protocol designation.</text>
+<text font-family="Dialog" font-size="12" x="833" y="210">
+path/path_info - self-titled.</text>
+<text font-family="Dialog" font-size="12" x="833" y="225">
+encoding - character set of the request.</text>
+<text font-family="Dialog" font-size="12" x="833" y="240">
+contect_type - MIME type.</text>
+<text font-family="Dialog" font-size="12" x="833" y="255">
+content_params - dictionary with additional MIME.</text>
+<text font-family="Dialog" font-size="12" x="833" y="270">
+META - dictionary with additional parameters</text>
+<text font-family="Dialog" font-size="12" x="833" y="285">
+     CONTENT_LIENGTH - query length in characters.</text>
+<text font-family="Dialog" font-size="12" x="833" y="300">
+     CONTEN_TYPE - MIME-type of the query body.</text>
+<text font-family="Dialog" font-size="12" x="833" y="315">
+     HTTP-ACCEPT - string with supported MIME types.</text>
+<text font-family="Dialog" font-size="12" x="833" y="330">
+     HTTP_ACCEPT_ENCODING -  supported encoding.</text>
+<text font-family="Dialog" font-size="12" x="833" y="345">
+    HTTP_ACCEPT_LANGUAGES - supported languages.</text>
+<text font-family="Dialog" font-size="12" x="833" y="360">
+    HTTP_HOST - domain name or IP and port number.</text>
+<text font-family="Dialog" font-size="12" x="833" y="375">
+    HTTP_REFERER - the address of page redirected from.</text>
+<text font-family="Dialog" font-size="12" x="833" y="390">
+    HTTP_USER_AGENT - the web-browser name.</text>
+<text font-family="Dialog" font-size="12" x="833" y="405">
+    QUERY-STRING - raw GET-param string.</text>
+<text font-family="Dialog" font-size="12" x="833" y="420">
+    REMOTE-ADDR - IP of the client computer.</text>
+<text font-family="Dialog" font-size="12" x="833" y="435">
+    REMOTE-HOST - domain name of the client computer.</text>
+<text font-family="Dialog" font-size="12" x="833" y="450">
+   REMOTE-USER - the user name.</text>
+<text font-family="Dialog" font-size="12" x="833" y="465">
+   REQUEST-METHOD - the request method.</text>
+<text font-family="Dialog" font-size="12" x="833" y="480">
+   SERVER-NAME - the server domain name.</text>
+<text font-family="Dialog" font-size="12" x="833" y="495">
+   SERVER-PORT - the TCP-port number.</text>
+<text font-family="Dialog" font-size="12" x="833" y="510">
+body - the content in bytes object type.</text>
+<text font-family="Dialog" font-size="12" x="833" y="525">
+get_host() - returns the string with combination </text>
+<text font-family="Dialog" font-size="12" x="833" y="540">
+of IP, TCP-port.</text>
+<text font-family="Dialog" font-size="12" x="833" y="555">
+get_port() - returns the TCP-port number.</text>
+<text font-family="Dialog" font-size="12" x="833" y="570">
+get_full_path() - returns full path to the current page.</text>
+<text font-family="Dialog" font-size="12" x="833" y="585">
+build_absolute_url(&lt;path&gt;) - build full internet adresse.</text>
+<text font-family="Dialog" font-size="12" x="833" y="600">
+is_secure() - True if used HTTPS, False if HTTP.</text>
+<text font-family="Dialog" font-size="12" x="833" y="615">
+is_ajax() - True if AJAX.</text>
+<polygon fill="#ffffc8" points="14,382 362,382 372,392 372,552 14,552 14,382" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,382 362,382 372,392 372,552 14,552 14,382" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="362,382 372,392 362,392 362,382" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="362,382 372,392 362,392 362,382" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="397">
+Redirection.</text>
+<text font-family="Dialog" font-size="12" x="17" y="427">
+Use the HttpResponseRedirect class for temporary </text>
+<text font-family="Dialog" font-size="12" x="17" y="442">
+redirection.</text>
+<text font-family="Dialog" font-size="12" x="17" y="457">
+HttpResponseRedirect(&lt;address of redirect&gt; </text>
+<text font-family="Dialog" font-size="12" x="17" y="472">
+[, status=302] [, reson=none])</text>
+<text font-family="Dialog" font-size="12" x="17" y="502">
+Use the HttpResponsePermanentRedirect for </text>
+<text font-family="Dialog" font-size="12" x="17" y="517">
+permanent redirection.</text>
+<text font-family="Dialog" font-size="12" x="17" y="532">
+HttpResponsePermanentRedirect(&lt;address of redirect&gt; </text>
+<text font-family="Dialog" font-size="12" x="17" y="547">
+[, status=302] [, reson=none])</text>
+<polygon fill="#ffffc8" points="1222,30 1584,30 1594,40 1594,525 1222,525 1222,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1222,30 1584,30 1594,40 1594,525 1222,525 1222,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1584,30 1594,40 1584,40 1584,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1584,30 1594,40 1584,40 1584,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="1225" y="45">
+Error messages and handling of special situations.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="75">
+All classes inherited from HttpResponse.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="105">
+HttpResponceNotFound([&lt;conten&gt;][,]</text>
+<text font-family="Dialog" font-size="12" x="1225" y="120">
+[content_type=none][,][status=404][,][reason=None]) - </text>
+<text font-family="Dialog" font-size="12" x="1225" y="135">
+requested page not found.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="165">
+HttpResponseBadRequest([&lt;conten&gt;][,]</text>
+<text font-family="Dialog" font-size="12" x="1225" y="180">
+[content_type=none][,][status=400][,][reason=None]) - </text>
+<text font-family="Dialog" font-size="12" x="1225" y="195">
+clients request incorrect.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="225">
+HttpResponseForbidden([&lt;conten&gt;][,]</text>
+<text font-family="Dialog" font-size="12" x="1225" y="240">
+[content_type=none][,][status=403][,][reason=None])  - </text>
+<text font-family="Dialog" font-size="12" x="1225" y="255">
+access denied.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="285">
+HttpResponseNotAllowed(&lt;sequence of allowed methods&gt;</text>
+<text font-family="Dialog" font-size="12" x="1225" y="300">
+[,][content_type=none][,][status=405][,][reason=None]) - </text>
+<text font-family="Dialog" font-size="12" x="1225" y="315">
+client request was executed with incorrect method.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="345">
+HttpResponseGon([&lt;conten&gt;][,]</text>
+<text font-family="Dialog" font-size="12" x="1225" y="360">
+[content_type=none][,][status=410][,][reason=None]) - </text>
+<text font-family="Dialog" font-size="12" x="1225" y="375">
+required page not exists.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="405">
+HttpResponceServerError([&lt;conten&gt;][,]</text>
+<text font-family="Dialog" font-size="12" x="1225" y="420">
+[content_type=none][,][status=500][,][reason=None]) - </text>
+<text font-family="Dialog" font-size="12" x="1225" y="435">
+error in server code.</text>
+<text font-family="Dialog" font-size="12" x="1225" y="465">
+HttpResponseNotModified([&lt;conten&gt;][,]</text>
+<text font-family="Dialog" font-size="12" x="1225" y="480">
+[content_type=none][,][status=304][,][reason=None]) - </text>
+<text font-family="Dialog" font-size="12" x="1225" y="495">
+requiered page isn't changed since last request.</text>
+<polygon fill="#ffffc8" points="1614,30 2018,30 2028,40 2028,461 1614,461 1614,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1614,30 2018,30 2028,40 2028,461 1614,461 1614,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="2018,30 2028,40 2018,40 2018,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="2018,30 2028,40 2018,40 2018,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="1617" y="45">
+Django Shortcuts.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="60">
+The functions execute several actions.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="75">
+Used for typical tasks.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="105">
+django.shortcuts</text>
+<text font-family="Dialog" font-size="12" x="1617" y="135">
+render(&lt;request&gt;, &lt;path to template&gt; [, context=None] </text>
+<text font-family="Dialog" font-size="12" x="1617" y="150">
+[, content_type=None] [, status=200]) - does template </text>
+<text font-family="Dialog" font-size="12" x="1617" y="165">
+render and response to the client.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="195">
+redirect(&lt;target&gt; [, permanent=false] </text>
+<text font-family="Dialog" font-size="12" x="1617" y="210">
+[, values of URL-params]) - automaticly cofigurates the </text>
+<text font-family="Dialog" font-size="12" x="1617" y="225">
+internet adresse according the parameters.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="255">
+get_object_or_404(&lt;source&gt;, &lt;search conditions&gt;) - </text>
+<text font-family="Dialog" font-size="12" x="1617" y="270">
+search the record, if it's not found raise the Http404 exception.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="300">
+get_list_or_404(&lt;source&gt;, &lt;filteration conditions&gt;) - </text>
+<text font-family="Dialog" font-size="12" x="1617" y="315">
+apply to the records the filtration conditions and </text>
+<text font-family="Dialog" font-size="12" x="1617" y="330">
+returns the QuerySet or raise Http404 exception.</text>
+<polygon fill="#ffffc8" points="1614,478 2053,478 2063,488 2063,749 1614,749 1614,478" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1614,478 2053,478 2063,488 2063,749 1614,749 1614,478" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="2053,478 2063,488 2053,488 2053,478" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="2053,478 2063,488 2053,488 2053,478" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="1617" y="493">
+Decorators.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="523">
+django.views.decorators.http</text>
+<text font-family="Dialog" font-size="12" x="1617" y="553">
+reauire_http_methods(&lt;secuence of methods&gt;) -</text>
+<text font-family="Dialog" font-size="12" x="1617" y="568">
+allows only HTTP methods for controller.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="598">
+require_get() - allows only GET method fot controller.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="628">
+require_post() - allows only POST method fot controller.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="658">
+require_safe() - allows only GET and HEAD methods for the controller.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="688">
+Raises the HttpResponseNotAllowed in case of unacceptable.</text>
+<text font-family="Dialog" font-size="12" x="1617" y="718">
+gzip_page() - press the response is web-browser allows.</text>
+</svg>
