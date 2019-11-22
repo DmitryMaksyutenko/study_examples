@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="884" version="1.1" width="1319" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="279" x="502" y="30"/>
+<text font-family="Dialog" font-size="24" x="530" y="55">
+Class-based views</text>
+<polygon fill="#ffffc8" points="30,46 350,46 360,56 360,453 30,453 30,46" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="30,46 350,46 360,56 360,453 30,453 30,46" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="350,46 360,56 350,56 350,46" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="350,46 360,56 350,56 350,46" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="33" y="61">
+The class-based view is an entity of more high level </text>
+<text font-family="Dialog" font-size="12" x="33" y="76">
+and does some typical actions by himself.</text>
+<text font-family="Dialog" font-size="12" x="33" y="91">
+The major functionality part of different </text>
+<text font-family="Dialog" font-size="12" x="33" y="106">
+controllers is implemented in mixins(purpose the </text>
+<text font-family="Dialog" font-size="12" x="33" y="121">
+extension of the other classes).</text>
+<text font-family="Dialog" font-size="12" x="33" y="151">
+The class-based views write in route as a result of </text>
+<text font-family="Dialog" font-size="12" x="33" y="166">
+the as_view() method.</text>
+<text font-family="Dialog" font-size="12" x="33" y="196">
+path('path/', SomeView.as_view())</text>
+<text font-family="Dialog" font-size="12" x="33" y="226">
+In the method call can be past the parameters </text>
+<text font-family="Dialog" font-size="12" x="33" y="241">
+of a controller.</text>
+<text font-family="Dialog" font-size="12" x="33" y="271">
+path('path/', SomeView.as_view(model=Model,</text>
+<text font-family="Dialog" font-size="12" x="33" y="286">
+              template_name='directory/page.html'))</text>
+<text font-family="Dialog" font-size="12" x="33" y="316">
+But the more used way is to make a derivative </text>
+<text font-family="Dialog" font-size="12" x="33" y="331">
+class from Model and</text>
+<text font-family="Dialog" font-size="12" x="33" y="346">
+define there the required parameters with values.</text>
+<text font-family="Dialog" font-size="12" x="33" y="376">
+class CreateSomeView(SomeView):</text>
+<text font-family="Dialog" font-size="12" x="33" y="391">
+    model = Model</text>
+<text font-family="Dialog" font-size="12" x="33" y="406">
+    template_name = 'directory/page.html'</text>
+<text font-family="Dialog" font-size="12" x="33" y="436">
+path('path/', CreateSomeView.as_view())</text>
+<polygon fill="#ffffc8" points="398,86 798,86 808,96 808,453 398,453 398,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="398,86 798,86 808,96 808,453 398,453 398,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="798,86 808,96 798,96 798,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="798,86 808,96 798,96 798,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="401" y="101">
+The main class-based views.</text>
+<text font-family="Dialog" font-size="12" x="401" y="116">
+django.views.generig.base</text>
+<text font-family="Dialog" font-size="12" x="401" y="146">
+View - The simplest one, defines the HTTP-method.</text>
+<text font-family="Dialog" font-size="12" x="401" y="176">
+ContextMixin - used for adding to the class-defined </text>
+<text font-family="Dialog" font-size="12" x="401" y="191">
+view tools for creating the template context.</text>
+<text font-family="Dialog" font-size="12" x="401" y="221">
+TemplateResponseMixin - used for adding the tools for rendering.</text>
+<text font-family="Dialog" font-size="12" x="401" y="251">
+TemplateView - inherits the View, ContextMixin, </text>
+<text font-family="Dialog" font-size="12" x="401" y="266">
+TemplateResponseMixin classes.</text>
+<text font-family="Dialog" font-size="12" x="401" y="281">
+Makes the render of the template automatically and response </text>
+<text font-family="Dialog" font-size="12" x="401" y="296">
+when GET used.</text>
+<text font-family="Dialog" font-size="12" x="401" y="326">
+class IndexView(TemplateView):</text>
+<text font-family="Dialog" font-size="12" x="401" y="341">
+    template_name = 'path/index.html'</text>
+<text font-family="Dialog" font-size="12" x="401" y="371">
+    def get_context_data(self, *args, **kwargs):</text>
+<text font-family="Dialog" font-size="12" x="401" y="386">
+        context = super().get_context_data(*args, **kwargs)</text>
+<text font-family="Dialog" font-size="12" x="401" y="401">
+        context['db_1'] = SomeDb.objects.all()</text>
+<text font-family="Dialog" font-size="12" x="401" y="416">
+        context['db_2'] = OtherDb.objects.all()</text>
+<text font-family="Dialog" font-size="12" x="401" y="431">
+        return context</text>
+<text font-family="Dialog" font-size="12" x="401" y="446">
+ </text>
+<polygon fill="#ffffc8" points="854,14 1294,14 1304,24 1304,349 854,349 854,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="854,14 1294,14 1304,24 1304,349 854,349 854,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1294,14 1304,24 1294,24 1294,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1294,14 1304,24 1294,24 1294,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="857" y="29">
+The information display classes.</text>
+<text font-family="Dialog" font-size="12" x="857" y="44">
+django.views.generic.detail</text>
+<text font-family="Dialog" font-size="12" x="857" y="74">
+SingleObjectMixin - retrieves the record from the </text>
+<text font-family="Dialog" font-size="12" x="857" y="89">
+model with key or slug help.</text>
+<text font-family="Dialog" font-size="12" x="857" y="119">
+SingleObjectTemplateResponseMixin - </text>
+<text font-family="Dialog" font-size="12" x="857" y="134">
+makes the template renders based on the found record from the model.</text>
+<text font-family="Dialog" font-size="12" x="857" y="164">
+DetalViwe - inherited form View, TemplateResponseMixin,</text>
+<text font-family="Dialog" font-size="12" x="857" y="179">
+ SingleObjectTemplateResponseMixin, SingleObjectMixin.</text>
+<text font-family="Dialog" font-size="12" x="857" y="194">
+Search the record by the key or slug. Add it to the object attribute and</text>
+<text font-family="Dialog" font-size="12" x="857" y="209">
+displays the page with the context of that record.</text>
+<text font-family="Dialog" font-size="12" x="857" y="239">
+class CreateDetalView(DetalView):</text>
+<text font-family="Dialog" font-size="12" x="857" y="254">
+    model = ModelName</text>
+<text font-family="Dialog" font-size="12" x="857" y="284">
+    def get_context_data(self, *args, **kwargs):</text>
+<text font-family="Dialog" font-size="12" x="857" y="299">
+        context = super().get_context_data(*args, **kwargs)</text>
+<text font-family="Dialog" font-size="12" x="857" y="314">
+        context['modelclasss'] =ModelClass.objects.all()</text>
+<text font-family="Dialog" font-size="12" x="857" y="329">
+        return context</text>
+<polygon fill="#ffffc8" points="438,462 792,462 802,472 802,869 438,869 438,462" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="438,462 792,462 802,472 802,869 438,869 438,462" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="792,462 802,472 792,472 792,462" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="792,462 802,472 792,472 792,462" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="441" y="477">
+django.views.generic.list</text>
+<text font-family="Dialog" font-size="12" x="441" y="507">
+MultipleObjectsMixin - retrieves the list of records.</text>
+<text font-family="Dialog" font-size="12" x="441" y="537">
+MultipleTemplateResponseMixin - makes the </text>
+<text font-family="Dialog" font-size="12" x="441" y="552">
+renders of the template</text>
+<text font-family="Dialog" font-size="12" x="441" y="567">
+based on the retrieved form model records.</text>
+<text font-family="Dialog" font-size="12" x="441" y="597">
+ListView - Inherits the View, TemplateResponseMixin, </text>
+<text font-family="Dialog" font-size="12" x="441" y="612">
+MultipleObjectMixin, MultipleTemplateResponseMixin - </text>
+<text font-family="Dialog" font-size="12" x="441" y="627">
+retrieves the list of the records from the model and </text>
+<text font-family="Dialog" font-size="12" x="441" y="642">
+stores them in object_list, displays the page with records.</text>
+<text font-family="Dialog" font-size="12" x="441" y="672">
+class CreateListView(ListView):</text>
+<text font-family="Dialog" font-size="12" x="441" y="687">
+    template_name = 'path/page.html'</text>
+<text font-family="Dialog" font-size="12" x="441" y="702">
+    context_object_name = 'molesclass'</text>
+<text font-family="Dialog" font-size="12" x="441" y="732">
+    def get_queryset(self):</text>
+<text font-family="Dialog" font-size="12" x="441" y="747">
+        return ModelClass.filter(attr=self.kwargs['attr_id'])</text>
+<text font-family="Dialog" font-size="12" x="441" y="762">
+ </text>
+<text font-family="Dialog" font-size="12" x="441" y="777">
+    def get_context_data(self, *args, **kwargs):</text>
+<text font-family="Dialog" font-size="12" x="441" y="792">
+        context = super().get_context_data(*args, **kwargs)</text>
+<text font-family="Dialog" font-size="12" x="441" y="807">
+        context['modelclass'] = ModelClass.object.all()</text>
+<text font-family="Dialog" font-size="12" x="441" y="822">
+        context['classattr'] = ModelClass.object.get(pk=</text>
+<text font-family="Dialog" font-size="12" x="441" y="837">
+                                   self.kwargs['attr_id'])</text>
+<text font-family="Dialog" font-size="12" x="441" y="852">
+        return context</text>
+<polygon fill="#ffffc8" points="862,366 1227,366 1237,376 1237,866 862,866 862,366" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="862,366 1227,366 1237,376 1237,866 862,866 862,366" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1227,366 1237,376 1227,376 1227,366" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1227,366 1237,376 1227,376 1227,366" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="865" y="381">
+The class-based view worked with forms.</text>
+<text font-family="Dialog" font-size="12" x="865" y="396">
+django.view.generic.edit</text>
+<text font-family="Dialog" font-size="12" x="865" y="426">
+FormMixin - can create the form, check the entered </text>
+<text font-family="Dialog" font-size="12" x="865" y="441">
+data, make redirection, or does repeat the form enter.</text>
+<text font-family="Dialog" font-size="12" x="865" y="471">
+ProcessFormView - displays the form, accept </text>
+<text font-family="Dialog" font-size="12" x="865" y="486">
+the data and validate it.</text>
+<text font-family="Dialog" font-size="12" x="865" y="516">
+FormView - main class for using.</text>
+<text font-family="Dialog" font-size="12" x="865" y="546">
+class CreateFormView(FormView):</text>
+<text font-family="Dialog" font-size="12" x="865" y="561">
+    template_name = 'app/form.html'</text>
+<text font-family="Dialog" font-size="12" x="865" y="576">
+    form_class = FormName</text>
+<text font-family="Dialog" font-size="12" x="865" y="591">
+    initial = {'key': 'value'}</text>
+<text font-family="Dialog" font-size="12" x="865" y="621">
+    def get_context_data(self, *args, **kwargs):</text>
+<text font-family="Dialog" font-size="12" x="865" y="636">
+        context = super().get_context_data(*args, **kwargs)</text>
+<text font-family="Dialog" font-size="12" x="865" y="651">
+        context['tablename'] = ModelClass.object.all()</text>
+<text font-family="Dialog" font-size="12" x="865" y="666">
+        return context</text>
+<text font-family="Dialog" font-size="12" x="865" y="696">
+    def form_valid(self, form):</text>
+<text font-family="Dialog" font-size="12" x="865" y="711">
+        form.save()</text>
+<text font-family="Dialog" font-size="12" x="865" y="726">
+        return super().form_valid(form)</text>
+<text font-family="Dialog" font-size="12" x="865" y="756">
+    def get_form(self, form_class=None):</text>
+<text font-family="Dialog" font-size="12" x="865" y="771">
+        self.object = super().get_form(form_class)</text>
+<text font-family="Dialog" font-size="12" x="865" y="786">
+        return self.object</text>
+<text font-family="Dialog" font-size="12" x="865" y="816">
+    def get_success(self):</text>
+<text font-family="Dialog" font-size="12" x="865" y="831">
+        return reverse('app:model',</text>
+<text font-family="Dialog" font-size="12" x="865" y="846">
+                     kwargs={mode_id: </text>
+<text font-family="Dialog" font-size="12" x="865" y="861">
+                  self.object.cleaned_data['classname'].pk})</text>
+<polygon fill="#ffffc8" points="14,470 395,470 405,480 405,757 14,757 14,470" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,470 395,470 405,480 405,757 14,757 14,470" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="395,470 405,480 395,480 395,470" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="395,470 405,480 395,480 395,470" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="485">
+Work with records.</text>
+<text font-family="Dialog" font-size="12" x="17" y="515">
+ModelFormMixin - used for work with the forms </text>
+<text font-family="Dialog" font-size="12" x="17" y="530">
+bonded with models.</text>
+<text font-family="Dialog" font-size="12" x="17" y="560">
+CreateView - used for creation, validation the form, creation </text>
+<text font-family="Dialog" font-size="12" x="17" y="575">
+the record with passed in form data.</text>
+<text font-family="Dialog" font-size="12" x="17" y="605">
+UpdateView - used for update data in the model. Create </text>
+<text font-family="Dialog" font-size="12" x="17" y="620">
+the form and</text>
+<text font-family="Dialog" font-size="12" x="17" y="635">
+displays it on-page.</text>
+<text font-family="Dialog" font-size="12" x="17" y="665">
+DeletionMixin - Assumes the record is found and saved in </text>
+<text font-family="Dialog" font-size="12" x="17" y="680">
+object attribute.</text>
+<text font-family="Dialog" font-size="12" x="17" y="710">
+DeleteView - displays the form on-page with a delete </text>
+<text font-family="Dialog" font-size="12" x="17" y="725">
+button and delete the record.</text>
+</svg>
