@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,7 +11,13 @@
 </head>
 <body>
 
-    <p>Retreive information from database</p>
+    <div id="form_frame">
+        <form action="data-from-db" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" vlaue="Submit">
+        </form>
+    </div>
 
 </body>
 </html>
