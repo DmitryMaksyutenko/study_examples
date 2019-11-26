@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="548" version="1.1" width="1068" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="287" x="342" y="14"/>
+<text font-family="Dialog" font-size="24" x="355" y="39">
+Base Templates tools</text>
+<polygon fill="#ffffc8" points="14,78 387,78 397,88 397,393 14,393 14,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,78 387,78 397,88 397,393 14,393 14,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="387,78 397,88 387,88 387,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="387,78 397,88 387,88 387,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="93">
+The template is an example for generating the web-page </text>
+<text font-family="Dialog" font-size="12" x="17" y="108">
+sends to the user.  Also used for generating text documents </text>
+<text font-family="Dialog" font-size="12" x="17" y="123">
+for mail.</text>
+<text font-family="Dialog" font-size="12" x="17" y="153">
+All settings are written in parameter TEMPLATES in project </text>
+<text font-family="Dialog" font-size="12" x="17" y="168">
+module settings.py. It stores the array of dictionaries each </text>
+<text font-family="Dialog" font-size="12" x="17" y="183">
+of them configures the available templates. </text>
+<text font-family="Dialog" font-size="12" x="17" y="198">
+(Only one in general).</text>
+<text font-family="Dialog" font-size="12" x="17" y="228">
+Elements:</text>
+<text font-family="Dialog" font-size="12" x="17" y="243">
+BACKEND - path to the Django backend engine.</text>
+<text font-family="Dialog" font-size="12" x="17" y="258">
+django.template.backends.django.DjangoTemplates - default</text>
+<text font-family="Dialog" font-size="12" x="17" y="273">
+django.template.backends.jinja2.Jinja2</text>
+<text font-family="Dialog" font-size="12" x="17" y="303">
+NAME - alias to the backend engine.</text>
+<text font-family="Dialog" font-size="12" x="17" y="318">
+DIRS - list of directories where search the templates.</text>
+<text font-family="Dialog" font-size="12" x="17" y="333">
+APP_DIRS - if True, search the templates in template </text>
+<text font-family="Dialog" font-size="12" x="17" y="348">
+directories of application.</text>
+<text font-family="Dialog" font-size="12" x="17" y="363">
+OPTIONS - additional parameters for particular </text>
+<text font-family="Dialog" font-size="12" x="17" y="378">
+backend engine. As a dictionary.</text>
+<polygon fill="#ffffc8" points="542,78 1043,78 1053,88 1053,533 542,533 542,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="542,78 1043,78 1053,88 1053,533 542,533 542,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1043,78 1053,88 1043,88 1043,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1043,78 1053,88 1043,88 1043,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="545" y="93">
+django.template.backend.django.DjangoTemplates parameters:</text>
+<text font-family="Dialog" font-size="12" x="545" y="123">
+autoescape - If True modifies the HTML forbidden symbols.</text>
+<text font-family="Dialog" font-size="12" x="545" y="138">
+string_if_invalid - string displayed in case of the failed access to a variable.</text>
+<text font-family="Dialog" font-size="12" x="545" y="153">
+file_charset - the template code specification.  </text>
+<text font-family="Dialog" font-size="12" x="545" y="168">
+context_processors - list of the module names used to handle the context.</text>
+<text font-family="Dialog" font-size="12" x="545" y="183">
+debug - if True, displayed the full-formed error messages.</text>
+<text font-family="Dialog" font-size="12" x="545" y="198">
+loader - list of module names that load templates.</text>
+<text font-family="Dialog" font-size="12" x="545" y="213">
+builtins  - default empty. The list of paths to the embedded library of tags.</text>
+<text font-family="Dialog" font-size="12" x="545" y="228">
+libraries - list of load template libraries. As a dictionary.</text>
+<text font-family="Dialog" font-size="12" x="545" y="258">
+The context process</text>
+<text font-family="Dialog" font-size="12" x="545" y="288">
+django.template.context_processors.request - add the "request" </text>
+<text font-family="Dialog" font-size="12" x="545" y="303">
+variable stored the object of current request.</text>
+<text font-family="Dialog" font-size="12" x="545" y="333">
+django.template.context_processor.csrf - add the "csrf_token" variable </text>
+<text font-family="Dialog" font-size="12" x="545" y="348">
+stored the electronic token.</text>
+<text font-family="Dialog" font-size="12" x="545" y="378">
+django.contrib.auth.context_processor.auth - add the "user" and "perms" </text>
+<text font-family="Dialog" font-size="12" x="545" y="393">
+varibles stored the user and premissions data.</text>
+<text font-family="Dialog" font-size="12" x="545" y="423">
+django.contrib.messages.context_processors.messages - add the "messages" </text>
+<text font-family="Dialog" font-size="12" x="545" y="438">
+value stored popup messages. </text>
+<text font-family="Dialog" font-size="12" x="545" y="468">
+django.template.context_processor.media - add the "MEDIA_URL" </text>
+<text font-family="Dialog" font-size="12" x="545" y="483">
+the project value.</text>
+<text font-family="Dialog" font-size="12" x="545" y="513">
+django.template.context_processors.tz - add the "TIME_ZONE" variable.</text>
+</svg>
