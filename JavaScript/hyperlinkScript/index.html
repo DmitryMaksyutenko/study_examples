@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+  <script type="text/javascript">
+    function findSun(n){
+      var s = 0
+      for(var i = 1; i <= n; i++){
+        s += i
+      }
+
+      return s
+    }
+
+    function get(){
+      var n
+      n = parseInt(prompt("Enter number: "))
+      return n
+    }
+  </script>
+<body>
+
+  <a href="javascript: var n = get(); alert('1+2+...+'+n+'='+findSun(n))">Press</a>
+</body>
+</html>
