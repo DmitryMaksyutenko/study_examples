@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="727" version="1.1" width="1352" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="415" x="458" y="14"/>
+<text font-family="Dialog" font-size="24" x="499" y="39">
+Displaying data. Directives.</text>
+<polygon fill="#ffffc8" points="14,26 380,26 390,36 390,285 14,285 14,26" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,26 380,26 390,36 390,285 14,285 14,26" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="380,26 390,36 380,36 380,26" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="380,26 390,36 380,36 380,26" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="41">
+For data displaying in a template applied directives.</text>
+<text font-family="Dialog" font-size="12" x="17" y="56">
+The directive write-in format </text>
+<text font-family="Dialog" font-size="12" x="17" y="71">
+{{ &lt;value of template context&gt; }}.</text>
+<text font-family="Dialog" font-size="12" x="17" y="101">
+It's possible to access an element by index via dot notation:</text>
+<text font-family="Dialog" font-size="12" x="17" y="116">
+{{ element_name.0 }}</text>
+<text font-family="Dialog" font-size="12" x="17" y="146">
+Access to dictionary element by key via dot notation:</text>
+<text font-family="Dialog" font-size="12" x="17" y="161">
+{{ dictionaty_name.keyName }}</text>
+<text font-family="Dialog" font-size="12" x="17" y="191">
+Access to a class attribute:</text>
+<text font-family="Dialog" font-size="12" x="17" y="206">
+{{ DbName.className.attribute }}</text>
+<text font-family="Dialog" font-size="12" x="17" y="236">
+Calling methods that don't accept the parameters, </text>
+<text font-family="Dialog" font-size="12" x="17" y="251">
+call without parentheses:</text>
+<text font-family="Dialog" font-size="12" x="17" y="266">
+{{ className.get_absolute_url }}</text>
+<polygon fill="#ffffc8" points="426,62 902,62 912,72 912,712 426,712 426,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="426,62 902,62 912,72 912,712 426,712 426,62" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="902,62 912,72 902,72 902,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="902,62 912,72 902,72 902,62" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="429" y="77">
+Template tags.</text>
+<text font-family="Dialog" font-size="12" x="429" y="92">
+Used to generate the context of the document.</text>
+<text font-family="Dialog" font-size="12" x="429" y="107">
+{% &lt;tag with param&gt; %}</text>
+<text font-family="Dialog" font-size="12" x="429" y="137">
+Single tag - inserts the value computed by the framework itself:</text>
+<text font-family="Dialog" font-size="12" x="429" y="152">
+{% csrf_token %}</text>
+<text font-family="Dialog" font-size="12" x="429" y="182">
+Dual tag - spaned the template fragment. Used for some actions:</text>
+<text font-family="Dialog" font-size="12" x="429" y="197">
+{% for some in some %}</text>
+<text font-family="Dialog" font-size="12" x="429" y="212">
+....</text>
+<text font-family="Dialog" font-size="12" x="429" y="227">
+{% endfor %}</text>
+<text font-family="Dialog" font-size="12" x="429" y="257">
+url &lt;name&gt; &lt;param list&gt; - creates an internet address.</text>
+<text font-family="Dialog" font-size="12" x="429" y="272">
+&lt;a href="{% url 'app:name' className.pk %}"&gt;{{ className.title }}&lt;/a&gt;</text>
+<text font-family="Dialog" font-size="12" x="429" y="302">
+for/in/endfor - iterate the elements in sequence.</text>
+<text font-family="Dialog" font-size="12" x="429" y="317">
+forloop.counter, forloop.counter0, forloop.revcounter, </text>
+<text font-family="Dialog" font-size="12" x="429" y="332">
+forloop.revcounter0, forloop.first, forloop.last,</text>
+<text font-family="Dialog" font-size="12" x="429" y="347">
+forloop.parentloop</text>
+<text font-family="Dialog" font-size="12" x="429" y="377">
+if/elif/else/endif - conditional construction.</text>
+<text font-family="Dialog" font-size="12" x="429" y="392">
+==, !=, &lt;, &gt;, &lt;=, &gt;=, in, not in, is, is not, and, or, not</text>
+<text font-family="Dialog" font-size="12" x="429" y="422">
+ifchanged/endifchanged - used in loops, displays the content if changed.</text>
+<text font-family="Dialog" font-size="12" x="429" y="452">
+cycle &lt;list&gt; [as &lt;variable&gt;] - consistently insert the value into a template.</text>
+<text font-family="Dialog" font-size="12" x="429" y="482">
+resetcycle [&lt;variable&gt;] - break the cycle.</text>
+<text font-family="Dialog" font-size="12" x="429" y="512">
+firstof &lt;list&gt;  - insert first not False value into the template.</text>
+<text font-family="Dialog" font-size="12" x="429" y="542">
+with/endwith - assign the value in to variable:</text>
+<text font-family="Dialog" font-size="12" x="429" y="557">
+{% with value=className.value %}</text>
+<text font-family="Dialog" font-size="12" x="429" y="572">
+{% if  value &gt; 0%}</text>
+<text font-family="Dialog" font-size="12" x="429" y="587">
+...</text>
+<text font-family="Dialog" font-size="12" x="429" y="602">
+{% endwith %}</text>
+<text font-family="Dialog" font-size="12" x="429" y="632">
+regroup &lt;sequence&gt; by &lt;key&gt; as &lt;variable&gt; - makes grouping.</text>
+<text font-family="Dialog" font-size="12" x="429" y="647">
+grouper, list</text>
+<text font-family="Dialog" font-size="12" x="429" y="677">
+now &lt;format&gt; - insert date and time into template.</text>
+<text font-family="Dialog" font-size="12" x="429" y="707">
+filter &lt;filter&gt;/endfilter - applyes filters to variables.</text>
+<polygon fill="#ffffc8" points="18,294 399,294 409,304 409,554 18,554 18,294" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="18,294 399,294 409,304 409,554 18,554 18,294" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="399,294 409,304 399,304 399,294" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="399,294 409,304 399,304 399,294" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="21" y="309">
+Filters transform the values before display.</text>
+<text font-family="Dialog" font-size="12" x="21" y="324">
+Written in directive after the name of the value separated by |</text>
+<text font-family="Dialog" font-size="12" x="21" y="339">
+{{ className.date | date "d.m.Y H:i:s" }}</text>
+<text font-family="Dialog" font-size="12" x="21" y="369">
+Filters can be concatenated</text>
+<text font-family="Dialog" font-size="12" x="21" y="384">
+{{ className.content | lower | default: 'no description' }}</text>
+<text font-family="Dialog" font-size="12" x="21" y="414">
+date:&lt;format&gt;</text>
+<text font-family="Dialog" font-size="12" x="21" y="429">
+time[:format]</text>
+<text font-family="Dialog" font-size="12" x="21" y="444">
+timesince[:&lt;value to compare&gt;] </text>
+<text font-family="Dialog" font-size="12" x="21" y="459">
+timeuntil[:&lt;value to compare&gt;]</text>
+<text font-family="Dialog" font-size="12" x="21" y="474">
+yesno[: example string]</text>
+<text font-family="Dialog" font-size="12" x="21" y="489">
+default:&lt;value&gt;</text>
+<text font-family="Dialog" font-size="12" x="21" y="504">
+default_if_none:&lt;value&gt;</text>
+<text font-family="Dialog" font-size="12" x="21" y="519">
+uper</text>
+<text font-family="Dialog" font-size="12" x="21" y="534">
+lower</text>
+<text font-family="Dialog" font-size="12" x="21" y="549">
+title</text>
+<polygon fill="#ffffc8" points="930,22 1327,22 1337,32 1337,222 930,222 930,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="930,22 1327,22 1337,32 1337,222 930,222 930,22" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1327,22 1337,32 1327,32 1327,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1327,22 1337,32 1327,32 1327,22" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="933" y="37">
+Template inheritance.</text>
+<text font-family="Dialog" font-size="12" x="933" y="52">
+Use same semantic as OOP</text>
+<text font-family="Dialog" font-size="12" x="933" y="67">
+The base template defines the set of blocks. The child template</text>
+<text font-family="Dialog" font-size="12" x="933" y="82">
+will paste the content into the block.</text>
+<text font-family="Dialog" font-size="12" x="933" y="97">
+{% block &lt;name&gt; %}</text>
+<text font-family="Dialog" font-size="12" x="933" y="112">
+{% endblock %}</text>
+<text font-family="Dialog" font-size="12" x="933" y="142">
+In derived template define the explicit inheritance with tag</text>
+<text font-family="Dialog" font-size="12" x="933" y="157">
+{% extends "pathTo/base.html" %}</text>
+<text font-family="Dialog" font-size="12" x="933" y="187">
+And use the named block from the base template.</text>
+<text font-family="Dialog" font-size="12" x="933" y="202">
+{% block &lt;name&gt; %}</text>
+<text font-family="Dialog" font-size="12" x="933" y="217">
+{% endblock %}</text>
+<polygon fill="#ffffc8" points="930,230 1327,230 1337,240 1337,333 930,333 930,230" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="930,230 1327,230 1337,240 1337,333 930,333 930,230" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1327,230 1337,240 1327,240 1327,230" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1327,230 1337,240 1327,240 1327,230" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="933" y="245">
+Static files, internet addresses</text>
+<text font-family="Dialog" font-size="12" x="933" y="260">
+static &lt;path to static file&gt; [as &lt;variable&gt;]</text>
+<text font-family="Dialog" font-size="12" x="933" y="290">
+{% load static %}</text>
+<text font-family="Dialog" font-size="12" x="933" y="305">
+&lt;link href="{% static 'path/style.css' %}"&gt;</text>
+</svg>
