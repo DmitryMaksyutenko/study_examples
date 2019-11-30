@@ -40,4 +40,8 @@ function closeWindow(){
   }
 }
 
-document.write('<hr>')
+document.write('<p style="text-align: center; font-size: 26px; color: red;">load document.</p>')
+
+function loadDoc(docName){
+  window.location.assign(docName)
+}
