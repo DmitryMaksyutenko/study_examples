@@ -1,7 +1,7 @@
 from .forms import GetInfoForm
 from django.shortcuts import render
 from django.views.generic.edit import FormView
-from django.views.generic import ListView
+from django.views.generic import DetailView
 #   from django.shortcuts import get_object_or_404
 from .models import Persons
 
@@ -22,7 +22,7 @@ def getInfo(request):
 
 
 class GetInfo(FormView):
-    """Returns the page of adding the information."""
+    """Returns the page of selection the information."""
     template_name = 'personsdb/getInfo.html'
     form_class = GetInfoForm
     success_url = 'getinfo'
@@ -31,8 +31,10 @@ class GetInfo(FormView):
         return super().form_valid(form)
 
 
-class ShowInfo(ListView):
+class ShowInfo(DetailView):
     """Return the result"""
-#    queryset = Persons.objects.all()
-    template_name = 'personsdb/getInfo.html'
-    context_object_name = 'person'
+    model = Persons
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
