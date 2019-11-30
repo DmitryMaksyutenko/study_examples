@@ -45,3 +45,15 @@ document.write('<p style="text-align: center; font-size: 26px; color: red;">load
 function loadDoc(docName){
   window.location.assign(docName)
 }
+
+document.write('<p style="text-align: center; font-size: 26px; color: red;">All window object methods and properties.</p>')
+
+function showWindowMethods(){
+  let i = 0
+  for(let item in window){
+    i++
+    document.write("<p style='text-align: center;'>"+ i +": "+ item +"</p>")
+  }
+}
+
+showWindowMethods()
