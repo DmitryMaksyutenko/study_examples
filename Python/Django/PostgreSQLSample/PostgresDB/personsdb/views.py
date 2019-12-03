@@ -1,8 +1,8 @@
 from .forms import GetInfoForm
-from django.shortcuts import render
+from django.shortcuts import render, Http404
 from django.views.generic.edit import FormView
 from django.views.generic import DetailView
-#   from django.shortcuts import get_object_or_404
+# from django.shortcuts import get_object_or_404
 from .models import Persons
 
 
@@ -22,19 +22,35 @@ def getInfo(request):
 
 
 class GetInfo(FormView):
-    """Returns the page of selection the information."""
+    """Show form"""
     template_name = 'personsdb/getInfo.html'
     form_class = GetInfoForm
-    success_url = 'getinfo'
-
-    def form_valid(self, form):
-        return super().form_valid(form)
+    model = Persons
 
 
 class ShowInfo(DetailView):
     """Return the result"""
     model = Persons
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
+    def get_object(self, queryset=None):
+        if queryset is None:
+            queryset = self.get_queryset()
+
+        pk = self.kwargs.get(self.pk_url_kwarg)
+        slug = self.kwargs.get(self.slug_url_kwarg)
+
+        if pk is not None:
+            queryset = queryset.filter(pk=pk)
+        if slug is not None and (pk is None or self.query_pk_and_slug):
+            slug_field = self.get_slug_field()
+            queryset = queryset.filter(**{slug_field: slug})
+
+        if pk is None and slug is None:
+            raise AttributeError("Error from get_object() method")
+
+        try:
+            obj = queryset.get()
+        except queryset.model.DoesNotExist:
+            raise Http404()
+
+        return obj

@@ -11,14 +11,8 @@
 </head>
 <body>
 
-  {% block content %}
-    {% for i in person %}
-      <p>{{ i.name }}</p>
-    {% endfor %}
-  {% endblock %}
-
     <div id="form_frame">
-        <form action="from-db" method="GET">
+      <form action="persons_list" method="GET">
             {% csrf_token %}
             {{ form }}
             <input type="submit" vlaue="Submit">

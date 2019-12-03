@@ -6,5 +6,5 @@ urlpatterns = [
     path('index', index),
     path('addinfo', addInfo),
     path('getinfo', GetInfo.as_view()),
-    path('<str:slug>', ShowInfo.as_view(), name="from-db")
+    path('<slug:slug>', ShowInfo.as_view(), name='from-db')
 ]
