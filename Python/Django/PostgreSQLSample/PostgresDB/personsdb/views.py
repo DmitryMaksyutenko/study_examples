@@ -1,5 +1,5 @@
 from .forms import GetInfoForm
-from django.shortcuts import render, Http404
+from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import FormView
 from django.views.generic import DetailView
 # from django.shortcuts import get_object_or_404
@@ -31,26 +31,8 @@ class GetInfo(FormView):
 class ShowInfo(DetailView):
     """Return the result"""
     model = Persons
+    context_object_name = 'object'
 
     def get_object(self, queryset=None):
-        if queryset is None:
-            queryset = self.get_queryset()
-
-        pk = self.kwargs.get(self.pk_url_kwarg)
-        slug = self.kwargs.get(self.slug_url_kwarg)
-
-        if pk is not None:
-            queryset = queryset.filter(pk=pk)
-        if slug is not None and (pk is None or self.query_pk_and_slug):
-            slug_field = self.get_slug_field()
-            queryset = queryset.filter(**{slug_field: slug})
-
-        if pk is None and slug is None:
-            raise AttributeError("Error from get_object() method")
-
-        try:
-            obj = queryset.get()
-        except queryset.model.DoesNotExist:
-            raise Http404()
-
-        return obj
+        obj = self.request.GET['name']
+        return get_object_or_404(Persons, name=obj)
