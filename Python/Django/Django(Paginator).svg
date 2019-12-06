@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="471" version="1.1" width="833" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="159" x="294" y="14"/>
+<text font-family="Dialog" font-size="24" x="316" y="39">
+Paginator</text>
+<polygon fill="#ffffc8" points="158,70 594,70 604,80 604,145 158,145 158,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="158,70 594,70 604,80 604,145 158,145 158,70" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="594,70 604,80 594,80 594,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="594,70 604,80 594,80 594,70" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="161" y="85">
+The paginator is a program mechanism for partition the list of the data.</text>
+<text font-family="Dialog" font-size="12" x="161" y="100">
+It is explicitly used in the controllers-functions or in the </text>
+<text font-family="Dialog" font-size="12" x="161" y="115">
+class-based views of a low level. The ListView like views are used </text>
+<text font-family="Dialog" font-size="12" x="161" y="130">
+paginator implicitly.</text>
+<polygon fill="#ffffc8" points="14,174 364,174 374,184 374,437 14,437 14,174" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,174 364,174 374,184 374,437 14,437 14,174" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="364,174 374,184 364,184 364,174" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="364,174 374,184 364,184 364,174" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="189">
+Paginator class:</text>
+<text font-family="Dialog" font-size="12" x="17" y="219">
+django.core.paginator</text>
+<text font-family="Dialog" font-size="12" x="17" y="249">
+Paginator(&lt;list of records&gt;, &lt;count of records in part&gt;[, </text>
+<text font-family="Dialog" font-size="12" x="17" y="264">
+orphads=0] [, allow_empty_first_page=True])</text>
+<text font-family="Dialog" font-size="12" x="17" y="294">
+count - count of all records in all parts of the paginator.</text>
+<text font-family="Dialog" font-size="12" x="17" y="309">
+num_pages - number of parts of the list.</text>
+<text font-family="Dialog" font-size="12" x="17" y="324">
+page_range - iterator returned the numbers of all </text>
+<text font-family="Dialog" font-size="12" x="17" y="339">
+paginator parts.</text>
+<text font-family="Dialog" font-size="12" x="17" y="369">
+get_page(&lt;part number&gt;) - return the Page class </text>
+<text font-family="Dialog" font-size="12" x="17" y="384">
+instance.</text>
+<text font-family="Dialog" font-size="12" x="17" y="399">
+page(&lt;part number&gt;) - return the Page class </text>
+<text font-family="Dialog" font-size="12" x="17" y="414">
+instance of raise an error.</text>
+<polygon fill="#ffffc8" points="414,166 808,166 818,176 818,456 414,456 414,166" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="414,166 808,166 818,176 818,456 414,456 414,166" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="808,166 818,176 808,176 808,166" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="808,166 818,176 808,176 808,166" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="417" y="181">
+Page class:</text>
+<text font-family="Dialog" font-size="12" x="417" y="211">
+django.core.paginator</text>
+<text font-family="Dialog" font-size="12" x="417" y="241">
+object_list - list of records included in the current part. </text>
+<text font-family="Dialog" font-size="12" x="417" y="256">
+number - index of a current paginator part (start from 1).</text>
+<text font-family="Dialog" font-size="12" x="417" y="271">
+paginator - the instance of a paginator that created this part.</text>
+<text font-family="Dialog" font-size="12" x="417" y="301">
+has_next() - return True if the next paginator part is exists.</text>
+<text font-family="Dialog" font-size="12" x="417" y="316">
+has_previous() - return True is the previous paginator </text>
+<text font-family="Dialog" font-size="12" x="417" y="331">
+part is exists.</text>
+<text font-family="Dialog" font-size="12" x="417" y="346">
+has_other_pages() - retur True if next and previous parts </text>
+<text font-family="Dialog" font-size="12" x="417" y="361">
+of a paginator are exists.</text>
+<text font-family="Dialog" font-size="12" x="417" y="376">
+next_page_number() - return number of the next part.</text>
+<text font-family="Dialog" font-size="12" x="417" y="391">
+previous_page_number() - retur number of the previous part.</text>
+<text font-family="Dialog" font-size="12" x="417" y="406">
+start_index() - return the index of the first record presented </text>
+<text font-family="Dialog" font-size="12" x="417" y="421">
+in this part.</text>
+<text font-family="Dialog" font-size="12" x="417" y="436">
+end_index() - return the index of the last record presented </text>
+<text font-family="Dialog" font-size="12" x="417" y="451">
+in this part.</text>
+</svg>
