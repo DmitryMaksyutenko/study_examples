@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="660" version="1.1" width="1204" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="30" stroke="#000000" stroke-width="1" width="223" x="478" y="14"/>
+<text font-family="Dialog" font-size="24" x="479" y="38">
+Forms from model</text>
+<polygon fill="#ffffc8" points="14,30 352,30 362,40 362,157 14,157 14,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,30 352,30 362,40 362,157 14,157 14,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="352,30 362,40 352,40 352,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="352,30 362,40 352,40 352,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="45">
+The form in Django terminology is an entity that</text>
+<text font-family="Dialog" font-size="12" x="17" y="60">
+takes data from the user, and makes validation.</text>
+<text font-family="Dialog" font-size="12" x="17" y="75">
+The form defines a set of separate fields for data input.</text>
+<text font-family="Dialog" font-size="12" x="17" y="90">
+Form from model is different from the regular form </text>
+<text font-family="Dialog" font-size="12" x="17" y="105">
+the representation of any record of the model - </text>
+<text font-family="Dialog" font-size="12" x="17" y="120">
+existing or not.</text>
+<text font-family="Dialog" font-size="12" x="17" y="135">
+Form from model has the save() method</text>
+<polygon fill="#ffffc8" points="14,198 370,198 380,208 380,525 14,525 14,198" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,198 370,198 380,208 380,525 14,525 14,198" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="370,198 380,208 370,208 370,198" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="370,198 380,208 370,208 370,198" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="213">
+django.forms</text>
+<text font-family="Dialog" font-size="12" x="17" y="228">
+modelform_factory( &lt;model&gt; [, fields=None] [,</text>
+<text font-family="Dialog" font-size="12" x="17" y="243">
+ exclude=None] [, labels=None] [, help_texts=None] [,</text>
+<text font-family="Dialog" font-size="12" x="17" y="258">
+ erro_messages=None] [, fields_classes=None] [,</text>
+<text font-family="Dialog" font-size="12" x="17" y="273">
+ widgets=None] [, form=&lt;form from model&gt;] )</text>
+<text font-family="Dialog" font-size="12" x="17" y="303">
+model - refence to Model class.</text>
+<text font-family="Dialog" font-size="12" x="17" y="318">
+fields - list of the fields of model. "_ _all_ _"</text>
+<text font-family="Dialog" font-size="12" x="17" y="333">
+exclude - list of fields of model for excluding.</text>
+<text font-family="Dialog" font-size="12" x="17" y="348">
+"only fields or exclude."</text>
+<text font-family="Dialog" font-size="12" x="17" y="363">
+labels - dictionary {"fieldName": description}</text>
+<text font-family="Dialog" font-size="12" x="17" y="378">
+help_text - additional text for form fields in dictionary.</text>
+<text font-family="Dialog" font-size="12" x="17" y="393">
+error_messages - string error messages in dictionary.</text>
+<text font-family="Dialog" font-size="12" x="17" y="408">
+field_classes - sets field type for form in model field</text>
+<text font-family="Dialog" font-size="12" x="17" y="423">
+relation. Dictionary.</text>
+<text font-family="Dialog" font-size="12" x="17" y="438">
+widgets - sets the management element for dispalying</text>
+<text font-family="Dialog" font-size="12" x="17" y="453">
+on web-page.</text>
+<text font-family="Dialog" font-size="12" x="17" y="468">
+form - sets the form as an example of creating a new one.</text>
+<text font-family="Dialog" font-size="12" x="17" y="498">
+modelform_factory() returns a new Form class ready for</text>
+<text font-family="Dialog" font-size="12" x="17" y="513">
+use as a result.</text>
+<polygon fill="#ffffc8" points="422,54 729,54 739,64 739,245 422,245 422,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="422,54 729,54 739,64 739,245 422,245 422,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="729,54 739,64 729,64 729,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="729,54 739,64 729,64 729,54" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="425" y="69">
+django.forml</text>
+<text font-family="Dialog" font-size="12" x="425" y="84">
+ModelForm class.</text>
+<text font-family="Dialog" font-size="12" x="425" y="114">
+ModelForm declares the Meta class in which </text>
+<text font-family="Dialog" font-size="12" x="425" y="129">
+writes a set of attributes with names like the </text>
+<text font-family="Dialog" font-size="12" x="425" y="144">
+parameters of the modelform_factory() function.</text>
+<text font-family="Dialog" font-size="12" x="425" y="174">
+class FormName(ModelForm):</text>
+<text font-family="Dialog" font-size="12" x="425" y="189">
+    class Meta:</text>
+<text font-family="Dialog" font-size="12" x="425" y="204">
+        model = ModelClassName</text>
+<text font-family="Dialog" font-size="12" x="425" y="219">
+        fields = ('field', 'field', 'field')</text>
+<text font-family="Dialog" font-size="12" x="425" y="234">
+        titile = {'field': 'some label'}</text>
+<polygon fill="#ffffc8" points="414,294 741,294 751,304 751,549 414,549 414,294" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="414,294 741,294 751,304 751,549 414,549 414,294" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="741,294 751,304 741,304 741,294" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="741,294 751,304 741,304 741,294" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="417" y="309">
+Full form definition.</text>
+<text font-family="Dialog" font-size="12" x="417" y="324">
+Allows using all form parameters.</text>
+<text font-family="Dialog" font-size="12" x="417" y="339">
+Creating the attributes in a form class, specify types </text>
+<text font-family="Dialog" font-size="12" x="417" y="354">
+for them as classes with parameters passed in </text>
+<text font-family="Dialog" font-size="12" x="417" y="369">
+constructors.</text>
+<text font-family="Dialog" font-size="12" x="417" y="384">
+The Meta class in which defines the model related to </text>
+<text font-family="Dialog" font-size="12" x="417" y="399">
+form and a list of fields.</text>
+<text font-family="Dialog" font-size="12" x="417" y="429">
+class FormName(ModelForm):</text>
+<text font-family="Dialog" font-size="12" x="417" y="444">
+    attr1 = forms.CharField(label='value')</text>
+<text font-family="Dialog" font-size="12" x="417" y="459">
+    attr2 = forms.CharField(label='value')</text>
+<text font-family="Dialog" font-size="12" x="417" y="474">
+    attr3 = forms.CharField(label='value')</text>
+<text font-family="Dialog" font-size="12" x="417" y="504">
+    class Meta:</text>
+<text font-family="Dialog" font-size="12" x="417" y="519">
+        model = ModelClassName</text>
+<text font-family="Dialog" font-size="12" x="417" y="534">
+        fields = ('attr1', 'attr2', 'attr3')</text>
+<polygon fill="#ffffc8" points="782,38 1179,38 1189,48 1189,389 782,389 782,38" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="782,38 1179,38 1189,48 1189,389 782,389 782,38" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1179,38 1189,48 1179,48 1179,38" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1179,38 1189,48 1179,48 1179,38" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="785" y="53">
+Form validation.</text>
+<text font-family="Dialog" font-size="12" x="785" y="68">
+High-level classes validate the data by themselves.</text>
+<text font-family="Dialog" font-size="12" x="785" y="83">
+Low-level classes of functions require the validation.</text>
+<text font-family="Dialog" font-size="12" x="785" y="113">
+call method is_valid() of from. If data are correct returns True</text>
+<text font-family="Dialog" font-size="12" x="785" y="128">
+if form.is_valid(): do some; else: error</text>
+<text font-family="Dialog" font-size="12" x="785" y="158">
+use 'errors' form attribute. It stores the dictionary with error </text>
+<text font-family="Dialog" font-size="12" x="785" y="173">
+messages.</text>
+<text font-family="Dialog" font-size="12" x="785" y="203">
+cleaned_data - dictionary with form inseted data.</text>
+<text font-family="Dialog" font-size="12" x="785" y="233">
+Use validators:</text>
+<text font-family="Dialog" font-size="12" x="785" y="248">
+from django.core import validators</text>
+<text font-family="Dialog" font-size="12" x="785" y="263">
+class FormName(forms.Form):</text>
+<text font-family="Dialog" font-size="12" x="785" y="278">
+    title = forms.CharField(label='some val', </text>
+<text font-family="Dialog" font-size="12" x="785" y="293">
+         validators=[validators.RegexValidator(regex='^.{4,}$')])</text>
+<text font-family="Dialog" font-size="12" x="785" y="323">
+Method overrides:</text>
+<text font-family="Dialog" font-size="12" x="785" y="338">
+override method clean_&lt;field name&gt;()</text>
+<text font-family="Dialog" font-size="12" x="785" y="368">
+For validate more then one field:</text>
+<text font-family="Dialog" font-size="12" x="785" y="383">
+override clean()</text>
+<polygon fill="#ffffc8" points="782,406 1155,406 1165,416 1165,645 782,645 782,406" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="782,406 1155,406 1165,416 1165,645 782,645 782,406" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1155,406 1165,416 1155,416 1155,406" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1155,406 1165,416 1155,416 1155,406" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="785" y="421">
+Form uotput.</text>
+<text font-family="Dialog" font-size="12" x="785" y="451">
+It template:</text>
+<text font-family="Dialog" font-size="12" x="785" y="466">
+form.as_p</text>
+<text font-family="Dialog" font-size="12" x="785" y="481">
+from.as_ul</text>
+<text font-family="Dialog" font-size="12" x="785" y="496">
+form.as_table (default)</text>
+<text font-family="Dialog" font-size="12" x="785" y="526">
+BounField:</text>
+<text font-family="Dialog" font-size="12" x="785" y="541">
+label_tag</text>
+<text font-family="Dialog" font-size="12" x="785" y="556">
+label</text>
+<text font-family="Dialog" font-size="12" x="785" y="571">
+help-text</text>
+<text font-family="Dialog" font-size="12" x="785" y="586">
+errors</text>
+<text font-family="Dialog" font-size="12" x="785" y="601">
+is_hidden</text>
+<text font-family="Dialog" font-size="12" x="785" y="616">
+visible_fields</text>
+<text font-family="Dialog" font-size="12" x="785" y="631">
+hidden_fields</text>
+</svg>
