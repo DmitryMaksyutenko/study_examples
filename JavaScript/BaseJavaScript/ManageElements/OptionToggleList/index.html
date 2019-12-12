@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body onload="set()">
+
+  <p id="sampleText">
+  Used font <span id="font"></span>, style<span id="style"></span>, size<span
+                                                 id="size"><span>, color
+                                                   <span id="color"></span>
+  </p>
+
+  <table style="width:100%;">
+    <tr>
+
+      <td>
+        <b>Font style</b><br>
+        <input type="checkbox" id="boldFont">Bold font<br>
+        <input type="checkbox" id="italicFont">Italic font<br>
+      </td>
+
+      <td>
+        <b>Font Family</b><br>
+        <input type="radio" name="fontFamily" value="Times New Roman">Font
+        Family<br>
+        <input type="radio" name="fontFamily" value="Arial">Arial<br>
+        <input type="radio" name="fontFamily" value="Courier New">Courier
+        New<br>
+      </td>
+
+      <td>
+        <b>Font size</b><br>
+        <select id="fontSize" style="font-size:11pt; font-weight:900;" size="1">
+          <option value="15">15</option>
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+          <option value="25">25</option>
+        </select><br><br>
+
+        <select id="fontColor" style="font-size:12pt;">
+          <option value="red">red</option>
+          <option value="blue">blue</option>
+          <option value="green">gteen</option>
+        </select>
+      </td>
+
+    </tr>
+  </table>
+
+  <script type="text/javascript" src="elements.js"></script>
+</body>
+</html>

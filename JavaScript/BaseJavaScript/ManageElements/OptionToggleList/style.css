@@ -1,0 +1,16 @@
+td {
+  width: 30%;
+  background-color: #fcfcfc;
+  vertical-align: top;
+  border-style: ridge;
+  font-size: 15pt;
+  padding:10px;
+}
+
+#sampleText {
+  border: outset;
+  border-width: 5px;
+  text-align: center;
+  border-color: gray;
+  padding: 20px;
+}
