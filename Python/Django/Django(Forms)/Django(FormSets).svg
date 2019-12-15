@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="490" version="1.1" width="1026" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="159" x="406" y="14"/>
+<text font-family="Dialog" font-size="24" x="429" y="39">
+FormSets</text>
+<polygon fill="#ffffc8" points="14,22 311,22 321,32 321,89 14,89 14,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,22 311,22 321,32 321,89 14,89 14,22" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="311,22 321,32 311,32 311,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="311,22 321,32 311,32 311,22" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="37">
+The formset allows work with several records </text>
+<text font-family="Dialog" font-size="12" x="17" y="52">
+of the model. It looks like a group of forms </text>
+<text font-family="Dialog" font-size="12" x="17" y="67">
+displayed after each other and shows data </text>
+<text font-family="Dialog" font-size="12" x="17" y="82">
+of one record.</text>
+<polygon fill="#ffffc8" points="14,110 417,110 427,120 427,475 14,475 14,110" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,110 417,110 427,120 427,475 14,475 14,110" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="417,110 427,120 417,120 417,110" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="417,110 427,120 417,120 417,110" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="125">
+Use the class factory from django.forms named </text>
+<text font-family="Dialog" font-size="12" x="17" y="140">
+modelform_factory() for creation formset.</text>
+<text font-family="Dialog" font-size="12" x="17" y="155">
+modelform_factory(&lt;model&gt; [, form=&lt;form related to model&gt;] </text>
+<text font-family="Dialog" font-size="12" x="17" y="170">
+[, fields=None] [, exclude=None] [, labels=None] </text>
+<text font-family="Dialog" font-size="12" x="17" y="185">
+[, help_texts=None] [, error_messages=None] </text>
+<text font-family="Dialog" font-size="12" x="17" y="200">
+[, field_class=None] [, widgets=None] [, extra=1] </text>
+<text font-family="Dialog" font-size="12" x="17" y="215">
+[, can_order=False] [, can_delete=False] </text>
+<text font-family="Dialog" font-size="12" x="17" y="230">
+[, min_num=None] [, validate_min=None] </text>
+<text font-family="Dialog" font-size="12" x="17" y="245">
+[, max_num=None] [, validate_max=False] </text>
+<text font-family="Dialog" font-size="12" x="17" y="260">
+[, formset=&lt;formset&gt;])</text>
+<text font-family="Dialog" font-size="12" x="17" y="290">
+model - model related.</text>
+<text font-family="Dialog" font-size="12" x="17" y="305">
+form - form related to model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="320">
+fields - list of fields names included automatically.</text>
+<text font-family="Dialog" font-size="12" x="17" y="335">
+exclude - list of fields names excluded automatically.</text>
+<text font-family="Dialog" font-size="12" x="17" y="350">
+labels - dictionary {'form fields': 'records for them'}.</text>
+<text font-family="Dialog" font-size="12" x="17" y="365">
+help_text - additional parameter.</text>
+<text font-family="Dialog" font-size="12" x="17" y="380">
+error_messages - string error messages.</text>
+<text font-family="Dialog" font-size="12" x="17" y="395">
+field_classes - types of fields of model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="410">
+widgets - management elements.</text>
+<text font-family="Dialog" font-size="12" x="17" y="425">
+extra - number of empty forms.</text>
+<text font-family="Dialog" font-size="12" x="17" y="455">
+only form, fields, exclude.</text>
+<text font-family="Dialog" font-size="12" x="17" y="470">
+.... </text>
+<polygon fill="#ffffc8" points="598,22 939,22 949,32 949,253 598,253 598,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="598,22 939,22 949,32 949,253 598,253 598,22" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="939,22 949,32 939,32 939,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="939,22 949,32 939,32 939,22" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="601" y="37">
+Self forms handling required when used the formset.</text>
+<text font-family="Dialog" font-size="12" x="601" y="67">
+When GET-request received, we need to create an </text>
+<text font-family="Dialog" font-size="12" x="601" y="82">
+instance of formset. Add it to the context of a template </text>
+<text font-family="Dialog" font-size="12" x="601" y="97">
+and made a render.</text>
+<text font-family="Dialog" font-size="12" x="601" y="112">
+modelfrom_factory() return a ModelForm class</text>
+<text font-family="Dialog" font-size="12" x="601" y="127">
+for the given model. Use the ModelForm class f</text>
+<text font-family="Dialog" font-size="12" x="601" y="142">
+or creating an instance of formset.</text>
+<text font-family="Dialog" font-size="12" x="601" y="172">
+When form filled user send POST-request to the </text>
+<text font-family="Dialog" font-size="12" x="601" y="187">
+server with form data.</text>
+<text font-family="Dialog" font-size="12" x="601" y="202">
+We need to create formset repeatedly.</text>
+<text font-family="Dialog" font-size="12" x="601" y="217">
+It created the same way but with 'requset.POST' </text>
+<text font-family="Dialog" font-size="12" x="601" y="232">
+dictionary as parameter.</text>
+<polygon fill="#ffffc8" points="590,302 1001,302 1011,312 1011,469 590,469 590,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="590,302 1001,302 1011,312 1011,469 590,469 590,302" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1001,302 1011,312 1001,312 1001,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1001,302 1011,312 1001,312 1001,302" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="593" y="317">
+Imbedded forms used for work with records of secondary model. </text>
+<text font-family="Dialog" font-size="12" x="593" y="347">
+inlinefonnset_factory(&lt;prime model&gt;, &lt;secondary model&gt;[,</text>
+<text font-family="Dialog" font-size="12" x="593" y="362">
+fonn=&lt;related form&gt;][,fk_name=None] </text>
+<text font-family="Dialog" font-size="12" x="593" y="377">
+[, fields=None] [, exclude=None] [, labels=None] </text>
+<text font-family="Dialog" font-size="12" x="593" y="392">
+[, help_texts=None] [, error_messages=None] </text>
+<text font-family="Dialog" font-size="12" x="593" y="407">
+[, field_classes=None] [, widgets=None] </text>
+<text font-family="Dialog" font-size="12" x="593" y="422">
+[, extra=З] [, can_order=False] [, can_delete=True] </text>
+<text font-family="Dialog" font-size="12" x="593" y="437">
+[, min_num=None] [, validate_min=False] [, max_num=None] </text>
+<text font-family="Dialog" font-size="12" x="593" y="452">
+[, validate_max=False] [, fonnset=&lt;related formsets&gt;])</text>
+</svg>
