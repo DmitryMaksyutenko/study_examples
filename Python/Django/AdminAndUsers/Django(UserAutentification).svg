@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="627" version="1.1" width="1044" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="271" x="422" y="14"/>
+<text font-family="Dialog" font-size="24" x="439" y="39">
+User autentification</text>
+<polygon fill="#ffffc8" points="14,14 372,14 382,24 382,349 14,349 14,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,14 372,14 382,24 382,349 14,349 14,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="372,14 382,24 372,24 372,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="372,14 382,24 372,24 372,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="29">
+Before subsystem use, make migration procedure.</text>
+<text font-family="Dialog" font-size="12" x="17" y="44">
+Subsystem settings are written in module settings.py</text>
+<text font-family="Dialog" font-size="12" x="17" y="59">
+Required next middleware and applications:</text>
+<text font-family="Dialog" font-size="12" x="17" y="89">
+INSTALLED_AAPS</text>
+<text font-family="Dialog" font-size="12" x="17" y="104">
+djangol.contrib.auth</text>
+<text font-family="Dialog" font-size="12" x="17" y="119">
+django.contrib.contenttypes</text>
+<text font-family="Dialog" font-size="12" x="17" y="149">
+MIDDLEWARE</text>
+<text font-family="Dialog" font-size="12" x="17" y="164">
+django.contrib.sessions.middleware.SessionMiddleware</text>
+<text font-family="Dialog" font-size="12" x="17" y="179">
+django.contrib.auth.middleware.AuthenticationMIddleware</text>
+<text font-family="Dialog" font-size="12" x="17" y="209">
+Parameters</text>
+<text font-family="Dialog" font-size="12" x="17" y="224">
+LOGIN_URL - address for redirection after login </text>
+<text font-family="Dialog" font-size="12" x="17" y="239">
+not authorized users.</text>
+<text font-family="Dialog" font-size="12" x="17" y="254">
+LOGIN_REDIRECT_URL - address for success </text>
+<text font-family="Dialog" font-size="12" x="17" y="269">
+redirect after login.</text>
+<text font-family="Dialog" font-size="12" x="17" y="284">
+LOGOUT_REDIRECT_URL - address for redirection </text>
+<text font-family="Dialog" font-size="12" x="17" y="299">
+after logout.</text>
+<text font-family="Dialog" font-size="12" x="17" y="314">
+PASSWORD_RESET_TIMEOT_DAYS - days count </text>
+<text font-family="Dialog" font-size="12" x="17" y="329">
+valid for a password reset.</text>
+<polygon fill="#ffffc8" points="14,374 379,374 389,384 389,514 14,514 14,374" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,374 379,374 389,384 389,514 14,514 14,374" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="379,374 389,384 379,384 379,374" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="379,374 389,384 379,384 379,374" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="389">
+Superuser is the user that has permissions for all data </text>
+<text font-family="Dialog" font-size="12" x="17" y="404">
+including the list of users.</text>
+<text font-family="Dialog" font-size="12" x="17" y="434">
+creation command</text>
+<text font-family="Dialog" font-size="12" x="17" y="449">
+manage.py createsuperuser [--username]</text>
+<text font-family="Dialog" font-size="12" x="17" y="464">
+[--email]</text>
+<text font-family="Dialog" font-size="12" x="17" y="494">
+command for password changing</text>
+<text font-family="Dialog" font-size="12" x="17" y="509">
+manage.py changepassword [&lt;username&gt;]</text>
+<polygon fill="#ffffc8" points="430,70 691,70 701,80 701,277 430,277 430,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="430,70 691,70 701,80 701,277 430,277 430,70" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="691,70 701,80 691,80 691,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="691,70 701,80 691,80 691,70" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="433" y="85">
+Site entering</text>
+<text font-family="Dialog" font-size="12" x="433" y="100">
+django.contrib.auth.views</text>
+<text font-family="Dialog" font-size="12" x="433" y="130">
+LoginView</text>
+<text font-family="Dialog" font-size="12" x="433" y="145">
+Inherited from FormView, realizes the </text>
+<text font-family="Dialog" font-size="12" x="433" y="160">
+authorization on the website.</text>
+<text font-family="Dialog" font-size="12" x="433" y="190">
+When GET requests received, displayed </text>
+<text font-family="Dialog" font-size="12" x="433" y="205">
+the login form.</text>
+<text font-family="Dialog" font-size="12" x="433" y="220">
+When POST request received, searches </text>
+<text font-family="Dialog" font-size="12" x="433" y="235">
+for the user in a list of users. If search </text>
+<text font-family="Dialog" font-size="12" x="433" y="250">
+success makes redirection or raises the </text>
+<text font-family="Dialog" font-size="12" x="433" y="265">
+exception.</text>
+<polygon fill="#ffffc8" points="430,302 691,302 701,312 701,445 430,445 430,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="430,302 691,302 701,312 701,445 430,445 430,302" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="691,302 701,312 691,312 691,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="691,302 701,312 691,312 691,302" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="433" y="317">
+Website logout</text>
+<text font-family="Dialog" font-size="12" x="433" y="332">
+django.contrib.auth.views</text>
+<text font-family="Dialog" font-size="12" x="433" y="362">
+LogoutView</text>
+<text font-family="Dialog" font-size="12" x="433" y="377">
+Inherited from TemplateView</text>
+<text font-family="Dialog" font-size="12" x="433" y="407">
+When GET requests received, the user </text>
+<text font-family="Dialog" font-size="12" x="433" y="422">
+logout.</text>
+<text font-family="Dialog" font-size="12" x="433" y="437">
+And will be redirected to URL.</text>
+<polygon fill="#ffffc8" points="734,22 1019,22 1029,32 1029,612 734,612 734,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="734,22 1019,22 1029,32 1029,612 734,612 734,22" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1019,22 1029,32 1019,32 1019,22" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1019,22 1029,32 1019,32 1019,22" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="737" y="37">
+PsswordChangeView</text>
+<text font-family="Dialog" font-size="12" x="737" y="67">
+Inherited from FormView</text>
+<text font-family="Dialog" font-size="12" x="737" y="82">
+When GET requests received, displayes </text>
+<text font-family="Dialog" font-size="12" x="737" y="97">
+the form of password restore.</text>
+<text font-family="Dialog" font-size="12" x="737" y="112">
+When POST requests received, it saves </text>
+<text font-family="Dialog" font-size="12" x="737" y="127">
+the new password and redirects a user.</text>
+<text font-family="Dialog" font-size="12" x="737" y="157">
+PasswordChangeDoneView</text>
+<text font-family="Dialog" font-size="12" x="737" y="187">
+Inherited from TemplateView</text>
+<text font-family="Dialog" font-size="12" x="737" y="202">
+Just displays the page of success </text>
+<text font-family="Dialog" font-size="12" x="737" y="217">
+password change.</text>
+<text font-family="Dialog" font-size="12" x="737" y="247">
+PsswordResetView</text>
+<text font-family="Dialog" font-size="12" x="737" y="277">
+Inherited from FormView</text>
+<text font-family="Dialog" font-size="12" x="737" y="292">
+Initializes the password reset</text>
+<text font-family="Dialog" font-size="12" x="737" y="307">
+When GET requests received, displays the </text>
+<text font-family="Dialog" font-size="12" x="737" y="322">
+form required an email address.</text>
+<text font-family="Dialog" font-size="12" x="737" y="337">
+After POST requests received, checks the </text>
+<text font-family="Dialog" font-size="12" x="737" y="352">
+user in the user list, if it presents sends the </text>
+<text font-family="Dialog" font-size="12" x="737" y="367">
+mail with a link into the page of the </text>
+<text font-family="Dialog" font-size="12" x="737" y="382">
+password reset.</text>
+<text font-family="Dialog" font-size="12" x="737" y="412">
+PasswordResetDoneView</text>
+<text font-family="Dialog" font-size="12" x="737" y="442">
+Inherited from TemplateView</text>
+<text font-family="Dialog" font-size="12" x="737" y="457">
+Displays the page of success mail sending.</text>
+<text font-family="Dialog" font-size="12" x="737" y="487">
+PasswordResetConfirmView</text>
+<text font-family="Dialog" font-size="12" x="737" y="517">
+Inherited from Formview, does the </text>
+<text font-family="Dialog" font-size="12" x="737" y="532">
+password reset.</text>
+<text font-family="Dialog" font-size="12" x="737" y="562">
+PasswordResetCompleteView</text>
+<text font-family="Dialog" font-size="12" x="737" y="592">
+Inherited from TemplateView, displays </text>
+<text font-family="Dialog" font-size="12" x="737" y="607">
+page of success password reset.</text>
+</svg>
