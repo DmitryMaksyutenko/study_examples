@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="548" version="1.1" width="892" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="303" x="94" y="46"/>
+<text font-family="Dialog" font-size="24" x="107" y="71">
+User and Authorization</text>
+<polygon fill="#ffffc8" points="14,158 318,158 328,168 328,529 14,529 14,158" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,158 318,158 328,168 328,529 14,529 14,158" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="318,158 328,168 318,168 318,158" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="318,158 328,168 318,168 318,158" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="173">
+Any registered user in Django presents as a User </text>
+<text font-family="Dialog" font-size="12" x="17" y="188">
+class entity from django.cntrib.auth.models.</text>
+<text font-family="Dialog" font-size="12" x="17" y="203">
+This class is a model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="233">
+It possible to get access to an entity with:</text>
+<text font-family="Dialog" font-size="12" x="17" y="248">
+In view function via "user" attribute of "request".</text>
+<text font-family="Dialog" font-size="12" x="17" y="263">
+In template via "user" variable created by </text>
+<text font-family="Dialog" font-size="12" x="17" y="278">
+context handler</text>
+<text font-family="Dialog" font-size="12" x="17" y="293">
+django.contrib.auth.context_processor.auth.</text>
+<text font-family="Dialog" font-size="12" x="17" y="323">
+User class attributes:</text>
+<text font-family="Dialog" font-size="12" x="17" y="338">
+is_authenticated</text>
+<text font-family="Dialog" font-size="12" x="17" y="353">
+is_anonymous</text>
+<text font-family="Dialog" font-size="12" x="17" y="368">
+is_active</text>
+<text font-family="Dialog" font-size="12" x="17" y="383">
+username</text>
+<text font-family="Dialog" font-size="12" x="17" y="398">
+password</text>
+<text font-family="Dialog" font-size="12" x="17" y="413">
+email</text>
+<text font-family="Dialog" font-size="12" x="17" y="428">
+...</text>
+<text font-family="Dialog" font-size="12" x="17" y="458">
+User class methods:</text>
+<text font-family="Dialog" font-size="12" x="17" y="473">
+has_perm(&lt;permission&gt;)</text>
+<text font-family="Dialog" font-size="12" x="17" y="488">
+get_username()</text>
+<text font-family="Dialog" font-size="12" x="17" y="503">
+get_full_name()</text>
+<text font-family="Dialog" font-size="12" x="17" y="518">
+get_short_name()</text>
+<polygon fill="#ffffc8" points="462,14 779,14 789,24 789,101 462,101 462,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="462,14 779,14 789,24 789,101 462,101 462,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="779,14 789,24 779,24 779,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="779,14 789,24 779,24 779,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="465" y="29">
+Authorization</text>
+<text font-family="Dialog" font-size="12" x="465" y="59">
+Makes part of website content not allowed to users </text>
+<text font-family="Dialog" font-size="12" x="465" y="74">
+of a different types.</text>
+<polygon fill="#ffffc8" points="390,150 867,150 877,160 877,533 390,533 390,150" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="390,150 867,150 877,160 877,533 390,533 390,150" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="867,150 877,160 867,160 867,150" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="867,150 877,160 867,160 867,150" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="393" y="165">
+Imperative approach.</text>
+<text font-family="Dialog" font-size="12" x="393" y="180">
+It is the simplest way.</text>
+<text font-family="Dialog" font-size="12" x="393" y="195">
+Just tell Django what to do if user is not logged</text>
+<text font-family="Dialog" font-size="12" x="393" y="210">
+or has fewer permissions.</text>
+<text font-family="Dialog" font-size="12" x="393" y="240">
+The declarative way is more useful.</text>
+<text font-family="Dialog" font-size="12" x="393" y="255">
+Say Django, allows the users that passed the criteria.</text>
+<text font-family="Dialog" font-size="12" x="393" y="270">
+That approach realized with decorators from</text>
+<text font-family="Dialog" font-size="12" x="393" y="285">
+django.contrib.auth.decorators:</text>
+<text font-family="Dialog" font-size="12" x="393" y="315">
+login_required([redirect_field_name][, login_url])</text>
+<text font-family="Dialog" font-size="12" x="393" y="330">
+user_passes_test(&lt;function for check&gt;, [redirect_field_name][, login_url])</text>
+<text font-family="Dialog" font-size="12" x="393" y="345">
+permission_required(&lt;permissions&gt;[,raise_exception][,login_url])</text>
+<text font-family="Dialog" font-size="12" x="393" y="375">
+Realize the declaration approach with the class-based views</text>
+<text font-family="Dialog" font-size="12" x="393" y="390">
+with mixins from django.contrib.auth.mixins</text>
+<text font-family="Dialog" font-size="12" x="393" y="405">
+That classes inherited from AccessMixin class.</text>
+<text font-family="Dialog" font-size="12" x="393" y="435">
+Templates authorization:</text>
+<text font-family="Dialog" font-size="12" x="393" y="450">
+If in settings.py inside TEMPLATES in OPTIONS context_processor</text>
+<text font-family="Dialog" font-size="12" x="393" y="465">
+assigned django.contrib.auth.context_processor.auth</text>
+<text font-family="Dialog" font-size="12" x="393" y="480">
+It will add to the context of each template the "user", "perms" </text>
+<text font-family="Dialog" font-size="12" x="393" y="495">
+variables store the current user and its permissions.</text>
+</svg>
