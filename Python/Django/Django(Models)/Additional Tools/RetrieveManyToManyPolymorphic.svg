@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="428" version="1.1" width="1228" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="607" x="310" y="14"/>
+<text font-family="Dialog" font-size="24" x="335" y="39">
+Retrieve, Many-to-many, Polymorphic relation</text>
+<polygon fill="#ffffc8" points="14,86 387,86 397,96 397,413 14,413 14,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,86 387,86 397,96 397,413 14,413 14,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="387,86 397,96 387,96 387,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="387,86 397,96 387,96 387,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="101">
+Management of retrieve, from the model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="116">
+These methods are increasing the performance.</text>
+<text font-family="Dialog" font-size="12" x="17" y="131">
+Of QuerySet and Manager.</text>
+<text font-family="Dialog" font-size="12" x="17" y="161">
+select_related(&lt;foreign key 1&gt;,&lt;foreign key 2 &gt;,...) - </text>
+<text font-family="Dialog" font-size="12" x="17" y="176">
+used with the secondary model, retrieve one record </text>
+<text font-family="Dialog" font-size="12" x="17" y="191">
+of the prime model in case of one-to-many relation, </text>
+<text font-family="Dialog" font-size="12" x="17" y="206">
+or used in case of one-to-one relation.</text>
+<text font-family="Dialog" font-size="12" x="17" y="236">
+prefetch_related(&lt;relation 1&gt;,&lt;relation 2&gt;,&lt;relation 3&gt;...) -</text>
+<text font-family="Dialog" font-size="12" x="17" y="251">
+used with a prime model for retrieving all related secondary </text>
+<text font-family="Dialog" font-size="12" x="17" y="266">
+records in a one-to-many relation. Or in many-to-many.</text>
+<text font-family="Dialog" font-size="12" x="17" y="296">
+class Prefetch(&lt;relation&gt; [, QuerySet][, to_attr=None]) - </text>
+<text font-family="Dialog" font-size="12" x="17" y="311">
+stores all data for retrieving.</text>
+<text font-family="Dialog" font-size="12" x="17" y="341">
+defer(&lt;field name 1&gt;,&lt;field name 2&gt;,&lt;field name 3&gt;...) - </text>
+<text font-family="Dialog" font-size="12" x="17" y="356">
+Dont retreives the passed fields from model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="386">
+only(&lt;field name 1&gt;,&lt;field name 2&gt;,&lt;field name 3&gt;...) -</text>
+<text font-family="Dialog" font-size="12" x="17" y="401">
+Retrieve only specifying fields.</text>
+<polygon fill="#ffffc8" points="414,94 796,94 806,104 806,277 414,277 414,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="414,94 796,94 806,104 806,277 414,277 414,94" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="796,94 806,104 796,104 796,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="796,94 806,104 796,104 796,94" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="417" y="109">
+Many-to-many with additional data:</text>
+<text font-family="Dialog" font-size="12" x="417" y="139">
+1) Create the model for binding. Create in that model fields of </text>
+<text font-family="Dialog" font-size="12" x="417" y="154">
+ForeignKey for the prime and secondary models. Fields for </text>
+<text font-family="Dialog" font-size="12" x="417" y="169">
+additional data.</text>
+<text font-family="Dialog" font-size="12" x="417" y="199">
+2) Create in the primary model field of ManyToMany type for </text>
+<text font-family="Dialog" font-size="12" x="417" y="214">
+connection with the secondary model. Specify a secondary </text>
+<text font-family="Dialog" font-size="12" x="417" y="229">
+model in the parameter  "through". In the "through_fields" </text>
+<text font-family="Dialog" font-size="12" x="417" y="244">
+parameter specify the field of the prime model and the </text>
+<text font-family="Dialog" font-size="12" x="417" y="259">
+secondary model to create the relation.  </text>
+<polygon fill="#ffffc8" points="830,86 1203,86 1213,96 1213,317 830,317 830,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="830,86 1203,86 1213,96 1213,317 830,317 830,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1203,86 1213,96 1203,96 1203,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1203,86 1213,96 1203,96 1203,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="833" y="101">
+Polymorphic or general relation - is the relation that allows </text>
+<text font-family="Dialog" font-size="12" x="833" y="116">
+binding the secondary model with any model in application.</text>
+<text font-family="Dialog" font-size="12" x="833" y="146">
+INSTALLED_APPS += django.contrib.contenttypes</text>
+<text font-family="Dialog" font-size="12" x="833" y="176">
+As one-to-many relation, but with additional fields </text>
+<text font-family="Dialog" font-size="12" x="833" y="191">
+in a secondary model: FoeignKey type field that </text>
+<text font-family="Dialog" font-size="12" x="833" y="206">
+points to the ContentType model.</text>
+<text font-family="Dialog" font-size="12" x="833" y="221">
+object_id = models.PositiveIntegerField() - for foreingn key.</text>
+<text font-family="Dialog" font-size="12" x="833" y="236">
+polymorphic = GenericForeignKey()</text>
+<text font-family="Dialog" font-size="12" x="833" y="266">
+GenericRelation() class used in case access from the prime </text>
+<text font-family="Dialog" font-size="12" x="833" y="281">
+model to secondary in polymorphic relation.</text>
+</svg>
