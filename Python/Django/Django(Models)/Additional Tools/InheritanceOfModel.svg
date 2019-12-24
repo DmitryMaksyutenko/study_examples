@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="380" version="1.1" width="1215" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="30" stroke="#000000" stroke-width="1" width="251" x="438" y="14"/>
+<text font-family="Dialog" font-size="24" x="439" y="38">
+Inheritance of model</text>
+<polygon fill="#ffffc8" points="14,14 364,14 374,24 374,365 14,365 14,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,14 364,14 374,24 374,365 14,365 14,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="364,14 374,24 364,24 364,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="364,14 374,24 364,24 364,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="29">
+Multi-table inheritance:</text>
+<text font-family="Dialog" font-size="12" x="17" y="44">
+It is a simple inheritance of any model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="59">
+Django will create the tables of base class and child </text>
+<text font-family="Dialog" font-size="12" x="17" y="74">
+in a database.</text>
+<text font-family="Dialog" font-size="12" x="17" y="89">
+It creates a one-to-one relationship between them.</text>
+<text font-family="Dialog" font-size="12" x="17" y="104">
+The base model will be a main and child is secondary.</text>
+<text font-family="Dialog" font-size="12" x="17" y="119">
+It creates the field &lt;main model name&gt;_ptr in a </text>
+<text font-family="Dialog" font-size="12" x="17" y="134">
+secondary model, that defines the one-to-one relation.</text>
+<text font-family="Dialog" font-size="12" x="17" y="164">
+Used for creation in base an entities with the same </text>
+<text font-family="Dialog" font-size="12" x="17" y="179">
+fields. The inheritance from the base class allows </text>
+<text font-family="Dialog" font-size="12" x="17" y="194">
+specifying the class with unique field.</text>
+<text font-family="Dialog" font-size="12" x="17" y="224">
+class Base(models.Model):</text>
+<text font-family="Dialog" font-size="12" x="17" y="239">
+    base_var = models.CharField()</text>
+<text font-family="Dialog" font-size="12" x="17" y="284">
+class Inherited(Base):</text>
+<text font-family="Dialog" font-size="12" x="17" y="299">
+    spec_var = models.CharField()</text>
+<text font-family="Dialog" font-size="12" x="17" y="314">
+    parent_link = models.OneToOneField(Base, </text>
+<text font-family="Dialog" font-size="12" x="17" y="329">
+                                  on_delete=rnodels.CASCADE,</text>
+<text font-family="Dialog" font-size="12" x="17" y="344">
+                                  parent_link=True)</text>
+<polygon fill="#ffffc8" points="782,30 1190,30 1200,40 1200,325 782,325 782,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="782,30 1190,30 1200,40 1200,325 782,325 782,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1190,30 1200,40 1190,40 1190,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1190,30 1200,40 1190,40 1190,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="785" y="45">
+Abstract base classes:</text>
+<text font-family="Dialog" font-size="12" x="785" y="60">
+Defines the abstract field inside the nested Meta class as True.</text>
+<text font-family="Dialog" font-size="12" x="785" y="75">
+For abstract base model does not create the table in the database.</text>
+<text font-family="Dialog" font-size="12" x="785" y="90">
+Fields inherited from the base class can be overridden or deleted.</text>
+<text font-family="Dialog" font-size="12" x="785" y="105">
+The Meta class fields of the base class are not inherited as default.</text>
+<text font-family="Dialog" font-size="12" x="785" y="135">
+class Base(models.Model):</text>
+<text font-family="Dialog" font-size="12" x="785" y="150">
+   base_var = models.CharField()</text>
+<text font-family="Dialog" font-size="12" x="785" y="180">
+   class Meta():</text>
+<text font-family="Dialog" font-size="12" x="785" y="195">
+       abstract = True</text>
+<text font-family="Dialog" font-size="12" x="785" y="240">
+class Inherited():</text>
+<text font-family="Dialog" font-size="12" x="785" y="255">
+    base_var = None</text>
+<text font-family="Dialog" font-size="12" x="785" y="270">
+    new_var = models.Charfield()</text>
+<text font-family="Dialog" font-size="12" x="785" y="300">
+   class Meta(Base.Meta):</text>
+<text font-family="Dialog" font-size="12" x="785" y="315">
+       pass </text>
+<polygon fill="#ffffc8" points="414,70 731,70 741,80 741,269 414,269 414,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="414,70 731,70 741,80 741,269 414,269 414,70" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="731,70 741,80 731,80 731,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="731,70 741,80 731,80 731,70" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="417" y="85">
+Proxy models:</text>
+<text font-family="Dialog" font-size="12" x="417" y="100">
+Used for extension of the base class model and </text>
+<text font-family="Dialog" font-size="12" x="417" y="115">
+overriding its behavior.</text>
+<text font-family="Dialog" font-size="12" x="417" y="130">
+Creating inside Meta class of the inherited model, </text>
+<text font-family="Dialog" font-size="12" x="417" y="145">
+field proxy = Ture</text>
+<text font-family="Dialog" font-size="12" x="417" y="160">
+In database does not create any table for the </text>
+<text font-family="Dialog" font-size="12" x="417" y="175">
+proxy model. All data stores in the base model.</text>
+<text font-family="Dialog" font-size="12" x="417" y="205">
+class Proxy(Base):</text>
+<text font-family="Dialog" font-size="12" x="417" y="220">
+    class Meta:</text>
+<text font-family="Dialog" font-size="12" x="417" y="235">
+        proxy = True</text>
+<text font-family="Dialog" font-size="12" x="417" y="250">
+        ordering = ['-value']</text>
+</svg>
