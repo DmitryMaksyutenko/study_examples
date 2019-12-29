@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="516" version="1.1" width="844" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="319" x="294" y="14"/>
+<text font-family="Dialog" font-size="24" x="344" y="39">
+Custom Managers</text>
+<polygon fill="#ffffc8" points="14,62 395,62 405,72 405,501 14,501 14,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,62 395,62 405,72 405,501 14,501 14,62" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="395,62 405,72 395,72 395,62" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="395,62 405,72 395,72 395,62" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="77">
+A manager is an object which used for query operations </text>
+<text font-family="Dialog" font-size="12" x="17" y="92">
+to database. At least one Manager exists for every model. </text>
+<text font-family="Dialog" font-size="12" x="17" y="107">
+It stored in the "objects" attribute of the model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="137">
+The creation of the self Managers of the models is a simple </text>
+<text font-family="Dialog" font-size="12" x="17" y="152">
+inheritance of the Manager class. </text>
+<text font-family="Dialog" font-size="12" x="17" y="167">
+Override the get_queryset() method of manager.</text>
+<text font-family="Dialog" font-size="12" x="17" y="197">
+class MyManager(models.Manager):</text>
+<text font-family="Dialog" font-size="12" x="17" y="212">
+    def get_queryset(self):</text>
+<text font-family="Dialog" font-size="12" x="17" y="227">
+        return super().get_queryset().order_by()</text>
+<text font-family="Dialog" font-size="12" x="17" y="257">
+Use the base get_queryset() method for retrieving </text>
+<text font-family="Dialog" font-size="12" x="17" y="272">
+the initial QuerySet.</text>
+<text font-family="Dialog" font-size="12" x="17" y="302">
+It makes sense to add additional methods to </text>
+<text font-family="Dialog" font-size="12" x="17" y="317">
+customed manager.</text>
+<text font-family="Dialog" font-size="12" x="17" y="347">
+Customed manager can be assigned to the "objects" </text>
+<text font-family="Dialog" font-size="12" x="17" y="362">
+attribute of the model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="392">
+objects = MyManager()</text>
+<text font-family="Dialog" font-size="12" x="17" y="422">
+Or the custom manager may be additional in model.</text>
+<text font-family="Dialog" font-size="12" x="17" y="452">
+objects = models.Manager()</text>
+<text font-family="Dialog" font-size="12" x="17" y="467">
+additional_manager = MyManager()</text>
+<polygon fill="#ffffc8" points="454,70 819,70 829,80 829,301 454,301 454,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="454,70 819,70 829,80 829,301 454,301 454,70" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="819,70 829,80 819,80 819,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="819,70 829,80 819,80 819,70" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="457" y="85">
+Custom QuerySet used for extra methods with for example </text>
+<text font-family="Dialog" font-size="12" x="457" y="100">
+(often and multiple times used filtration conditions, </text>
+<text font-family="Dialog" font-size="12" x="457" y="115">
+sorts, computations).</text>
+<text font-family="Dialog" font-size="12" x="457" y="145">
+class MyQuerySet(models.QuerySet):</text>
+<text font-family="Dialog" font-size="12" x="457" y="160">
+    def get_field(self, val):</text>
+<text font-family="Dialog" font-size="12" x="457" y="175">
+        return self.annotate(id=val)</text>
+<text font-family="Dialog" font-size="12" x="457" y="205">
+Django provides the two fabrik of classes that create </text>
+<text font-family="Dialog" font-size="12" x="457" y="220">
+classes of dispatchers of records on models records base.</text>
+<text font-family="Dialog" font-size="12" x="457" y="250">
+as_manager()</text>
+<text font-family="Dialog" font-size="12" x="457" y="265">
+from_queryset(&lt;custom class QuerySet&gt;)</text>
+</svg>
