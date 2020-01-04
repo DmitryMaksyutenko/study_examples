@@ -1,0 +1,13 @@
+{% extends 'base_reg.html' %}
+
+{% block context %}
+
+  <a class="a_info" href="{% url "index-page" %}">Return</a>
+  <br>
+  <br>
+
+  <p>Information about {{ name }}</p>
+  <br>
+  <p id="content">{{ content.name }} {{ content.region }} {{ content.population }}</p>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+body {
+  background: #f0ffff;
+}
+
+#index_p {
+  text-align: center;
+  font-size: 36px;
+  color: yellow;
+  width: auto;
+  height: auto;
+  background: green;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  width: 250px;
+  height: 30px;
+  background: cyan;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 26px;
+  border: 0.5px solid black;
+  margin: 20px;
+}
+
+a:visited {
+  color: red;
+}
+
+ol {
+  margin-left: 39%;
+}
+
+li {
+  color: green;
+  font-size: 24px;
+}

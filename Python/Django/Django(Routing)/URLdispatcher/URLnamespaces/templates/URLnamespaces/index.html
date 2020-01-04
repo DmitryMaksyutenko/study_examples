@@ -1,0 +1,8 @@
+{% extends 'base_namespaces.html' %}
+
+{% block content %}
+  <p id="index_p">URL namespaces.</p>
+  <a href="{% url "urlnamespaces:cities-page" %}">Show Cities</a>
+  <a href="{% url "urlnamespaces:languages-page" %}">Show Languages</a>
+  <a href="{% url "urlnamespaces:countries-page" %}">Show Countries</a>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block context %}
+  <a href="{% url "index-page" %}">Retun</a>
+  {% for item in data %}
+  <p>{{ forloop.counter }}. {{ item.countrycode.code }} {{ item.language }} {{ item.isofficial }} {{ item.percentage }}</p>
+  {% endfor %}
+{% endblock %}

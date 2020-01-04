@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block context %}
+  <a href="{% url "index-page" %}">Return</a>
+  <p>{{ data.code }} {{ data.name }} {{ data.continent }} {{ data.headofstate }} 
+  {{ data.governmentform }}</p>
+{% endblock %}

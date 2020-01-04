@@ -1,0 +1,26 @@
+{% extends 'base_reg.html' %}
+
+{% block context %}
+
+  <a class="a_info" href="{% url "index-page" %}">Return</a>
+    <p>Informatio about {{ name }}</p>
+
+    {% if "Cities" in name %}
+      {% for value in content %}
+        <p id="content">{{ value.id }} {{ value.name }} {{ value.countrycode.code }} {{ value.district }} {{ value.population }}</p>
+      {% endfor %}
+    {% endif %}
+
+    {% if "Countries" in name %}
+      {% for value in content %}
+      <p id="content">{{ value.name }} {{ value.region }} {{ value.population }} {{ value.code }}</p>
+      {% endfor %}
+    {% endif %}
+
+    {% if "Languages" in name %}
+      {% for value in content %}
+      <p id="content">{{ value.isofficial }} {{ value.percentage }} {{ value.language }}</p>
+      {% endfor %}
+    {% endif %}
+
+{% endblock %}

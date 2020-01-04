@@ -1,0 +1,30 @@
+#mainP {
+  text-align: center;
+  font-size: 36px;
+  color: green;
+}
+
+.a-index {
+  display: block;
+  margin-left:45%;
+  font-size: 26px;
+  text-decoration: none;
+  padding: 10px;
+  color: green;
+}
+
+a {
+  font-size: 26px;
+  text-decoration: none;
+  color: green;
+}
+
+a:visited {
+  color: red;
+}
+
+p {
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+}

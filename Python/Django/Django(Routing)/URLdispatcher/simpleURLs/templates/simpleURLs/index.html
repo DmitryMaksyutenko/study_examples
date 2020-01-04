@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block context %}
+  <p id="mainP">This is main page!</p>
+  <a class="a-index" href="{% url "cities-page" %}">Show cities</a>
+  <a class="a-index" href="{% url "countries-page" %}">Show countries</a>
+  <a class="a-index" href="{% url "languages-page" %}">Show languages</a>
+{% endblock %}

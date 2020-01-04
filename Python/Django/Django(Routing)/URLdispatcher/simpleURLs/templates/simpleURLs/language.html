@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block context %}
+    <a href="{% url 'index-page' %}">Return</a>
+  {% if data|length <= 1 %}
+    <p>{{ data.countrycode.code }} {{ data.language }} {{ data.isofficial }} {{ data.percentage }}</p>
+  {% else %}
+    {% for item in data %}
+      <p>{{ forloop.counter }}. {{ item.countrycode.code }} {{ item.language }} {{ item.isofficial }} {{ item.percentage }}</p>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

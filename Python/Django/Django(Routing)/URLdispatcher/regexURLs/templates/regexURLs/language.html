@@ -1,0 +1,17 @@
+{% extends 'base_reg.html' %}
+
+{% block context %}
+    <a class="a_info" href="{% url "index-page" %}">Return</a>
+    <br>
+    <br>
+
+    <p>Information about {{ name }}</p>
+    <br>
+    {% if content|length <= 1 %}
+      <p id="content">{{ content.countrycode.code }} {{ content.language }} {{ content.isofficial }} {{ content.percentage }}</p>
+    {% else %}
+      {% for item in content %}
+        <p id="content">{{ forloop.counter }}. {{ item.countrycode.code }} {{ item.language }} {{ item.isofficial }} {{ item.percentage }}</p>
+      {% endfor %}
+    {% endif %}
+{% endblock %}

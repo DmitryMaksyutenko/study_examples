@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block context %}
+  <a href="{% url "index-page" %}">Retun</a>
+  <p>{{ data.id }}. {{ data.name }} {{ data.countrycode.code }} {{ data.district }} {{ data.population }} people.</p>
+{% endblock %}

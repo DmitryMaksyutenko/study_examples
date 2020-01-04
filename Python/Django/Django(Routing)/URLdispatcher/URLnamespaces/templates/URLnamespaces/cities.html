@@ -1,0 +1,10 @@
+{% extends 'base_namespaces.html' %}
+
+{% block content %}
+  <a href="{% url "urlnamespaces:index-page" %}">Return</a>
+  <ol>
+    {% for data in context %}
+    <li>{{ data.name }}</li>
+    {% endfor %}
+  </ol>
+{% endblock %}
