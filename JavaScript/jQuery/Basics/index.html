@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Base of jQuery.</title>
+
+  <style>
+
+    a.test {
+      margin: 47%;
+      font-weight: bold;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+    <a href="http://jquery.com">jQuery</a>
+
+    <script src="../jquery.js"></script>
+    <script>
+
+        //  The .ready() method affers a way to run JavaScript code as soon as the page's Document Object Model
+        //  becomes safe to mamipulate.
+        $(document).ready(function(){
+
+          //  addClass() Adds the specified class to each element in the set of matches
+          //  elements.
+          jQuery("a").addClass("test");
+
+            //  $ is an alias of jQuery.
+            $("a").click(function(event){
+
+              alert("Visit the jQuery site.");
+              //  Prevent the default behavior of the clicl event.
+              event.preventDefault();
+
+              //  removeClass() Remove e single or multiple classes from each
+              //  element in the set of matches.
+              $("a").removeClass("test");
+
+              //  jQuery provide handly effects.
+              $(this).hide("slow");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
