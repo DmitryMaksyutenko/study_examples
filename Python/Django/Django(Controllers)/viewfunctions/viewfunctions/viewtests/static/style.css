@@ -1,0 +1,30 @@
+* {
+    margin: auto;
+}
+
+section {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px 2px;
+}
+
+.header_p {
+  margin-left: 43%;
+  margin-top: 3%;
+  display: block;
+  font-size: 26px;
+  color: #DCDCDC;
+}
+
+.section_p {
+  padding: 1%;
+  display: block;
+  font-size: 26px;
+  color: #D7BFBF;
+}
+
+body {
+    background: #353131;
+}
