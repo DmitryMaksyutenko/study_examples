@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="604" version="1.1" width="745" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="47" stroke="#000000" stroke-width="1" width="439" x="86" y="14"/>
+<text font-family="Dialog" font-size="24" x="110" y="39">
+Forms not related to the models</text>
+<polygon fill="#ffffc8" points="14,70 352,70 362,80 362,293 14,293 14,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,70 352,70 362,80 362,293 14,293 14,70" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="352,70 362,80 352,80 352,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="352,70 362,80 352,80 352,70" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="85">
+Django allows the form creation not related to models. </text>
+<text font-family="Dialog" font-size="12" x="17" y="100">
+It can be used in case of data not required for store i</text>
+<text font-family="Dialog" font-size="12" x="17" y="115">
+nto the database or must be stored after checking.</text>
+<text font-family="Dialog" font-size="12" x="17" y="145">
+These forms created as Form derived classes. </text>
+<text font-family="Dialog" font-size="12" x="17" y="160">
+Fields must be defined explicitly. </text>
+<text font-family="Dialog" font-size="12" x="17" y="175">
+No nested Meta class. </text>
+<text font-family="Dialog" font-size="12" x="17" y="190">
+Don't support save() method and instance parameter.</text>
+<text font-family="Dialog" font-size="12" x="17" y="220">
+from django import forms</text>
+<text font-family="Dialog" font-size="12" x="17" y="250">
+class MyForm(forms.Form):</text>
+<text font-family="Dialog" font-size="12" x="17" y="265">
+    a = forms.CharField()</text>
+<text font-family="Dialog" font-size="12" x="17" y="280">
+    b = forms.IntegerField()</text>
+<polygon fill="#ffffc8" points="14,302 358,302 368,312 368,589 14,589 14,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,302 358,302 368,312 368,589 14,589 14,302" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="358,302 368,312 358,312 358,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="358,302 368,312 358,312 358,302" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="317">
+A formset is a layer of abstraction to work with multiple </text>
+<text font-family="Dialog" font-size="12" x="17" y="332">
+forms on the same page. </text>
+<text font-family="Dialog" font-size="12" x="17" y="362">
+BaseFormSet is a class represents a formset.</text>
+<text font-family="Dialog" font-size="12" x="17" y="392">
+Formset created with formset_factory() function</text>
+<text font-family="Dialog" font-size="12" x="17" y="407">
+formset_factory(form=&lt;form&gt;[, extra= 1]</text>
+<text font-family="Dialog" font-size="12" x="17" y="422">
+[, can_order=False][, can_delete=False]</text>
+<text font-family="Dialog" font-size="12" x="17" y="437">
+[, min_num=None][, validate_min=False]</text>
+<text font-family="Dialog" font-size="12" x="17" y="452">
+[, max_num=False][, validate_max=False]</text>
+<text font-family="Dialog" font-size="12" x="17" y="467">
+formset=&lt;set of forms&gt;)</text>
+<text font-family="Dialog" font-size="12" x="17" y="497">
+from django import forms</text>
+<text font-family="Dialog" font-size="12" x="17" y="527">
+class MyFormSet(forms.Form):</text>
+<text font-family="Dialog" font-size="12" x="17" y="542">
+    a = CharField()</text>
+<text font-family="Dialog" font-size="12" x="17" y="572">
+formset = create_formset(MyFormSet, extra=2)</text>
+<polygon fill="#ffffc8" points="430,158 693,158 703,168 703,253 430,253 430,158" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="430,158 693,158 703,168 703,253 430,253 430,158" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="693,158 703,168 693,168 693,158" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="693,158 703,168 693,168 693,158" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="433" y="173">
+Set up CSS styles for forms</text>
+<text font-family="Dialog" font-size="12" x="433" y="203">
+Use attributes for set up.</text>
+<text font-family="Dialog" font-size="12" x="433" y="233">
+required_css_class - class name required</text>
+<text font-family="Dialog" font-size="12" x="433" y="248">
+error_css_class - calss name required</text>
+<polygon fill="#ffffc8" points="414,358 720,358 730,368 730,501 414,501 414,358" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="414,358 720,358 730,368 730,501 414,501 414,358" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="720,358 730,368 720,368 720,358" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="720,358 730,368 720,368 720,358" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="417" y="373">
+Setting display forms.</text>
+<text font-family="Dialog" font-size="12" x="417" y="403">
+Use the named parameters of a class constructor.</text>
+<text font-family="Dialog" font-size="12" x="417" y="433">
+field_order</text>
+<text font-family="Dialog" font-size="12" x="417" y="448">
+label_suffix</text>
+<text font-family="Dialog" font-size="12" x="417" y="463">
+auto_id</text>
+<text font-family="Dialog" font-size="12" x="417" y="478">
+use_required_attribute</text>
+<text font-family="Dialog" font-size="12" x="417" y="493">
+prefix</text>
+</svg>
