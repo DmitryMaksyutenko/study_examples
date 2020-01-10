@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="588" version="1.1" width="1308" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="383" x="454" y="14"/>
+<text font-family="Dialog" font-size="24" x="501" y="39">
+Custom filters and tags.</text>
+<polygon fill="#ffffc8" points="14,54 376,54 386,64 386,445 14,445 14,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,54 376,54 386,64 386,445 14,445 14,54" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="376,54 386,64 376,64 376,54" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="376,54 386,64 376,64 376,54" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="69">
+Modules with code of filters and tags must be placed </text>
+<text font-family="Dialog" font-size="12" x="17" y="84">
+in the "template" package of the application.</text>
+<text font-family="Dialog" font-size="12" x="17" y="99">
+Create the __init__.py module inside the "template" </text>
+<text font-family="Dialog" font-size="12" x="17" y="114">
+package. Create the module filtersandtags.py</text>
+<text font-family="Dialog" font-size="12" x="17" y="144">
+The filter is a simple Django method that receives as the </text>
+<text font-family="Dialog" font-size="12" x="17" y="159">
+first parameter value for handling, next parameters are</text>
+<text font-family="Dialog" font-size="12" x="17" y="174">
+the value of the filter parameters, can be default.</text>
+<text font-family="Dialog" font-size="12" x="17" y="189">
+Returns a modified value as result.</text>
+<text font-family="Dialog" font-size="12" x="17" y="219">
+Wrote function must be registered in the template as filter.</text>
+<text font-family="Dialog" font-size="12" x="17" y="249">
+Create the instance of Library from django.template</text>
+<text font-family="Dialog" font-size="12" x="17" y="264">
+and call the method filter()</text>
+<text font-family="Dialog" font-size="12" x="17" y="279">
+filter(&lt;filter name&gt;, &lt;function link&gt;)</text>
+<text font-family="Dialog" font-size="12" x="17" y="309">
+from django.template import Library</text>
+<text font-family="Dialog" font-size="12" x="17" y="339">
+register = Library()</text>
+<text font-family="Dialog" font-size="12" x="17" y="369">
+# @register.filter(name="cur")</text>
+<text font-family="Dialog" font-size="12" x="17" y="384">
+def currency(value, name="usd."):</text>
+<text font-family="Dialog" font-size="12" x="17" y="399">
+    return "%1.2f, %s" % (value, name)</text>
+<text font-family="Dialog" font-size="12" x="17" y="429">
+register.filter("currency", currncy)</text>
+<polygon fill="#ffffc8" points="446,94 847,94 857,104 857,389 446,389 446,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="446,94 847,94 857,104 857,389 446,389 446,94" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="847,94 857,104 847,104 847,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="847,94 857,104 847,104 847,94" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="449" y="109">
+HTML escape symbols</text>
+<text font-family="Dialog" font-size="12" x="449" y="139">
+django.utils.html</text>
+<text font-family="Dialog" font-size="12" x="449" y="169">
+escape(&lt;string&gt;) - does the changing of the symbols in string.</text>
+<text font-family="Dialog" font-size="12" x="449" y="184">
+conditional_escape(&lt;string&gt;) - does the change if string</text>
+<text font-family="Dialog" font-size="12" x="449" y="199">
+not modified yet.</text>
+<text font-family="Dialog" font-size="12" x="449" y="229">
+Returns the modified string.</text>
+<text font-family="Dialog" font-size="12" x="449" y="259">
+The result must be marked as the string passed the </text>
+<text font-family="Dialog" font-size="12" x="449" y="274">
+modification.</text>
+<text font-family="Dialog" font-size="12" x="449" y="289">
+from django.utils.safestring import mask_safe</text>
+<text font-family="Dialog" font-size="12" x="449" y="304">
+mark_safe(&lt;marked string&gt;)</text>
+<text font-family="Dialog" font-size="12" x="449" y="334">
+@retgister.filter(is_safe=Ture)</text>
+<text font-family="Dialog" font-size="12" x="449" y="349">
+def somefilter(value):</text>
+<text font-family="Dialog" font-size="12" x="449" y="364">
+    return mark_safe(result_string)</text>
+<polygon fill="#ffffc8" points="894,30 1272,30 1282,40 1282,317 894,317 894,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="894,30 1272,30 1282,40 1282,317 894,317 894,30" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1272,30 1282,40 1272,40 1272,30" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1272,30 1282,40 1272,40 1272,30" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="897" y="45">
+Tag creation.</text>
+<text font-family="Dialog" font-size="12" x="897" y="75">
+Function of teg realization can accept multiple values.</text>
+<text font-family="Dialog" font-size="12" x="897" y="90">
+Return the string as the result.</text>
+<text font-family="Dialog" font-size="12" x="897" y="120">
+Tags are registres as the filters but with simle_tag() function.</text>
+<text font-family="Dialog" font-size="12" x="897" y="135">
+fimple_tag([name=None][,][takes_context=False])</text>
+<text font-family="Dialog" font-size="12" x="897" y="150">
+name = name of tag for calling in tamplate.</text>
+<text font-family="Dialog" font-size="12" x="897" y="165">
+takes_context = if True, the first argumen in function must be</text>
+<text font-family="Dialog" font-size="12" x="897" y="180">
+the template context.</text>
+<text font-family="Dialog" font-size="12" x="897" y="210">
+form django import template</text>
+<text font-family="Dialog" font-size="12" x="897" y="240">
+@register.simple_tag(takes_context=True)</text>
+<text font-family="Dialog" font-size="12" x="897" y="255">
+def cometag(context, sep, *args):</text>
+<text font-family="Dialog" font-size="12" x="897" y="270">
+    return "%s %s %s" % (context, sep, len(*args)) </text>
+<text font-family="Dialog" font-size="12" x="897" y="300">
+The tags can return HTML snippets.</text>
+<polygon fill="#ffffc8" points="894,382 1283,382 1293,392 1293,573 894,573 894,382" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="894,382 1283,382 1293,392 1293,573 894,573 894,382" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1283,382 1293,392 1283,392 1283,382" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1283,382 1293,392 1283,392 1283,382" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="897" y="397">
+Templates overriding used for defining the custom templates </text>
+<text font-family="Dialog" font-size="12" x="897" y="412">
+for Django usage.</text>
+<text font-family="Dialog" font-size="12" x="897" y="442">
+There are two approaches:</text>
+<text font-family="Dialog" font-size="12" x="897" y="457">
+Place the application package firs in a list of INSTALLED_APPS</text>
+<text font-family="Dialog" font-size="12" x="897" y="472">
+or</text>
+<text font-family="Dialog" font-size="12" x="897" y="487">
+Set up the path to the directory with custom templates in DIRS</text>
+<text font-family="Dialog" font-size="12" x="897" y="502">
+parameter of TEMPLATES settings.</text>
+<text font-family="Dialog" font-size="12" x="897" y="532">
+But be vare to use overriding. Use the custom templates.</text>
+</svg>
