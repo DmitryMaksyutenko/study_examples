@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="669" version="1.1" width="823" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="199" x="278" y="14"/>
+<text font-family="Dialog" font-size="24" x="303" y="39">
+File Uploads</text>
+<polygon fill="#ffffc8" points="22,70 360,70 370,80 370,285 22,285 22,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="22,70 360,70 370,80 370,285 22,285 22,70" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="360,70 370,80 360,80 360,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="360,70 370,80 360,80 360,70" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="25" y="85">
+File uploads subsystem, setting in settings.py file.</text>
+<text font-family="Dialog" font-size="12" x="25" y="115">
+MEDIA_URL - prefix adding to the internet address </text>
+<text font-family="Dialog" font-size="12" x="25" y="130">
+of the uploaded file.</text>
+<text font-family="Dialog" font-size="12" x="25" y="145">
+If Django met that prefix, it passes it to the subsystem.</text>
+<text font-family="Dialog" font-size="12" x="25" y="175">
+MEDIA_ROOT - full path to the directory of file storage.</text>
+<text font-family="Dialog" font-size="12" x="25" y="205">
+FILE_UPLOADED_HANDLES - classes of handlers.</text>
+<text font-family="Dialog" font-size="12" x="25" y="220">
+FILE_UPLOAD_MAX_MEMORY_SIZE</text>
+<text font-family="Dialog" font-size="12" x="25" y="235">
+FILE_UPLOAD_TEMP_DIR</text>
+<text font-family="Dialog" font-size="12" x="25" y="250">
+FILE_UPLOAD_PERMISSIONS</text>
+<text font-family="Dialog" font-size="12" x="25" y="265">
+FILE_UPLOAD_DIRECTORY_PERMISSIONS</text>
+<text font-family="Dialog" font-size="12" x="25" y="280">
+DEFAULT_FILE_STORAGE</text>
+<polygon fill="#ffffc8" points="22,302 332,302 342,312 342,427 22,427 22,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="22,302 332,302 342,312 342,427 22,427 22,302" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="332,302 342,312 332,312 332,302" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="332,302 342,312 332,312 332,302" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="25" y="317">
+Route for uploaded files.</text>
+<text font-family="Dialog" font-size="12" x="25" y="347">
+The route writes in module urls.py of the project.</text>
+<text font-family="Dialog" font-size="12" x="25" y="362">
+Inside the static() function.</text>
+<text font-family="Dialog" font-size="12" x="25" y="392">
+from django.conf.urls.static import static</text>
+<text font-family="Dialog" font-size="12" x="25" y="422">
+static(&lt;prefix&gt;, document_root=&lt;dir path&gt;)</text>
+<polygon fill="#ffffc8" points="14,446 357,446 367,456 367,556 14,556 14,446" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,446 357,446 367,456 367,556 14,556 14,446" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="357,446 367,456 357,456 357,446" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="357,446 367,456 357,456 357,446" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="461">
+Storing files in models.</text>
+<text font-family="Dialog" font-size="12" x="17" y="491">
+Django uses two model types of fields for file storage.</text>
+<text font-family="Dialog" font-size="12" x="17" y="506">
+FileField - any type of file.</text>
+<text font-family="Dialog" font-size="12" x="17" y="521">
+ImagaField - field for images. (Requires "Pillow" library)</text>
+<text font-family="Dialog" font-size="12" x="17" y="551">
+FilePathField - file stored on disk</text>
+<polygon fill="#ffffc8" points="446,70 726,70 736,80 736,315 446,315 446,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="446,70 726,70 736,80 736,315 446,315 446,70" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="726,70 736,80 726,80 726,70" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="726,70 736,80 726,80 726,70" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="449" y="85">
+Forms and validators for file type fields.</text>
+<text font-family="Dialog" font-size="12" x="449" y="115">
+In forms used fields FileField and ImageField</text>
+<text font-family="Dialog" font-size="12" x="449" y="130">
+for files fields presentation.</text>
+<text font-family="Dialog" font-size="12" x="449" y="160">
+Validators:</text>
+<text font-family="Dialog" font-size="12" x="449" y="175">
+FileExtensionValidator</text>
+<text font-family="Dialog" font-size="12" x="449" y="190">
+validate_image_file_extension</text>
+<text font-family="Dialog" font-size="12" x="449" y="205">
+invalid</text>
+<text font-family="Dialog" font-size="12" x="449" y="220">
+missing</text>
+<text font-family="Dialog" font-size="12" x="449" y="235">
+empty</text>
+<text font-family="Dialog" font-size="12" x="449" y="250">
+contradiction</text>
+<text font-family="Dialog" font-size="12" x="449" y="265">
+invalid_extension</text>
+<text font-family="Dialog" font-size="12" x="449" y="280">
+invalid_image</text>
+<text font-family="Dialog" font-size="12" x="449" y="295">
+FileInput</text>
+<text font-family="Dialog" font-size="12" x="449" y="310">
+ClearableFileInput</text>
+<polygon fill="#ffffc8" points="382,342 798,342 808,352 808,407 382,407 382,342" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="382,342 798,342 808,352 808,407 382,407 382,342" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="798,342 808,352 798,352 798,342" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="798,342 808,352 798,352 798,342" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="385" y="357">
+Set enctype attribute in tag form equal to multipart/form-data</text>
+<text font-family="Dialog" font-size="12" x="385" y="372">
+Set the second parameter of the form constructor FILES attribute</text>
+<text font-family="Dialog" font-size="12" x="385" y="402">
+These required for correct file uploading.</text>
+<polygon fill="#ffffc8" points="462,446 666,446 676,456 676,556 462,556 462,446" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="462,446 666,446 676,456 676,556 462,556 462,446" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="666,446 676,456 666,456 666,446" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="666,446 676,456 666,456 666,446" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="465" y="461">
+File delete</text>
+<text font-family="Dialog" font-size="12" x="465" y="491">
+def delete(request, id):</text>
+<text font-family="Dialog" font-size="12" x="465" y="506">
+    img = Img.objects.get(pk=id)</text>
+<text font-family="Dialog" font-size="12" x="465" y="521">
+    img.img.delete()</text>
+<text font-family="Dialog" font-size="12" x="465" y="536">
+    img.delete()</text>
+<text font-family="Dialog" font-size="12" x="465" y="551">
+    return redirect("path")</text>
+<polygon fill="#ffffc8" points="214,574 560,574 570,584 570,654 214,654 214,574" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="214,574 560,574 570,584 570,654 214,654 214,574" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="560,574 570,584 560,584 560,574" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="560,574 570,584 560,584 560,574" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="217" y="589">
+Django provides low-level classes for file storage.</text>
+<text font-family="Dialog" font-size="12" x="217" y="619">
+This approach requires the realization of the behavior.</text>
+<text font-family="Dialog" font-size="12" x="217" y="649">
+class UploadedFile</text>
+</svg>
