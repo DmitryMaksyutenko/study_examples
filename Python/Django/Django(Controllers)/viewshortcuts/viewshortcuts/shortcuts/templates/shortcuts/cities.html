@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+  {% for city in context %}
+  <p>{{ city.id }} {{ city.name }}</p>
+  {% endfor %}
+{% endblock body_block %}

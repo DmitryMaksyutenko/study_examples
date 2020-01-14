@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+  <p>{{ context }}</p>
+
+  <a href="{% url 'shortcuts:redirect-page' %}">go to google</a>
+{% endblock body_block %}
