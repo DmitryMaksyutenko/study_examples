@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="492" version="1.1" width="1159" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="47" stroke="#000000" stroke-width="1" width="279" x="390" y="14"/>
+<text font-family="Dialog" font-size="24" x="460" y="39">
+MIddleware</text>
+<polygon fill="#ffffc8" points="14,94 255,94 265,104 265,237 14,237 14,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,94 255,94 265,104 265,237 14,237 14,94" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="255,94 265,104 255,104 255,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="255,94 265,104 255,104 255,94" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="109">
+the Django middleware is the program </text>
+<text font-family="Dialog" font-size="12" x="17" y="124">
+module that performs the handling of </text>
+<text font-family="Dialog" font-size="12" x="17" y="139">
+the request and response.</text>
+<text font-family="Dialog" font-size="12" x="17" y="154">
+MIDDLEWARE - the settings parameter</text>
+<text font-family="Dialog" font-size="12" x="17" y="169">
+of the project middleware.</text>
+<text font-family="Dialog" font-size="12" x="17" y="199">
+This tool used for handling </text>
+<text font-family="Dialog" font-size="12" x="17" y="214">
+data pased by network </text>
+<polygon fill="#ffffc8" points="14,278 249,278 259,288 259,469 14,469 14,278" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,278 249,278 259,288 259,469 14,469 14,278" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="249,278 259,288 249,288 249,278" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="249,278 259,288 249,288 249,278" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="293">
+The middleware is executed twice.</text>
+<text font-family="Dialog" font-size="12" x="17" y="323">
+First time when the request received, </text>
+<text font-family="Dialog" font-size="12" x="17" y="338">
+before pass it to the controller. </text>
+<text font-family="Dialog" font-size="12" x="17" y="353">
+They execute in the order written in </text>
+<text font-family="Dialog" font-size="12" x="17" y="368">
+parameter MIDDLEWARE.</text>
+<text font-family="Dialog" font-size="12" x="17" y="398">
+The second time when the controller </text>
+<text font-family="Dialog" font-size="12" x="17" y="413">
+does generate the response. </text>
+<text font-family="Dialog" font-size="12" x="17" y="428">
+But before sending it to the user. </text>
+<text font-family="Dialog" font-size="12" x="17" y="443">
+The order of execution is reversed.</text>
+<polygon fill="#ffffc8" points="334,78 747,78 757,88 757,477 334,477 334,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="334,78 747,78 757,88 757,477 334,477 334,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="747,78 757,88 747,88 747,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="747,78 757,88 747,88 747,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="337" y="93">
+It is possible to create custom middleware like function or class.</text>
+<text font-family="Dialog" font-size="12" x="337" y="123">
+The function middleware is a function that returns the function.</text>
+<text font-family="Dialog" font-size="12" x="337" y="153">
+def my_middleware(get_response):</text>
+<text font-family="Dialog" font-size="12" x="337" y="168">
+    # some code here...</text>
+<text font-family="Dialog" font-size="12" x="337" y="183">
+    def inside_middleware(request):</text>
+<text font-family="Dialog" font-size="12" x="337" y="198">
+        response = get_response(request)</text>
+<text font-family="Dialog" font-size="12" x="337" y="213">
+        return response</text>
+<text font-family="Dialog" font-size="12" x="337" y="228">
+    return inside_middleware</text>
+<text font-family="Dialog" font-size="12" x="337" y="288">
+The class middleware offers more features.</text>
+<text font-family="Dialog" font-size="12" x="337" y="318">
+Class middleware must define et least two methods.</text>
+<text font-family="Dialog" font-size="12" x="337" y="348">
+__init__(self, get_response) - the constructor</text>
+<text font-family="Dialog" font-size="12" x="337" y="363">
+__call__(self, request) - callable</text>
+<text font-family="Dialog" font-size="12" x="337" y="393">
+Additional methods.</text>
+<text font-family="Dialog" font-size="12" x="337" y="423">
+process_view</text>
+<text font-family="Dialog" font-size="12" x="337" y="438">
+process_exception</text>
+<text font-family="Dialog" font-size="12" x="337" y="453">
+process_template</text>
+<polygon fill="#ffffc8" points="814,166 1134,166 1144,176 1144,351 814,351 814,166" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="814,166 1134,166 1144,176 1144,351 814,351 814,166" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1134,166 1144,176 1134,176 1134,166" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1134,166 1144,176 1134,176 1134,166" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="817" y="181">
+Context Handler.</text>
+<text font-family="Dialog" font-size="12" x="817" y="211">
+It is a program module that adds the </text>
+<text font-family="Dialog" font-size="12" x="817" y="226">
+context to the template some extra data.</text>
+<text font-family="Dialog" font-size="12" x="817" y="256">
+It is the Python function accepts the HttpRequets </text>
+<text font-family="Dialog" font-size="12" x="817" y="271">
+as a single parameter and returns the dictionary </text>
+<text font-family="Dialog" font-size="12" x="817" y="286">
+with data for addition to the context.</text>
+<text font-family="Dialog" font-size="12" x="817" y="316">
+That context handler must be added to the </text>
+<text font-family="Dialog" font-size="12" x="817" y="331">
+context_processors in the TEMPLATES parameter </text>
+<text font-family="Dialog" font-size="12" x="817" y="346">
+inside settings.py.</text>
+</svg>
