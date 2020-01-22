@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="679" version="1.1" width="1259" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="327" x="482" y="14"/>
+<text font-family="Dialog" font-size="24" x="543" y="39">
+Cookie, Sessions</text>
+<polygon fill="#ffffc8" points="14,18 431,18 441,28 441,623 14,623 14,18" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,18 431,18 441,28 441,623 14,623 14,18" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="431,18 441,28 431,28 431,18" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="431,18 441,28 431,28 431,18" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="33">
+Cookie - tool for storing arbitrary data on the client-side. </text>
+<text font-family="Dialog" font-size="12" x="17" y="48">
+The data size is not bigger than 4Kb.</text>
+<text font-family="Dialog" font-size="12" x="17" y="78">
+All cookie stored on the client-side relates to the </text>
+<text font-family="Dialog" font-size="12" x="17" y="93">
+current document, and not past due, accessed via </text>
+<text font-family="Dialog" font-size="12" x="17" y="108">
+COOKIES attribute of query object(Httprequest). </text>
+<text font-family="Dialog" font-size="12" x="17" y="123">
+The keys of the elements of that dictionary are the </text>
+<text font-family="Dialog" font-size="12" x="17" y="138">
+keys of all available cookie, and values of the </text>
+<text font-family="Dialog" font-size="12" x="17" y="153">
+elements are the values saved in that cookie </text>
+<text font-family="Dialog" font-size="12" x="17" y="168">
+as strings. The values of the cookie accessed </text>
+<text font-family="Dialog" font-size="12" x="17" y="183">
+for read-only.</text>
+<text font-family="Dialog" font-size="12" x="17" y="213">
+set_cookie(&lt;key&gt; [, vlaue=""] [, max_age=None] </text>
+<text font-family="Dialog" font-size="12" x="17" y="228">
+[, expires=None] [, path="/"] [, domain=None] </text>
+<text font-family="Dialog" font-size="12" x="17" y="243">
+[, secure=False] [, httponly=False] [, samesite=None])</text>
+<text font-family="Dialog" font-size="12" x="17" y="258">
+Function for writting the value into cookie.</text>
+<text font-family="Dialog" font-size="12" x="17" y="273">
+kay - string</text>
+<text font-family="Dialog" font-size="12" x="17" y="288">
+value - string</text>
+<text font-family="Dialog" font-size="12" x="17" y="303">
+max_age - time for storing</text>
+<text font-family="Dialog" font-size="12" x="17" y="318">
+expires - date and time of past due</text>
+<text font-family="Dialog" font-size="12" x="17" y="333">
+path - path to cookie</text>
+<text font-family="Dialog" font-size="12" x="17" y="348">
+domain - root domain</text>
+<text font-family="Dialog" font-size="12" x="17" y="363">
+secure - use secure protocol</text>
+<text font-family="Dialog" font-size="12" x="17" y="378">
+httponly - only http, https</text>
+<text font-family="Dialog" font-size="12" x="17" y="393">
+samesite - allow or deny sent of the saved cookie to another site.</text>
+<text font-family="Dialog" font-size="12" x="17" y="423">
+delete_cookie(&lt;key&gt; [, path="/"] [, domain=None])</text>
+<text font-family="Dialog" font-size="12" x="17" y="438">
+Function delete the cookie.</text>
+<text font-family="Dialog" font-size="12" x="17" y="468">
+set_signed_cookie(&lt;key&gt; [, vlaue=""] [, salt=""] </text>
+<text font-family="Dialog" font-size="12" x="17" y="483">
+[, max_age=None] [, expires=None] [, path="/"] </text>
+<text font-family="Dialog" font-size="12" x="17" y="498">
+[, domain=None] [, secure=False] [, httponly=False] </text>
+<text font-family="Dialog" font-size="12" x="17" y="513">
+[, samesite=None])</text>
+<text font-family="Dialog" font-size="12" x="17" y="528">
+Saving the value of the signed cookie.</text>
+<text font-family="Dialog" font-size="12" x="17" y="558">
+salt - extra value for digital signing.</text>
+<text font-family="Dialog" font-size="12" x="17" y="588">
+get_signed_cookie(&lt;key&gt; [, default=RAISE_ERROR] </text>
+<text font-family="Dialog" font-size="12" x="17" y="603">
+[, salt=""] [, max_age=None])</text>
+<text font-family="Dialog" font-size="12" x="17" y="618">
+Read the value from signed cookie.</text>
+<polygon fill="#ffffc8" points="842,14 1234,14 1244,24 1244,664 842,664 842,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="842,14 1234,14 1244,24 1244,664 842,664 842,14" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1234,14 1244,24 1234,24 1234,14" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1234,14 1244,24 1234,24 1234,14" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="845" y="29">
+Session - the time period of the user stays on site. It starts </text>
+<text font-family="Dialog" font-size="12" x="845" y="44">
+when the user sign-in, ends when the user quits.</text>
+<text font-family="Dialog" font-size="12" x="845" y="74">
+It is possible to add arbitrary data and store them in the </text>
+<text font-family="Dialog" font-size="12" x="845" y="89">
+database or file. This data lives during the session and after </text>
+<text font-family="Dialog" font-size="12" x="845" y="104">
+until time is out.</text>
+<text font-family="Dialog" font-size="12" x="845" y="134">
+For each session, Django generates the unique key ID, </text>
+<text font-family="Dialog" font-size="12" x="845" y="149">
+that then stored in a signed cookie. Since cookie content </text>
+<text font-family="Dialog" font-size="12" x="845" y="164">
+stored for each domain automatically sents to the web-server</text>
+<text font-family="Dialog" font-size="12" x="845" y="179">
+in the composition of the header of the request, </text>
+<text font-family="Dialog" font-size="12" x="845" y="194">
+Django will retrieve saved ID.</text>
+<text font-family="Dialog" font-size="12" x="845" y="224">
+Session requires:</text>
+<text font-family="Dialog" font-size="12" x="845" y="254">
+django.contrib.sessions in app. list.</text>
+<text font-family="Dialog" font-size="12" x="845" y="284">
+django.contrib.sessions.middleware</text>
+<text font-family="Dialog" font-size="12" x="845" y="299">
+in list of the MIDDLEWARE</text>
+<text font-family="Dialog" font-size="12" x="845" y="329">
+settings.py</text>
+<text font-family="Dialog" font-size="12" x="845" y="344">
+SESSION_ENGINE - class name:</text>
+<text font-family="Dialog" font-size="12" x="845" y="359">
+django.contrib.sessions.backends.db</text>
+<text font-family="Dialog" font-size="12" x="845" y="374">
+django.contrib.sessions.backends.file</text>
+<text font-family="Dialog" font-size="12" x="845" y="389">
+django.contrib.sessions.backinds.cache</text>
+<text font-family="Dialog" font-size="12" x="845" y="404">
+django.contrib.sessions.backends.cached_db</text>
+<text font-family="Dialog" font-size="12" x="845" y="419">
+django.contrib.sessions.backends.signed_cookies</text>
+<text font-family="Dialog" font-size="12" x="845" y="449">
+SESSION_SERIALIZER - class name of the serializer:</text>
+<text font-family="Dialog" font-size="12" x="845" y="464">
+django.contrib.sessions.serializers.JSONSerializer</text>
+<text font-family="Dialog" font-size="12" x="845" y="479">
+django.contrib.sessions.serializers.PickleSerializer</text>
+<text font-family="Dialog" font-size="12" x="845" y="509">
+SESSION_EXPIRE_AT_BROWSER_CLOSE</text>
+<text font-family="Dialog" font-size="12" x="845" y="524">
+SESSION_SAVE_EVERY_REQUEST</text>
+<text font-family="Dialog" font-size="12" x="845" y="539">
+SESSION_COOKIE_DOMAIN</text>
+<text font-family="Dialog" font-size="12" x="845" y="554">
+SESSION_COOKIE_PATH</text>
+<text font-family="Dialog" font-size="12" x="845" y="569">
+SESSION_COOKIE_AGE</text>
+<text font-family="Dialog" font-size="12" x="845" y="584">
+SESSION_COOKIE_NAME</text>
+<text font-family="Dialog" font-size="12" x="845" y="599">
+SESSION_COOKIE_HTTPONLY</text>
+<text font-family="Dialog" font-size="12" x="845" y="614">
+SESSION_COOKIE_SECURE</text>
+<text font-family="Dialog" font-size="12" x="845" y="629">
+SESSION_COOKIE_SAMESITE</text>
+<text font-family="Dialog" font-size="12" x="845" y="644">
+SESSION_FILE_PATH</text>
+<text font-family="Dialog" font-size="12" x="845" y="659">
+SESION_CACHE_PATH</text>
+<polygon fill="#ffffc8" points="458,94 815,94 825,104 825,501 458,501 458,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="458,94 815,94 825,104 825,501 458,501 458,94" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="815,94 825,104 815,104 815,94" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="815,94 825,104 815,104 815,94" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="461" y="109">
+django.contrib.sessions.middleware.SessionMiddleware </text>
+<text font-family="Dialog" font-size="12" x="461" y="124">
+adds to the request object the attribute "session".</text>
+<text font-family="Dialog" font-size="12" x="461" y="154">
+Supported methods of the "session":</text>
+<text font-family="Dialog" font-size="12" x="461" y="184">
+flush()</text>
+<text font-family="Dialog" font-size="12" x="461" y="199">
+set_test_cookie()</text>
+<text font-family="Dialog" font-size="12" x="461" y="214">
+test_cookie_worked()</text>
+<text font-family="Dialog" font-size="12" x="461" y="229">
+delete_test_cookie()</text>
+<text font-family="Dialog" font-size="12" x="461" y="244">
+set_expiry(&lt;time&gt;)</text>
+<text font-family="Dialog" font-size="12" x="461" y="259">
+get_expiry_age()</text>
+<text font-family="Dialog" font-size="12" x="461" y="274">
+get_expiry_date()</text>
+<text font-family="Dialog" font-size="12" x="461" y="289">
+get_expire_at_browser_close()</text>
+<text font-family="Dialog" font-size="12" x="461" y="304">
+clear_expired()</text>
+<text font-family="Dialog" font-size="12" x="461" y="319">
+cycle_key()</text>
+<text font-family="Dialog" font-size="12" x="461" y="349">
+clieansessions command use for manage.py</text>
+</svg>
