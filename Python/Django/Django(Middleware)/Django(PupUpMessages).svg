@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="581" version="1.1" width="1189" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="247" x="486" y="14"/>
+<text font-family="Dialog" font-size="24" x="498" y="39">
+Pop Up messages.</text>
+<polygon fill="#ffffc8" points="14,78 395,78 405,88 405,565 14,565 14,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,78 395,78 405,88 405,565 14,565 14,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="395,78 405,88 395,88 395,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="395,78 405,88 395,88 395,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="93">
+Pop up messages are exists only in current request time. </text>
+<text font-family="Dialog" font-size="12" x="17" y="108">
+Used for output on the page any information message </text>
+<text font-family="Dialog" font-size="12" x="17" y="123">
+that actually in the current moment.</text>
+<text font-family="Dialog" font-size="12" x="17" y="153">
+Required:</text>
+<text font-family="Dialog" font-size="12" x="17" y="168">
+django.contrib.messages inside INSTALLED_APPS</text>
+<text font-family="Dialog" font-size="12" x="17" y="198">
+django.contrib.sessions.middleware.SessionMiddleware </text>
+<text font-family="Dialog" font-size="12" x="17" y="213">
+&amp; django.contrib.messages.middleware.MessasgeMiddleware </text>
+<text font-family="Dialog" font-size="12" x="17" y="228">
+inside MIDDLEWARE</text>
+<text font-family="Dialog" font-size="12" x="17" y="258">
+django.contrib.messages.context_processors.messages for </text>
+<text font-family="Dialog" font-size="12" x="17" y="273">
+template list</text>
+<text font-family="Dialog" font-size="12" x="17" y="303">
+Settings:</text>
+<text font-family="Dialog" font-size="12" x="17" y="318">
+MESSAGE_STORE</text>
+<text font-family="Dialog" font-size="12" x="17" y="333">
+django.contrib.messages.storage.cookie.CoolieStorage</text>
+<text font-family="Dialog" font-size="12" x="17" y="348">
+django.contrib.messages.storage.fallback.FallbackStorage</text>
+<text font-family="Dialog" font-size="12" x="17" y="363">
+django.contrib.messages.storage.session.SessionStorage</text>
+<text font-family="Dialog" font-size="12" x="17" y="378">
+MESSGE_LEVEL</text>
+<text font-family="Dialog" font-size="12" x="17" y="393">
+MESSAGE_TAG</text>
+<text font-family="Dialog" font-size="12" x="17" y="423">
+Each pop-up message has a "level" as an integer number. </text>
+<text font-family="Dialog" font-size="12" x="17" y="438">
+It shows the rank of the message and own style.</text>
+<text font-family="Dialog" font-size="12" x="17" y="468">
+MESSAGE_LEVEL:</text>
+<text font-family="Dialog" font-size="12" x="17" y="483">
+DEBUG = 10</text>
+<text font-family="Dialog" font-size="12" x="17" y="498">
+INFO = 20</text>
+<text font-family="Dialog" font-size="12" x="17" y="513">
+SUCCESS = 25</text>
+<text font-family="Dialog" font-size="12" x="17" y="528">
+WARNING = 30</text>
+<text font-family="Dialog" font-size="12" x="17" y="543">
+ERROR = 40</text>
+<polygon fill="#ffffc8" points="446,78 750,78 760,88 760,443 446,443 446,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="446,78 750,78 760,88 760,443 446,443 446,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="750,78 760,88 750,88 750,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="750,78 760,88 750,88 750,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="449" y="93">
+Creation of the pop-up message.</text>
+<text font-family="Dialog" font-size="12" x="449" y="123">
+add_message(&lt;request&gt;, &lt;level&gt; , </text>
+<text font-family="Dialog" font-size="12" x="449" y="138">
+&lt;message text&gt; [, extra_tags=""] </text>
+<text font-family="Dialog" font-size="12" x="449" y="153">
+[, fail_silently=False])</text>
+<text font-family="Dialog" font-size="12" x="449" y="183">
+request = HttpRquest entity</text>
+<text font-family="Dialog" font-size="12" x="449" y="198">
+level = MESSAGE_LEVEL</text>
+<text font-family="Dialog" font-size="12" x="449" y="213">
+message text = string</text>
+<text font-family="Dialog" font-size="12" x="449" y="228">
+extra_tags = additional style classes</text>
+<text font-family="Dialog" font-size="12" x="449" y="243">
+fail_silently = True(Don't show error message)</text>
+<text font-family="Dialog" font-size="12" x="449" y="273">
+debug()</text>
+<text font-family="Dialog" font-size="12" x="449" y="288">
+info()</text>
+<text font-family="Dialog" font-size="12" x="449" y="303">
+success()</text>
+<text font-family="Dialog" font-size="12" x="449" y="318">
+warning()</text>
+<text font-family="Dialog" font-size="12" x="449" y="333">
+error()</text>
+<text font-family="Dialog" font-size="12" x="449" y="348">
+(&lt;request&gt;, &lt;message text&gt; [, extra_tags=""] </text>
+<text font-family="Dialog" font-size="12" x="449" y="363">
+[, fail_silently=False])</text>
+<text font-family="Dialog" font-size="12" x="449" y="393">
+Class:</text>
+<text font-family="Dialog" font-size="12" x="449" y="408">
+django.contrib.messages.views</text>
+<text font-family="Dialog" font-size="12" x="449" y="438">
+SuccessMessageMixin</text>
+<polygon fill="#ffffc8" points="798,78 1159,78 1169,88 1169,353 798,353 798,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="798,78 1159,78 1169,88 1169,353 798,353 798,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1159,78 1169,88 1159,88 1159,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1159,78 1169,88 1159,88 1159,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="801" y="93">
+Display pop-up messages.</text>
+<text font-family="Dialog" font-size="12" x="801" y="108">
+Use context processor from</text>
+<text font-family="Dialog" font-size="12" x="801" y="123">
+django.contrib.messages.context_processor.messages. </text>
+<text font-family="Dialog" font-size="12" x="801" y="138">
+It adds to the template context the variable "messages" </text>
+<text font-family="Dialog" font-size="12" x="801" y="153">
+that stores the sequence of all pop-up messages.</text>
+<text font-family="Dialog" font-size="12" x="801" y="183">
+Each element of the sequence is the Message entity.</text>
+<text font-family="Dialog" font-size="12" x="801" y="213">
+Attributes:</text>
+<text font-family="Dialog" font-size="12" x="801" y="228">
+message</text>
+<text font-family="Dialog" font-size="12" x="801" y="243">
+level</text>
+<text font-family="Dialog" font-size="12" x="801" y="258">
+level_tag</text>
+<text font-family="Dialog" font-size="12" x="801" y="273">
+extra_tag</text>
+<text font-family="Dialog" font-size="12" x="801" y="288">
+tags</text>
+<text font-family="Dialog" font-size="12" x="801" y="318">
+DEAFULT_MESSAGE_LEVELS - dictionary</text>
+<text font-family="Dialog" font-size="12" x="801" y="333">
+key = level as string</text>
+<text font-family="Dialog" font-size="12" x="801" y="348">
+value = appropriate number</text>
+<polygon fill="#ffffc8" points="798,366 1164,366 1174,376 1174,566 798,566 798,366" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="798,366 1164,366 1174,376 1174,566 798,566 798,366" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1164,366 1174,376 1164,376 1164,366" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1164,366 1174,376 1164,376 1164,366" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="801" y="381">
+It's possible to create custom levels of pop-up messages.</text>
+<text font-family="Dialog" font-size="12" x="801" y="411">
+Example:</text>
+<text font-family="Dialog" font-size="12" x="801" y="426">
+CRITICAL = 50</text>
+<text font-family="Dialog" font-size="12" x="801" y="441">
+add_message(rqeuest, CRITICAL, "some text...")</text>
+<text font-family="Dialog" font-size="12" x="801" y="471">
+For style class adding for the custom defined level. </text>
+<text font-family="Dialog" font-size="12" x="801" y="486">
+Define the dictionary with level as key and style </text>
+<text font-family="Dialog" font-size="12" x="801" y="501">
+class as a value.</text>
+<text font-family="Dialog" font-size="12" x="801" y="531">
+MESSAGE_TAGS = {</text>
+<text font-family="Dialog" font-size="12" x="801" y="546">
+    CRITICAL: 'critical',</text>
+<text font-family="Dialog" font-size="12" x="801" y="561">
+}</text>
+</svg>
