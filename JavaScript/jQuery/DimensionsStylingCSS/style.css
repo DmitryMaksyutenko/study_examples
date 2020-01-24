@@ -1,0 +1,23 @@
+.redStyle {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+}
+
+.greenStyle {
+    color: green;
+    font-size: 26px;
+    text-align: center;
+}
+
+.blueStyle {
+    color: blue;
+    font-size: 28px;
+    text-align: center;
+}
+
+.cyanStyle {
+    color: cyan;
+    font-size: 30px;
+    text-align: center;
+}
