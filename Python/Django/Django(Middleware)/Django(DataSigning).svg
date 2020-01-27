@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="564" version="1.1" width="740" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="32" stroke="#000000" stroke-width="1" width="255" x="230" y="14"/>
+<text font-family="Dialog" font-size="24" x="281" y="39">
+Data Signing</text>
+<polygon fill="#ffffc8" points="14,118 332,118 342,128 342,469 14,469 14,118" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,118 332,118 342,128 342,469 14,469 14,118" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="332,118 342,128 332,128 332,118" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="332,118 342,128 332,128 332,118" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="133">
+For string values signing can be applied simple </text>
+<text font-family="Dialog" font-size="12" x="17" y="148">
+"Signer" class from django.core.signing.</text>
+<text font-family="Dialog" font-size="12" x="17" y="178">
+Signer([key=None] [,] [sep=':'] [,] [salt=None])</text>
+<text font-family="Dialog" font-size="12" x="17" y="208">
+key = secret ket (as default used </text>
+<text font-family="Dialog" font-size="12" x="17" y="223">
+SECRET_KEY from settings)</text>
+<text font-family="Dialog" font-size="12" x="17" y="253">
+sep = character for content separation</text>
+<text font-family="Dialog" font-size="12" x="17" y="283">
+salt = additional value for encription</text>
+<text font-family="Dialog" font-size="12" x="17" y="313">
+Calss methods:</text>
+<text font-family="Dialog" font-size="12" x="17" y="343">
+sign(&lt;signing value&gt;) - sing the value and return </text>
+<text font-family="Dialog" font-size="12" x="17" y="358">
+the result</text>
+<text font-family="Dialog" font-size="12" x="17" y="388">
+unsign(&lt;signed value&gt;) - get value from signed </text>
+<text font-family="Dialog" font-size="12" x="17" y="403">
+data and return it as result</text>
+<text font-family="Dialog" font-size="12" x="17" y="433">
+If the signed value is invalid, raised the </text>
+<text font-family="Dialog" font-size="12" x="17" y="448">
+BadSignature exception</text>
+<polygon fill="#ffffc8" points="382,78 715,78 725,88 725,309 382,309 382,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="382,78 715,78 725,88 725,309 382,309 382,78" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="715,78 725,88 715,88 715,78" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="715,78 725,88 715,88 715,78" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="385" y="93">
+The TimestampSignature class used in the case when </text>
+<text font-family="Dialog" font-size="12" x="385" y="108">
+the signed value must live a particular time period.</text>
+<text font-family="Dialog" font-size="12" x="385" y="138">
+TimestampSignature([key=None] [,] </text>
+<text font-family="Dialog" font-size="12" x="385" y="153">
+[sep=':'] [,] [salt=None])</text>
+<text font-family="Dialog" font-size="12" x="385" y="183">
+Class methods:</text>
+<text font-family="Dialog" font-size="12" x="385" y="213">
+sign(&lt;signing value&gt;) - sing the value and return </text>
+<text font-family="Dialog" font-size="12" x="385" y="228">
+the result</text>
+<text font-family="Dialog" font-size="12" x="385" y="258">
+unsign(&lt;signed value&gt; [, max_age=None]) - </text>
+<text font-family="Dialog" font-size="12" x="385" y="273">
+get value from signed data and return it as result.</text>
+<text font-family="Dialog" font-size="12" x="385" y="288">
+max_age specifies the life time.</text>
+<polygon fill="#ffffc8" points="382,326 694,326 704,336 704,549 382,549 382,326" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="382,326 694,326 704,336 704,549 382,549 382,326" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="694,326 704,336 694,336 694,326" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="694,326 704,336 694,336 694,326" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="385" y="341">
+For signing the values different from strings </text>
+<text font-family="Dialog" font-size="12" x="385" y="356">
+use the next functions.</text>
+<text font-family="Dialog" font-size="12" x="385" y="386">
+dump(&lt;value&gt; [, key=None] </text>
+<text font-family="Dialog" font-size="12" x="385" y="401">
+[, salt='django.core.signing'] </text>
+<text font-family="Dialog" font-size="12" x="385" y="416">
+[, compress=False]) - signs the setted value </text>
+<text font-family="Dialog" font-size="12" x="385" y="431">
+and return the result (can be compressed)</text>
+<text font-family="Dialog" font-size="12" x="385" y="461">
+loads(&lt;signed value&gt; [, key=None] </text>
+<text font-family="Dialog" font-size="12" x="385" y="476">
+[, salt='django.core.signing'] [, max_age=None]) - </text>
+<text font-family="Dialog" font-size="12" x="385" y="491">
+retreive the original value from signed data </text>
+<text font-family="Dialog" font-size="12" x="385" y="506">
+and return sa result.</text>
+</svg>
