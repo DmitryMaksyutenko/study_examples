@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="612" version="1.1" width="1183" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="39" stroke="#000000" stroke-width="1" width="167" x="470" y="14"/>
+<text font-family="Dialog" font-size="24" x="510" y="39">
+Signals</text>
+<polygon fill="#ffffc8" points="14,38 316,38 326,48 326,201 14,201 14,38" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,38 316,38 326,48 326,201 14,201 14,38" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="316,38 326,48 316,48 316,38" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="316,38 326,48 316,48 316,38" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="53">
+The Signal - is an entity created by Django when </text>
+<text font-family="Dialog" font-size="12" x="17" y="68">
+some action executed (New record in the model, </text>
+<text font-family="Dialog" font-size="12" x="17" y="83">
+record removing, user logout...). </text>
+<text font-family="Dialog" font-size="12" x="17" y="98">
+It is possible to define the handler for the signal, </text>
+<text font-family="Dialog" font-size="12" x="17" y="113">
+it can be a function or a method called in case </text>
+<text font-family="Dialog" font-size="12" x="17" y="128">
+of the signal appearing.</text>
+<text font-family="Dialog" font-size="12" x="17" y="158">
+The signals allow wedging in the process of the </text>
+<text font-family="Dialog" font-size="12" x="17" y="173">
+framework work. And perform some additional </text>
+<text font-family="Dialog" font-size="12" x="17" y="188">
+actions.</text>
+<polygon fill="#ffffc8" points="14,230 347,230 357,240 357,597 14,597 14,230" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="14,230 347,230 357,240 357,597 14,597 14,230" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="347,230 357,240 347,240 347,230" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="347,230 357,240 347,240 347,230" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="17" y="245">
+All signals in Django are the instance of the "Signal" </text>
+<text font-family="Dialog" font-size="12" x="17" y="260">
+class or its subclasses. Class support two methods </text>
+<text font-family="Dialog" font-size="12" x="17" y="275">
+for binding and unbinding the handler.</text>
+<text font-family="Dialog" font-size="12" x="17" y="305">
+connect(&lt;handler&gt; [, sender=None] </text>
+<text font-family="Dialog" font-size="12" x="17" y="320">
+[, weak=True] [, dispatch_uid=None]) - </text>
+<text font-family="Dialog" font-size="12" x="17" y="335">
+bind the handler to the signal.</text>
+<text font-family="Dialog" font-size="12" x="17" y="365">
+or decorator receiver(&lt;signal&gt;)</text>
+<text font-family="Dialog" font-size="12" x="17" y="395">
+handler = method or function of the handler.</text>
+<text font-family="Dialog" font-size="12" x="17" y="410">
+sender = Class from which sent a signal.</text>
+<text font-family="Dialog" font-size="12" x="17" y="425">
+weak = if True handler will be removed from </text>
+<text font-family="Dialog" font-size="12" x="17" y="440">
+memory in the case of unloading of the module.</text>
+<text font-family="Dialog" font-size="12" x="17" y="455">
+dispatch_uid = used in case of the binding the </text>
+<text font-family="Dialog" font-size="12" x="17" y="470">
+same handler to the same signal several times.</text>
+<text font-family="Dialog" font-size="12" x="17" y="500">
+disconnect([receiver=None] [,] [sender=None] [,] </text>
+<text font-family="Dialog" font-size="12" x="17" y="515">
+[dispatch_uid=None]) - remove the handler (receiver).</text>
+<text font-family="Dialog" font-size="12" x="17" y="545">
+Handler - A function or a method, must accept one </text>
+<text font-family="Dialog" font-size="12" x="17" y="560">
+positional parameter of the sender class. It also can </text>
+<text font-family="Dialog" font-size="12" x="17" y="575">
+accept arbitrary count of named parameters.</text>
+<polygon fill="#ffffc8" points="390,86 718,86 728,96 728,541 390,541 390,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="390,86 718,86 728,96 728,541 390,541 390,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="718,86 728,96 718,96 718,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="718,86 728,96 718,96 718,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="393" y="101">
+Embedded Django signals.</text>
+<text font-family="Dialog" font-size="12" x="393" y="131">
+Database subsystem signals:</text>
+<text font-family="Dialog" font-size="12" x="393" y="146">
+django.db.models.signals</text>
+<text font-family="Dialog" font-size="12" x="393" y="176">
+pre_init - sends before new record creation.</text>
+<text font-family="Dialog" font-size="12" x="393" y="191">
+post_init - sends after new record creation.</text>
+<text font-family="Dialog" font-size="12" x="393" y="206">
+pre_save - sends before record saving.</text>
+<text font-family="Dialog" font-size="12" x="393" y="221">
+post_save - sends after record saved.</text>
+<text font-family="Dialog" font-size="12" x="393" y="236">
+pre_delete - sends before record deletion.</text>
+<text font-family="Dialog" font-size="12" x="393" y="251">
+post_delete - sends after record deletion.</text>
+<text font-family="Dialog" font-size="12" x="393" y="266">
+m2m_changed - sends in case changing </text>
+<text font-family="Dialog" font-size="12" x="393" y="281">
+data in a many-to-many relation.</text>
+<text font-family="Dialog" font-size="12" x="393" y="311">
+Request/Response subsystem signals:</text>
+<text font-family="Dialog" font-size="12" x="393" y="326">
+django.core.signals</text>
+<text font-family="Dialog" font-size="12" x="393" y="356">
+request_started - sends at the beginning </text>
+<text font-family="Dialog" font-size="12" x="393" y="371">
+of request handling.</text>
+<text font-family="Dialog" font-size="12" x="393" y="386">
+request_finished - sent after sent to a </text>
+<text font-family="Dialog" font-size="12" x="393" y="401">
+user response.</text>
+<text font-family="Dialog" font-size="12" x="393" y="416">
+got_request_exception - sends in case of </text>
+<text font-family="Dialog" font-size="12" x="393" y="431">
+exception in the request handling.</text>
+<text font-family="Dialog" font-size="12" x="393" y="461">
+Authentication signals:</text>
+<text font-family="Dialog" font-size="12" x="393" y="476">
+django.contrib.auth.signals</text>
+<text font-family="Dialog" font-size="12" x="393" y="506">
+user_logged_in - sends after success user login.</text>
+<text font-family="Dialog" font-size="12" x="393" y="521">
+user_logged_out - sends after success user logout.</text>
+<text font-family="Dialog" font-size="12" x="393" y="536">
+user_login_failed - sends if the user can't log in.</text>
+<polygon fill="#ffffc8" points="758,86 1158,86 1168,96 1168,317 758,317 758,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="758,86 1158,86 1168,96 1168,317 758,317 758,86" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffc8" points="1158,86 1168,96 1158,96 1158,86" stroke="#ffffc8" stroke-width="1"/>
+<polyline fill="none" points="1158,86 1168,96 1158,96 1158,86" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="761" y="101">
+Custom signals defining.</text>
+<text font-family="Dialog" font-size="12" x="761" y="131">
+First, declare the signal, create the instance </text>
+<text font-family="Dialog" font-size="12" x="761" y="146">
+of the "Signal" class form django.dispatches.</text>
+<text font-family="Dialog" font-size="12" x="761" y="176">
+Signal(providing_args=&lt;list of name pareameters as strings&gt;)</text>
+<text font-family="Dialog" font-size="12" x="761" y="206">
+After, in concrete place of code initiate the sending of the signal. </text>
+<text font-family="Dialog" font-size="12" x="761" y="221">
+For that used two methods from the "Signal" class.</text>
+<text font-family="Dialog" font-size="12" x="761" y="251">
+send(&lt;sender&gt; [, named parematers]) - makes sending.</text>
+<text font-family="Dialog" font-size="12" x="761" y="281">
+send_robust(&lt;sender&gt; [, named parameters]) -  </text>
+<text font-family="Dialog" font-size="12" x="761" y="296">
+the same as the send(), but handle the exceptions.</text>
+</svg>
