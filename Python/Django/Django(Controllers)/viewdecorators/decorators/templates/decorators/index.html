@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title_context %}
+  Main page.
+{% endblock title_context %}
+
+{% block body_context %}
+
+  <h3>Django provides several decorators that can be applied to views to
+    support various HTTP features.
+  </h3><br>
+
+  <a href="{% url "get_decorator_page" %}">Go to GET decorator.</a><br><br>
+  <a href="{% url "safe_decorator_page" %}">Go to safe decorator.</a><br><br>
+  <a href="{% url "post_form_page" %}">Go to form.</a><br><br>
+  <a href="{% url "gzip_decorator_page" %}">Go to Gzip decorator.</a><br><br>
+  <a href="{% url "get_name_form_page" %}">Go to get name page.</a><br><br>
+  <a href="{% url "get_not_cacheable_page" %}">Go to never chachable.</a><br><br>
+  <a href="{% url "get_cache_control_page" %}">Go to cache control.</a><br><br>
+
+{% endblock body_context %}

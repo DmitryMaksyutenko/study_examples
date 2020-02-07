@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title_context %}
+  Cache-control page.
+{% endblock title_context %}
+
+{% block body_context %}
+  {% for data in context.items %}
+    <p>{{ data }}</p>
+  {% endfor %}
+
+  <a href="{% url "index_page" %}">RETURN</a>
+{% endblock body_context %}

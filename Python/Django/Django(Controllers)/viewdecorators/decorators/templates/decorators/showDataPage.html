@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title_context %}
+  Data from database
+{% endblock title_context %}
+
+{% block body_context %}
+
+<p>{{ context.name }} {{ context.surname }} {{ context.age }}</p>
+  <a href="{% url "index_page" %}">RETURN</a>
+
+{% endblock body_context %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body_context %}
+
+<form action="{% url "post_decorator" %}" method="POST">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="push">
+</form>
+
+{% endblock body_context %}

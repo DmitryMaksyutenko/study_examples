@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title_context %}
+  Get decorator
+{% endblock title_context %}
+
+{% block body_context %}
+  <p>This page returned by view with @required_GET decorator.</p><br>
+    {% for data in context.items %}
+      <p>{{ data }}</p>
+    {% endfor %}
+  <a href="{% url "index_page" %}">RETURN</a>
+{% endblock body_context %}
