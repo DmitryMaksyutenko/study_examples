@@ -1,0 +1,11 @@
+.redColor{
+    width: 300px;
+    height: 300px;
+    background: red;
+}
+
+.greenColor{
+    width: 500px;
+    height: 500px;
+    background: green;
+}
