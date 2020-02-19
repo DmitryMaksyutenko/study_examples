@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>404 page not found view.</p>
+  <p>exception message: {{ exception }}</p>
+  <p>request path: {{ request_path }}</p>
+  <p>the media folder: {{ MEDIA_URL }}</p>
+  <p>the static root: {{ STATIC_URL }}</p>
+{% endblock content %}

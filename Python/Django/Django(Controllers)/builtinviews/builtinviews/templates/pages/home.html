@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <ul>
+    <h3>Built-in-views</h3>
+    <li><a class="links" href="{% url "staticserve:get_image_page" %}">go to image</a></li>
+    <br>
+    <li><a class="links" href="{% url "staticserve:get_text_page" %}">go to text</a></li>
+    <br>
+    <li><a class="links" href="{% url "page404:get_404_page" %}">go to 404 error</a></li>
+    <br>
+    <li><a class="links" href="{% url "page500:get_500_page" %}">go to 500 error</a></li>
+    <br>
+    <li><a class="links" href="{% url "page403:get_403_page" %}">go to 403 error</a></li>
+    <br>
+    <li><a class="links" href="{% url "page400:get_400_page" %}">go to 400 error</a></li>
+  </ul>
+{% endblock content %}
