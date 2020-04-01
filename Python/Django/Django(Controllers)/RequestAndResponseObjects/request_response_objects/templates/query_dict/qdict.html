@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <p>QueryDict</p><br>
+  <p>QueryDict methods:</p><br>
+
+  {% for key, value in m_dict.items %}
+    <p class="pRed">{{ key }} = </p> <p>{{ value }}</p><br>
+  {% endfor %}
+
+  <a href="{% url "home_page:index_page" %}">Home</a>
+
+{% endblock content %}

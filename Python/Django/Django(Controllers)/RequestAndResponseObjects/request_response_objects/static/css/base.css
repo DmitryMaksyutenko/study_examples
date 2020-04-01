@@ -1,0 +1,23 @@
+* {
+  margin: auto;
+}
+
+p {
+  text-align: center;
+  font-size: 32px;
+  display: inline;
+}
+
+.pRed {
+  color: red;
+  text-align: center;
+  font-size: 32px;
+  display: inline;
+}
+
+a {
+  display: block;
+  font-size: 26px;
+  text-decoration: none;
+  text-align: center;
+}

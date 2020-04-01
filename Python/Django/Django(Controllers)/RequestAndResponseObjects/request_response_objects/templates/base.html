@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>
+
+    {% block title %}
+      base title block.
+    {% endblock title %}
+
+  </title>
+
+  {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+  {% endblock stylesheets %}
+
+</head>
+
+<body>
+
+  {% block content %}
+    <p>base content block of the body tag.</p>
+  {% endblock content %}
+
+  {% block scripts %}
+  {% endblock scripts %}
+
+</body>
+
+</html>
+

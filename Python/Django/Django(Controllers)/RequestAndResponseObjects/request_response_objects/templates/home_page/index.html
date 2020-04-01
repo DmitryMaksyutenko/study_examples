@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <p>This is home page.</p><br>
+
+  <a href="{% url "request_object:request_object" %}">Request Object</a>
+  <a href="{% url "query_dict:qdict_page" %}">QueryDict Object</a>
+  <a href="{% url "response_object:response_page" %}">Response Object</a>
+  <a href="{% url "response_redirect:redirect_page" %}">Redirect</a>
+  <a href="{% url "permanent_redirect:permanent_redirect_page" %}">Permanent Redirect</a>
+  <a href="{% url "not_modified:not_modified_page" %}">Page not modified</a>
+  <a href="{% url "bad_request:bad_request_page" %}">Bad Request</a>
+  <a href="{% url "not_found:not_found_page" %}">Not Found page</a>
+  <a href="{% url "forbidden:forbidden_page" %}">Forbidden</a>
+  <a href="{% url "not_allowed:not_allowed_page" %}">Not allowed</a>
+  <a href="{% url "gone:gone_page" %}">Gone</a>
+  <a href="{% url "server_error:server_error_page" %}">Server Error</a>
+  <a id="json" href="{% url "json_response:json_page" %}">Get JSON</a>
+  <a href="{% url "streaming_http_response:streaming_response_page" %}">Streaming response</a>
+  <a href="{% url "file_response:get_file_page" %}">Get File</a>
+
+{% endblock content %}
+
+{% block scripts %}
+
+  <script src="{% static "scripts/showjson.js" %}"></script>
+
+{% endblock scripts %}

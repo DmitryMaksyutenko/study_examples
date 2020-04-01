@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <p>Request object.</p><br>
+  <p>Request object "{{ context_a.object_name }}" attributes:</p><br>
+
+  {% for key, value in context_a.items %}
+    <p class="pRed">{{ key }}</p>
+    <p> = {{ value }}</p>
+    <br>
+  {% endfor %}
+  <br>
+
+  <p>Request object "{{ context_a.object_name }}" methods:</p><br>
+  {% for key, value in context_m.items %}
+    <p class="pRed">{{ key }}</p>
+    <p> = {{ value }}</p><br>
+  {% endfor %}
+
+  <a href="{% url "home_page:index_page" %}">Home</a>
+
+{% endblock content %}
