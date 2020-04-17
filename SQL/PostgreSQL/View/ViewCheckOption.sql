@@ -1,7 +1,7 @@
 /*
   CHECK OPTION may not be used with RECURSIVE views.
 
-  Only sopportd on views that are automaticali updatable, and do not have
+  Only supported on views that are automaticali updatable, and do not have
   INSTED OF trigger or INSTED rules except view is defined on top of a
   base view that has INSTED OF.
 */

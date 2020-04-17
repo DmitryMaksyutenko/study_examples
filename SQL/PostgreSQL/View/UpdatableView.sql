@@ -1,7 +1,7 @@
 /*
   The Postgres view is updatable when it meets the following conditions:
 
-  - The defining query of the view must have exactly one enty in the
+  - The defining query of the view must have exactly one entry in the
     FROM clause, which can be a table of another updatable view.
 
   - The defining quety must not contain one ot the following clauses
