@@ -1,4 +1,7 @@
 /*
+  The LIMIT clause is not a SQL-standard.
+
+
   LIMIT is an optional clause of the SELECT statement that returns a subset of
   rows returned by the query.
 
