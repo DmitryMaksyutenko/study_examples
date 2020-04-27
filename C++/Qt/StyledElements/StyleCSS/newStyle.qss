@@ -1,0 +1,33 @@
+QPushButton {
+        min-width: 80px;
+}
+
+QPushButton {
+        /* border-image: url(:/img/Linux.png) 5px; */
+        border-width: 5px;
+}
+
+QPushButton:hover {
+        border-image: url(:/img/Windows.png);
+        border-width: 5px;
+}
+
+QPushButton:pressed {
+        border-image: url(:/img/Android.png) 5px;
+        border-width: 5px;
+}
+
+QWidget {
+        background: black;
+}
+
+QPushButton {
+        min-width: 170px;
+        min-height: 200px;
+        background: qlineargradient(x1:0, y1:1, x2:0, y2:0,
+                                        stop:1 rgb(133, 133, 135),
+                                        stop:0.4 rgb(31, 31, 33));
+        color: white;
+        border: 5px solid red;
+        border-radius: 15px;
+}

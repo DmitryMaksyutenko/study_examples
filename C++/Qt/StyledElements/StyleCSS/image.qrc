@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+        <qresource>
+                <file>img/Linux.png</file>
+                <file>img/Windows.png</file>
+                <file>img/Android.png</file>
+        </qresource>
+</RCC>
