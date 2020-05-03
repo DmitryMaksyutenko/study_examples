@@ -16,7 +16,7 @@ FROM
   film
 EXCEPT
 SELECT DISTINCT
-  inventory.film_id
+  inventory.film_id,
   title
 FROM
   inventory
