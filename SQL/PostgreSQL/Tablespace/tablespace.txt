@@ -1,0 +1,22 @@
+PostgreSQL tablespaces allows to control how data stored in the file system.
+The tablespaces are very useful in many cases such as managing large tables
+and improving database performance.
+<---------------------------------------------------------------------------------------------->
+
+The tablespace is a location on disk where PostgreSQL stores data files containing
+database objects e.g., indexes., and tables. PostgreSQL uses a tablespace to
+map a logical name to a physical location on disk.
+
+PostgreSQL comes with two default tablespaces:
+ pg_default tablespace stores all user data.
+ pg_global tablespace stores all global data.
+
+There are two main advantages of using tablespaces:
+  First, if a partition on which the cluster was initialized is out of space, create a new
+  tablespace on a different partition and use it until reconfigure the system.
+
+  Second, the statistics of database objects’ usages to optimize the performance of databases.
+  For example, place the frequent access indexes or tables on devices that perform very fast
+  e.g., solid state devices, and put the tables containing archive data which is rarely used
+  on slower devices.
+<---------------------------------------------------------------------------------------------->
