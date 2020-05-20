@@ -4,10 +4,24 @@
     In other words, inside a function cannot open a new transaction, even commit or rollback the
     current transaction. Use the procedure insted.
 
-
-        CREATE FUNCTION somefunc(integer, text) RETURNS integer
-        AS 'function body text'
-        LANGUAGE plpgsql;
+    CREATE [ OR REPLACE  ] FUNCTION
+        name ( [ [ argmode  ] [ argname  ] argtype [ { DEFAULT | =  } default_expr  ] [, ...]  ]  )
+            [ RETURNS rettype
+              | RETURNS TABLE ( column_name column_type [, ...]  ) ]
+        { LANGUAGE lang_name
+            | TRANSFORM { FOR TYPE type_name  } [, ... ]
+            | WINDOW
+            | IMMUTABLE | STABLE | VOLATILE | [ NOT  ] LEAKPROOF
+            | CALLED ON NULL INPUT | RETURNS NULL ON NULL INPUT | STRICT
+            | [ EXTERNAL  ] SECURITY INVOKER | [ EXTERNAL  ] SECURITY DEFINER
+            | PARALLEL { UNSAFE | RESTRICTED | SAFE  }
+            | COST execution_cost
+            | ROWS result_rows
+            | SUPPORT support_function
+            | SET configuration_parameter { TO value | = value | FROM CURRENT  }
+            | AS 'definition'
+            | AS 'obj_file', 'link_symbol'
+        } ...
 
     PL/pgSQL is a block-structured language. The complete text of a function body must be a block.
     A block is defined as:
@@ -57,6 +71,7 @@ DO $$
            counter := counter + 1;
            RAISE NOTICE 'The current value of counter is %', counter;
     END first_block $$;
+
 
 DO $$
     <<outer_block>>
