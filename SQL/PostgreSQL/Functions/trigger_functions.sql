@@ -72,3 +72,6 @@ SET
     last_update = NOW()
 WHERE
     actor_id = 1;
+
+DROP TRIGGER get_id_count ON actor;
+DROP FUNCTION trigger_get_count;
