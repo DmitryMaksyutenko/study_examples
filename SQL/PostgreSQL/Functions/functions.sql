@@ -1,13 +1,11 @@
 /*
     Functions written in PL/pgSQL are defined to the server by executing CREATE FUNCTION commands.
-    User-defined functions is that they cannot execute transactions.
-    In other words, inside a function cannot open a new transaction, even commit or rollback the
-    current transaction. Use the procedure insted.
+    User-defined functions cannot execute transactions. In other words, inside a function cannot
+    open a new transaction, even commit or rollback the current transaction. Use the procedure insted.
 
     CREATE [ OR REPLACE  ] FUNCTION
         name ( [ [ argmode  ] [ argname  ] argtype [ { DEFAULT | =  } default_expr  ] [, ...]  ]  )
-            [ RETURNS rettype
-              | RETURNS TABLE ( column_name column_type [, ...]  ) ]
+            [ RETURNS rettype | RETURNS TABLE ( column_name column_type [, ...]  ) ]
         { LANGUAGE lang_name
             | TRANSFORM { FOR TYPE type_name  } [, ... ]
             | WINDOW
@@ -44,7 +42,7 @@
     To declare a constant in PL/pgSQL, use the following syntax:
         constant_name CONSTANT data_type [:= expression]
 
-    To raise a message, you use the RAISE statement as follows:
+    To raise a message, use the RAISE statement as follows:
         RAISE level format;
             level:
                 DEBUG
@@ -122,3 +120,27 @@ $$
 LANGUAGE plpgsql;
 
 DROP FUNCTION fact;
+
+-- Function returns table. Table function.
+CREATE OR REPLACE FUNCTION get_years (lhs INT, rhs INT)
+RETURNS TABLE (
+    id INT,
+    some_date DATE
+    ) AS
+$$
+    <<block>>
+    BEGIN
+        FOR val IN lhs .. rhs LOOP
+            id = val;
+            some_date = FORMAT('201%s-0%s-%s', val::CHAR, val::CHAR, val::CHAR);
+            RETURN NEXT;
+        END LOOP;
+    END block;
+$$
+LANGUAGE plpgsql;
+
+DROP FUNCTION IF EXISTS get_years(INT, INT);
+
+-- Generate series.
+SELECT * FROM generate_series(0, 10);
+SELECT * FROM generate_series(0, 10, 2);
