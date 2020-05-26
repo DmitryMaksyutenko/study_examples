@@ -61,6 +61,7 @@
         ASSERT condition [, message];
 */
 
+
 DO $$
     <<first_block>>
     DECLARE
@@ -89,8 +90,8 @@ DO $$
 END outer_block $$;
 
 
-CREATE FUNCTION foo(lhs integer, rhs integer) RETURNS integer AS
-$$
+CREATE FUNCTION foo(lhs integer, rhs integer)
+RETURNS integer AS $$
 <<block>>
     BEGIN
         RETURN lhs + rhs;
@@ -101,8 +102,8 @@ LANGUAGE plpgsql;
 DROP FUNCTION foo;
 
 
-CREATE FUNCTION fact(val INTEGER) RETURNS INTEGER AS
-$$
+CREATE FUNCTION fact(val INTEGER)
+RETURNS INTEGER AS $$
     <<block>>
     DECLARE
         result INTEGER := 0;
@@ -121,13 +122,13 @@ LANGUAGE plpgsql;
 
 DROP FUNCTION fact;
 
+
 -- Function returns table. Table function.
 CREATE OR REPLACE FUNCTION get_years (lhs INT, rhs INT)
 RETURNS TABLE (
     id INT,
     some_date DATE
-    ) AS
-$$
+    ) AS $$
     <<block>>
     BEGIN
         FOR val IN lhs .. rhs LOOP
@@ -141,6 +142,38 @@ LANGUAGE plpgsql;
 
 DROP FUNCTION IF EXISTS get_years(INT, INT);
 
+
 -- Generate series.
 SELECT * FROM generate_series(0, 10);
 SELECT * FROM generate_series(0, 10, 2);
+
+
+-- Function returns multiple rows.
+CREATE OR REPLACE FUNCTION get_all(val VARCHAR(10))
+RETURNS SETOF actor AS $$
+    BEGIN
+        RETURN QUERY
+        SELECT
+            *
+        FROM
+            actor
+        WHERE
+            first_name LIKE FORMAT('%s%%', val);
+    END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION get_names(val VARCHAR(10))
+RETURNS TABLE (first_name VARCHAR(50)) AS $$
+    BEGIN
+        RETURN QUERY
+        SELECT
+            actor.first_name
+        FROM
+            actor
+        WHERE
+            actor.first_name LIKE FORMAT('%s%%', val);
+    END;
+$$ LANGUAGE plpgsql;
+
+DROP FUNCTION IF EXISTS get_names(VARCHAR(10));
+DROP FUNCTION IF EXISTS get_all(VARCHAR(10));
