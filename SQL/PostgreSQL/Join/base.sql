@@ -50,3 +50,7 @@ VALUES
     (2, 'Apple'),
     (3, 'Watermelon'),
     (4, 'Pear');
+
+
+DROP TABLE IF EXISTS basket_a;
+DROP TABLE IF EXISTS basket_b;
