@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource>
+        <file>translations/main_ru.qm</file>
+        <file>translations/main_de.qm</file>
+    </qresource>
+</RCC>
