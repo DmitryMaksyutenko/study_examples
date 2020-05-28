@@ -19,3 +19,14 @@ FROM
 LEFT JOIN basket_b b ON
     a.fruit = b.fruit
     WHERE b.id IS NULL;
+
+
+-- LEFT JOIN with foreign key.
+SELECT
+    film.film_id,
+    film.title,
+    inventory_id
+FROM
+    film
+LEFT JOIN inventory ON
+    inventory.film_id = film.film_id;
