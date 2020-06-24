@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource>
+    <file>img/Linux.png</file>
+    <file>img/MacOSX.png</file>
+  </qresource>
+</RCC>
