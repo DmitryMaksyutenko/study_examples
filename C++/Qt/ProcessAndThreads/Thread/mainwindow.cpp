@@ -1,15 +1,19 @@
 #include "mainwindow.h"
 
-#include <QTextEdit>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    QTextEdit *t = new QTextEdit(this);
-    t->setFixedSize(300, 300);
+    text = new QTextEdit(this);
+    text->setFixedSize(600, 300);
 }
 
 MainWindow::~MainWindow()
 {
+}
+
+void MainWindow::textInsert(const QString &str)
+{
+    text->append(str);
 }
 
