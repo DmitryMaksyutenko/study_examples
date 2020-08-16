@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div id="app"
+       v-on:click="clicked">
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1>Private Message</h1>
+        <div class="w-100"> </div>
+        <h3>Current User: {{ user }}</h3>
+      </div>
+    </div>
+    <section id="message-window" class="container justify-content-center">
+      <div class="row justify-content-center">
+        <textarea id="messages-area" cols=70 rows=7
+                  v-html="getMessages('{{ all }}')">
+        </textarea>
+      </div>
+    </section>
+        <form v-on:submit.prevent="send()" method="POST" class="form-inline justify-content-center">
+          <input type="text" id="message" name="message" class="fomr-control col"/>
+          <input type="hidden" name="csrfmiddlewareroken" value="{{ csrf_token }}"/>
+          <button id="sendButton" type="submit" class="btn btn-primary mx-5 my-3">Send</button>
+        </form>
+    <a class="h3 text-decoration-none" href="{% url 'messages:home' %}">Home</a>
+    <br>
+    <a class="h3 text-decoration-none" href="{% url 'messages:log_out' %}">Log Out</a>
+  </div>
+{% endblock content %}
+
+{% block scripts %}
+  <script charset="utf-8">
+
+    async function postData(url = '', data = {}) {
+        const response = await fetch(url, {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(data)
+        });
+          return response.json();
+    };
+
+    new Vue({
+      el: "#app",
+      delimiters: ['<%', '%>'],
+      data: {
+        messages: "{{ all }}",
+      },
+      methods: {
+        clicked: function(){
+          window.console.log("DIV");
+        },
+        getMessages: function(data){
+          let text = data.replace(/&quot;/g, '"');
+          let arrText = text.split('}');
+          let result = String();
+          let asJson;
+          for (let i = 0; i < arrText.length - 1; i++) {
+            arrText[i] += '}'
+            asJson = JSON.parse(arrText[i]);
+            result += "from: " + asJson.from_user + " to: "
+                      + asJson.for_user + "\nmessage: " + asJson.message +
+                      "\n\n";
+          }
+          return result;
+        },
+        send: function(){
+        var t = this;
+        let dataToSend = document.getElementById("message").value;
+        postData("", {"message": dataToSend})
+          .then(data => {
+            document.getElementById("messages-area").value = t.getMessages(data["all"]);
+            document.getElementById("message").value = "";
+          });
+        }
+      }
+    });
+  </script>
+{% endblock scripts %}

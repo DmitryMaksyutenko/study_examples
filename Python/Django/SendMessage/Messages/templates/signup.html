@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="app"
+          class="container">
+
+        <h1 v-html="pageName"
+            v-bind:title="pageNameTitle"
+            class="row
+                    justify-content-center
+                    my-5"></h1>
+
+      <form method="POST">
+          {% csrf_token %}
+            <div class="row justify-content-center">
+              <div class="flex-column">
+                <div class="col">
+                  {% for item in form %}
+                        <label>{{ item.label }}</label>
+                        <div> {{ item }} </div>
+                  {% endfor %}
+                  <button class="col btn btn-success mt-4" type="submit">Sign Up</button>
+                </div>
+              </div>
+            </div>
+      </form>
+      <br>
+      <a class="h3 text-decoration-none" href="{% url 'messages:home' %}">Home page</a>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        new Vue({
+            el: '#app',
+            delimiters: ['<%', '%>'],
+            data: {
+                pageName: "Sign Up.",
+                pageNameTitle: "Sign Up."
+            }
+        });
+    </script>
+{% endblock scripts %}

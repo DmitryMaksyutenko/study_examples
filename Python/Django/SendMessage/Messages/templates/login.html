@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+      <div class="row
+                  justify-content-center
+                  py-5">
+        <div id="app">
+            {% if user.is_authenticated %}
+                <h2 v-html="currentUser"
+                    v-bind:title="currentUserTitle"
+                    v-on:click="aboutUser"></h2>
+            {% else %}
+                <h1 class="col">Log in.</h1>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+      <form method="POST">
+          {% csrf_token %}
+            <div class="row justify-content-center">
+              <div class="flex-column">
+                <div class="col">
+                  {% for item in form %}
+                        <label>{{ item.label }}</label>
+                        <div> {{ item }} </div>
+                  {% endfor %}
+                  <button class="col btn btn-success mt-4" type="submit">Log In</button>
+                  <input type="hidden" name="next" value="{{ next }}">
+                </div>
+              </div>
+            </div>
+      </form>
+      <br>
+      <a class="h2 text-decoration-none" href="{% url 'messages:home' %}">Home page</a>
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        new Vue({
+            el: '#app',
+            delimiters: ['<%', '%>'],
+            data: {
+                currentUser: 'User {{ user }} are logged in.',
+                currentUserTitle: 'User name.'
+            },
+            methods: {
+                aboutUser: function(){
+                    window.alert('This is user name: ' + '{{ user }}');
+                }
+            }
+        });
+    </script>
+{% endblock scripts %}

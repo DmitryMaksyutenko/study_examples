@@ -1,0 +1,137 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	configs/settings.py	/^ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0"]$/;"	v
+AuthenticatedSessionManager	Messages/models.py	/^class AuthenticatedSessionManager(models.Manager):$/;"	c
+AuthenticatedUsersManager	Messages/models.py	/^class AuthenticatedUsersManager(models.Manager):$/;"	c
+BASE_DIR	configs/settings.py	/^BASE_DIR = Path(__file__).resolve(strict=True).parent.parent$/;"	v
+CreateUser	Messages/forms.py	/^class CreateUser(UserCreationForm):$/;"	c
+CreateUserFormView	Messages/views.py	/^class CreateUserFormView(FormView):$/;"	c
+DATABASES	configs/settings.py	/^DATABASES = {$/;"	v
+DEBUG	configs/settings.py	/^DEBUG = True$/;"	v
+HomePage	Messages/views.py	/^class HomePage(TemplateView):$/;"	c
+INSTALLED_APPS	configs/settings.py	/^INSTALLED_APPS = [$/;"	v
+LOGIN_REDIRECT_URL	configs/settings.py	/^LOGIN_REDIRECT_URL = '\/messages'$/;"	v
+LOGOUT_REDIRECT_URL	configs/settings.py	/^LOGOUT_REDIRECT_URL = '\/'$/;"	v
+LogInUser	Messages/forms.py	/^class LogInUser(AuthenticationForm):$/;"	c
+LogInUserView	Messages/views.py	/^class LogInUserView(LoginView):$/;"	c
+MIDDLEWARE	configs/settings.py	/^MIDDLEWARE = [$/;"	v
+MessageForm	Messages/forms.py	/^class MessageForm(forms.Form):$/;"	c
+Messages	Messages/models.py	/^class Messages(models.Model):$/;"	c
+MessagesConfig	Messages/apps.py	/^class MessagesConfig(AppConfig):$/;"	c
+MessagesPage	Messages/views.py	/^class MessagesPage(TemplateView):$/;"	c
+Meta	Messages/forms.py	/^    class Meta:$/;"	c	class:CreateUser
+Meta	Messages/forms.py	/^    class Meta:$/;"	c	class:LogInUser
+Meta	Messages/models.py	/^    class Meta:$/;"	c	class:SessionMethods
+Meta	Messages/models.py	/^    class Meta:$/;"	c	class:UserMethods
+Migration	Messages/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	Messages/migrations/0002_auto_20200607_1334.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	Messages/migrations/0004_delete_djangosession.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	Messages/migrations/0005_privatemessage.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	Messages/migrations/0006_auto_20200629_1046.py	/^class Migration(migrations.Migration):$/;"	c
+Migration	Messages/migrations/0007_auto_20200702_0703.py	/^class Migration(migrations.Migration):$/;"	c
+PrivateMessage	Messages/models.py	/^class PrivateMessage(models.Model):$/;"	c
+PrivateMessageManager	Messages/models.py	/^class PrivateMessageManager(models.Manager):$/;"	c
+PrivateMessageView	Messages/views.py	/^class PrivateMessageView(TemplateView):$/;"	c
+ROOT_URLCONF	configs/settings.py	/^ROOT_URLCONF = 'configs.urls'$/;"	v
+SECRET_KEY	configs/settings.py	/^SECRET_KEY = 'Asdfj0900asdlkjlhooe67AdskhFklkLJLojas09jlahkljh'$/;"	v
+SESSION_COOKIE_AGE	configs/settings.py	/^SESSION_COOKIE_AGE = 86400$/;"	v
+STATIC_URL	configs/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+SessionMethods	Messages/models.py	/^class SessionMethods(Session):$/;"	c
+TEMPLATES	configs/settings.py	/^TEMPLATES = [$/;"	v
+UserMethods	Messages/models.py	/^class UserMethods(User):$/;"	c
+active_sessions	Messages/models.py	/^    def active_sessions(self):$/;"	m	class:AuthenticatedSessionManager
+app_name	Messages/urls.py	/^app_name = "messages"$/;"	v
+application	configs/wsgi.py	/^application = get_wsgi_application()$/;"	v
+auth_manager	Messages/models.py	/^    auth_manager = AuthenticatedSessionManager()$/;"	v	class:SessionMethods
+auth_manager	Messages/models.py	/^    auth_manager = AuthenticatedUsersManager()$/;"	v	class:UserMethods
+authenticated_users	Messages/models.py	/^    def authenticated_users(self, active_sessions):$/;"	m	class:AuthenticatedUsersManager
+bases	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            bases=('auth.user',),$/;"	v	class:Migration
+bases	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            bases=('sessions.session',),$/;"	v	class:Migration
+confirm_login_allowed	Messages/forms.py	/^    def confirm_login_allowed(self, user):$/;"	m	class:LogInUser
+dependencies	Messages/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	Messages/migrations/0002_auto_20200607_1334.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	Messages/migrations/0004_delete_djangosession.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	Messages/migrations/0005_privatemessage.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	Messages/migrations/0006_auto_20200629_1046.py	/^    dependencies = [$/;"	v	class:Migration
+dependencies	Messages/migrations/0007_auto_20200702_0703.py	/^    dependencies = [$/;"	v	class:Migration
+field	Messages/migrations/0002_auto_20200607_1334.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to=settings.AUTH_USER_MODEL),$/;"	v	class:Migration
+field	Messages/migrations/0006_auto_20200629_1046.py	/^            field=models.OneToOneField(on_delete=django.db.models.deletion.PROTECT, related_name='receiver', to=settings.AUTH_USER_MODEL),$/;"	v	class:Migration
+field	Messages/migrations/0007_auto_20200702_0703.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='receiver', to=settings.AUTH_USER_MODEL),$/;"	v	class:Migration
+field	Messages/migrations/0007_auto_20200702_0703.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='sender', to=settings.AUTH_USER_MODEL),$/;"	v	class:Migration
+fields	Messages/forms.py	/^        fields = ['email', 'password']$/;"	v	class:LogInUser.Meta
+fields	Messages/forms.py	/^        fields = ['username', 'email', 'password1', 'password2']$/;"	v	class:CreateUser.Meta
+fields	Messages/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+fields	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            fields=[$/;"	v	class:Migration
+fields	Messages/migrations/0005_privatemessage.py	/^            fields=[$/;"	v	class:Migration
+form_class	Messages/views.py	/^    form_class = CreateUser$/;"	v	class:CreateUserFormView
+form_class	Messages/views.py	/^    form_class = LogInUser$/;"	v	class:LogInUserView
+form_valid	Messages/views.py	/^    def form_valid(self, form):$/;"	m	class:CreateUserFormView
+get	Messages/views.py	/^    def get(self, request, *args, **kwargs):$/;"	m	class:MessagesPage
+get	Messages/views.py	/^    def get(self, request, *args, **kwargs):$/;"	m	class:PrivateMessageView
+initial	Messages/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+label	Messages/forms.py	/^                              label="",$/;"	v	class:MessageForm
+main	manage.py	/^def main():$/;"	f
+managers	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            managers=[$/;"	v	class:Migration
+message	Messages/forms.py	/^    message = forms.CharField(empty_value="Message.",$/;"	v	class:MessageForm
+message	Messages/models.py	/^    message = models.TextField()$/;"	v	class:Messages
+message	Messages/models.py	/^    message = models.TextField()$/;"	v	class:PrivateMessage
+message_manager	Messages/models.py	/^    message_manager = PrivateMessageManager()$/;"	v	class:PrivateMessage
+messages	Messages/models.py	/^    def messages(self, send, rec):$/;"	m	class:PrivateMessageManager
+model	Messages/forms.py	/^        model = User$/;"	v	class:CreateUser.Meta
+model_name	Messages/migrations/0002_auto_20200607_1334.py	/^            model_name='messages',$/;"	v	class:Migration
+model_name	Messages/migrations/0006_auto_20200629_1046.py	/^            model_name='privatemessage',$/;"	v	class:Migration
+model_name	Messages/migrations/0007_auto_20200702_0703.py	/^            model_name='privatemessage',$/;"	v	class:Migration
+name	Messages/apps.py	/^    name = 'Messages'$/;"	v	class:MessagesConfig
+name	Messages/migrations/0001_initial.py	/^            name='Messages',$/;"	v	class:Migration
+name	Messages/migrations/0001_initial.py	/^            name='Users',$/;"	v	class:Migration
+name	Messages/migrations/0002_auto_20200607_1334.py	/^            name='Users',$/;"	v	class:Migration
+name	Messages/migrations/0002_auto_20200607_1334.py	/^            name='user_id',$/;"	v	class:Migration
+name	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            name='DjangoSession',$/;"	v	class:Migration
+name	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            name='SessionMethods',$/;"	v	class:Migration
+name	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            name='UserMethods',$/;"	v	class:Migration
+name	Messages/migrations/0004_delete_djangosession.py	/^            name='DjangoSession',$/;"	v	class:Migration
+name	Messages/migrations/0005_privatemessage.py	/^            name='PrivateMessage',$/;"	v	class:Migration
+name	Messages/migrations/0006_auto_20200629_1046.py	/^            name='receiver',$/;"	v	class:Migration
+name	Messages/migrations/0007_auto_20200702_0703.py	/^            name='receiver',$/;"	v	class:Migration
+name	Messages/migrations/0007_auto_20200702_0703.py	/^            name='sender',$/;"	v	class:Migration
+name	Messages/urls.py	/^         name="private_message")$/;"	v
+objects	Messages/models.py	/^    objects = models.Manager()$/;"	v	class:PrivateMessage
+on_delete	Messages/models.py	/^                                 on_delete=models.PROTECT,$/;"	v	class:PrivateMessage
+on_delete	Messages/models.py	/^                               on_delete=models.PROTECT,$/;"	v	class:PrivateMessage
+operations	Messages/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+operations	Messages/migrations/0002_auto_20200607_1334.py	/^    operations = [$/;"	v	class:Migration
+operations	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^    operations = [$/;"	v	class:Migration
+operations	Messages/migrations/0004_delete_djangosession.py	/^    operations = [$/;"	v	class:Migration
+operations	Messages/migrations/0005_privatemessage.py	/^    operations = [$/;"	v	class:Migration
+operations	Messages/migrations/0006_auto_20200629_1046.py	/^    operations = [$/;"	v	class:Migration
+operations	Messages/migrations/0007_auto_20200702_0703.py	/^    operations = [$/;"	v	class:Migration
+options	Messages/migrations/0003_djangosession_sessionmethods_usermethods.py	/^            options={$/;"	v	class:Migration
+post	Messages/views.py	/^    def post(self, request, *args, **kwarg):$/;"	m	class:MessagesPage
+post	Messages/views.py	/^    def post(self, request, *args, **kwargs):$/;"	m	class:LogInUserView
+post	Messages/views.py	/^    def post(self, request, *args, **kwargs):$/;"	m	class:PrivateMessageView
+proxy	Messages/models.py	/^        proxy = True$/;"	v	class:SessionMethods.Meta
+proxy	Messages/models.py	/^        proxy = True$/;"	v	class:UserMethods.Meta
+receiver	Messages/models.py	/^    receiver = models.ForeignKey(User,$/;"	v	class:PrivateMessage
+related_name	Messages/models.py	/^                                 related_name='receiver',$/;"	v	class:PrivateMessage
+related_name	Messages/models.py	/^                               related_name='sender',$/;"	v	class:PrivateMessage
+sender	Messages/models.py	/^    sender = models.ForeignKey(User,$/;"	v	class:PrivateMessage
+success_url	Messages/views.py	/^    success_url = 'messages'$/;"	v	class:CreateUserFormView
+template_name	Messages/views.py	/^    template_name = 'index.html'$/;"	v	class:HomePage
+template_name	Messages/views.py	/^    template_name = 'login.html'$/;"	v	class:LogInUserView
+template_name	Messages/views.py	/^    template_name = 'messages.html'$/;"	v	class:MessagesPage
+template_name	Messages/views.py	/^    template_name = 'private_message.html'$/;"	v	class:PrivateMessageView
+template_name	Messages/views.py	/^    template_name = 'signup.html'$/;"	v	class:CreateUserFormView
+time	Messages/models.py	/^    time = models.DateTimeField(auto_now=True)$/;"	v	class:Messages
+time	Messages/models.py	/^    time = models.DateTimeField(auto_now=True)$/;"	v	class:PrivateMessage
+unique	Messages/models.py	/^                                 unique=False)$/;"	v	class:PrivateMessage
+unique	Messages/models.py	/^                               unique=False)$/;"	v	class:PrivateMessage
+urlpatterns	Messages/urls.py	/^urlpatterns = [$/;"	v
+urlpatterns	configs/urls.py	/^urlpatterns = [$/;"	v
+user_id	Messages/models.py	/^    user_id = models.ForeignKey(User, on_delete=models.PROTECT)$/;"	v	class:Messages
+widget	Messages/forms.py	/^                              widget=forms.Textarea)$/;"	v	class:MessageForm

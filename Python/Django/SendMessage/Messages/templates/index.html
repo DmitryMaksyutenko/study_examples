@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="app" class="row justify-content-center py-5">
+      <p  v-html="pageName"
+          v-bind:title="pageNameTitle"
+          v-on:click="tagCounter"
+          class="h2"></p>
+    </div>
+    <div id="nav" class="row justify-content-center">
+      <nav class="nav flex-column pt-5">
+        <a class="nav-item
+                  nav-link
+                  btn btn-primary
+                  col-sm my-2"
+            href="{% url 'messages:sign_up' %}">Sign Up</a>
+        <br>
+        <a class="nav-item
+                  nav-link
+                  btn btn-primary
+                  col-sm my-2"
+            href="{% url 'messages:log_in' %}">Log In</a>
+        <br>
+        <a class="nav-item
+                  nav-link
+                  btn btn-primary
+                  col-sm my-2"
+            href="{% url 'messages:messages' %}">Messages</a>
+      </nav>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        new Vue({
+            el: '#app',
+            delimiters: ['<%', '%>'],
+            data: {
+                tagPressed: 0,
+                pageName: "This is home page.",
+                pageNameTitle: "Home page."
+            },
+            methods: {
+                tagCounter: function(){
+                    this.tagPressed++;
+                    this.pageNameTitle = this.pageNameTitle + this.tagPressed;
+                }
+            }
+        });
+    </script>
+{% endblock scripts %}

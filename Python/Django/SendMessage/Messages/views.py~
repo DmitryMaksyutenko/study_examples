@@ -1,0 +1,47 @@
+from django.shortcuts import render
+from django.contrib.auth.views import (LoginView,)
+from django.views.generic.base import TemplateView
+from django.views.generic.edit import FormView
+
+from . forms import (CreateUser,
+                     LogInUser,
+                     MessageForm)
+
+
+class HomePage(TemplateView):
+    template_name = 'index.html'
+
+
+class MessagesPage(TemplateView):
+    template_name = 'messages.html'
+
+    def get(self, request, *args, **kwargs):
+        form = MessageForm()
+        content = {
+                    "form": form,
+                  }
+        return render(request, self.template_name, content)
+
+    def post(self, request, *args, **kwarg):
+        form = MessageForm(request.POST)
+        content = {
+                    "form": form,
+                    "messages": "DEFAUTL"
+                  }
+        return render(request, self.template_name, content)
+
+
+
+class CreateUserFormView(FormView):
+    template_name = 'signup.html'
+    form_class = CreateUser
+    success_url = 'messages'
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
+
+
+class LogInUserView(LoginView):
+    template_name = 'login.html'
+    form_class = LogInUser

@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div id="app"
+         v-on:click="clicked">
+      <div class="row justify-content-center">
+        <h1>Messages</h1>
+      </div>
+      <div class="row
+                  justify-content-center">
+        <h3>Current User: {{ user }}</h3>
+      </div>
+      <section id="users-window"
+                class="row
+                        justify-content-center">
+          {% for user in users %}
+              <a href="{% url 'messages:private_message' user.id %}">{{ user }}</a>
+          {% endfor %}
+      </section>
+        <section id="message-window">
+            <div class="row justify-content-center">
+              <ul class="col col-2">
+                  <label>Message from:</label>
+                  <li v-for="user in private_data()">
+                    <a :href="'/private-message/' + user.user_id" > <% user.user_name %> </a>
+                  </li>
+              </ul>
+                  <textarea class="col col-7 text-center" cols=70 rows=7
+                            v-html="getMessages('{{ all }}')" id="messages-area">
+                  </textarea>
+                <div class="col col-1"> </div>
+            </div>
+            <form v-on:submit.prevent="send()" method="POST" class="form-inline justify-content-center">
+              <input type="text" id="message" name="message" class="form-control col"/>
+              <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}" />
+              <button id="sendButton" class="btn btn-primary mx-5 my-3" type="submit">Send</button>
+            </form>
+      </section>
+      <a class="h3 text-decoration-none" href="{% url 'messages:home' %}">Home</a>
+      <br>
+      <a class="h3 text-decoration-none" href="{% url 'messages:log_out' %}">Log Out</a>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block scripts %}
+  <script charset="utf-8">
+
+    async function postData(url = '', data = {}) {
+        const response = await fetch(url, {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(data)
+        });
+          return response.json();
+    };
+
+    new Vue({
+      el: "#app",
+      delimiters: ['<%', '%>'],
+      data: {
+        messages: "{{ all }}",
+        private_messages: "{{ private }}"
+      },
+      methods: {
+        private_data: function(){
+          let text = this.private_messages.replace(/&quot;/g, '"');
+          let arrText = text.split('}',);
+          let obj = [];
+          for (let i = 0; i < arrText.length - 1; i++) {
+            arrText[i] += "}";
+            obj.push(JSON.parse(arrText[i]));
+          }
+          return obj;
+
+        },
+        clicked: function(event){
+          if (event.target.id == "sendButton"){
+            window.console.log(event.target.id);
+          } else {
+            window.console.log("APP DIV");
+          }
+        },
+        getMessages: function(data){
+          let text = data.replace(/&quot;/g, '"');
+          let arrText = text.split('}',);
+          let result = String();
+          for (let i = 0; i < arrText.length - 1; i++) {
+            arrText[i] += "}";
+            let jsonObj = JSON.parse(arrText[i]);
+            result += "MESSAGE FROM " +
+                      jsonObj.user_name + ": " +
+                      jsonObj.message + "\n";
+          }
+          return result;
+        },
+        send: function(){
+          var t = this;
+          let dataToSend = document.getElementById("message").value;
+          postData('messages', {'message': dataToSend})
+          .then(data => {
+            document.getElementById("messages-area").value = t.getMessages(data["all"]);
+            document.getElementById("message").value = "";
+          });
+        }
+      }
+    });
+  </script>
+{% endblock scripts %}
