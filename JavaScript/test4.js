@@ -1,4 +1,4 @@
 window.console.log("Hello!!!!!!!!!!!!!!!!!!");
 var elem = document.createElement("h1");
-elem.innerHtml = "Hello";
+elem.innerHTML = "Hello";
 document.body.appendChild(elem);
