@@ -1,0 +1,23 @@
+<!DOCTYPE store>
+<area>
+ <shelf number="1">
+  <name>Car</name>
+  <serial_number>xx123</serial_number>
+  <staf_quantity>3</staf_quantity>
+ </shelf>
+ <shelf number="2">
+  <name>Military</name>
+  <serial_number>xx1232352</serial_number>
+  <staf_quantity>5</staf_quantity>
+ </shelf>
+ <shelf number="3">
+  <name>Bear</name>
+  <serial_number>xSax123</serial_number>
+  <staf_quantity>3</staf_quantity>
+ </shelf>
+ <shelf number="4">
+  <name>Lego</name>
+  <serial_number>AAxx123</serial_number>
+  <staf_quantity>32</staf_quantity>
+ </shelf>
+</area>
