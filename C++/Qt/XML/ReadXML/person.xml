@@ -1,0 +1,23 @@
+<?xml version = "1.0"?>
+<persons>
+    <person>
+        <firstname> somename1 </firstname>
+        <lastname> somelastname1 </lastname>
+        <age> 123 </age>
+    </person>
+    <person>
+        <firstname> somename2 </firstname>
+        <lastname> somelastname2 </lastname>
+        <age> 12 </age>
+    </person>
+    <person>
+        <firstname> somename3 </firstname>
+        <lastname> somelastname3 </lastname>
+        <age> 23 </age>
+    </person>
+    <person>
+        <firstname> somename4 </firstname>
+        <lastname> somelastname4 </lastname>
+        <age> 13 </age>
+    </person>
+</persons>
