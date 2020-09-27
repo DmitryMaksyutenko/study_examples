@@ -1,0 +1,19 @@
+<!DOCTYPE xml>
+<users>
+    <person number="1">
+        <firstname>Name1</firstname>
+        <lastname>Lastname1</lastname>
+    </person>
+    <person number="2">
+        <firstname>Name2</firstname>
+        <lastname>Lastname2</lastname>
+    </person>
+    <person number="3">
+        <firstname>Name3</firstname>
+        <lastname>Lastname3</lastname>
+    </person>
+    <person number="4">
+        <firstname>Name4</firstname>
+        <lastname>Lastname4</lastname>
+    </person>
+</users>
