@@ -1,6 +1,7 @@
 /*
     Boolean
     A Boolean data type can hold one of three possible values: true, false or null.
+    The PostgreSQL uses the one byte for storing the boolean type in memory. The BOOLEAN can be abbriviated as BOOL.
 
     Character
     PostgreSQL provides three character data types: CHAR(n), VARCHAR(n), and TEXT
