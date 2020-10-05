@@ -36,7 +36,7 @@
 
       float(n) is a floating-point number whose precision, at least, n, up to a maximum of 8 bytes.
 
-      real or float8is a 4-byte floating-point number.
+      real or float8 is a 4-byte floating-point number.
 
       numeric or numeric(p,s) is a real number with p digits with s number after the decimal point.      The numeric(p,s) is the exact number.
 
