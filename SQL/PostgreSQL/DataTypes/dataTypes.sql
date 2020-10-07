@@ -26,6 +26,7 @@
       Small integer ( SMALLINT ) is 2-byte signed integer that has a range from -32,768 to 32,767.
 
       Integer ( INT ) is a 4-byte integer that has a range from -2,147,483,648 to 2,147,483,647.
+       Big integer ( BIGINT ) is a 8-byte integer with range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 
       Serial is the same as integer except that PostgreSQL will automatically generate
       and populate values into the SERIAL column.
