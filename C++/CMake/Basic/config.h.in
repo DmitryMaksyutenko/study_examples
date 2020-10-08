@@ -1,0 +1,3 @@
+// the configured options and settings for baseapp
+#define baseapp_VERSION_MAJOR @baseapp_VERSION_MAJOR@
+#define baseapp_VERSION_MINOR @baseapp_VERSION_MINOR@
