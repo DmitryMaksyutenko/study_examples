@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyForm</class>
+ <widget class="QWidget" name="MyForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLCDNumber" name="m_lcd"/>
+     </item>
+     <item>
+      <widget class="QSlider" name="slider">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="m_buttonReset">
+       <property name="text">
+        <string>&amp;Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_buttonQuit">
+       <property name="text">
+        <string>&amp;Quit</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>m_buttonQuit</tabstop>
+  <tabstop>m_buttonReset</tabstop>
+  <tabstop>slider</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_lcd</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>412</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>246</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_buttonQuit</sender>
+   <signal>clicked()</signal>
+   <receiver>MyForm</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
