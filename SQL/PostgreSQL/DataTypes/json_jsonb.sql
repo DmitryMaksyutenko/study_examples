@@ -74,4 +74,8 @@ SELECT json_each (info)
 FROM orders;
 
 
+SELECT json_typeof (info->'items'->'qty')
+FROM orders;
+
+
 DROP TABLE IF EXISTS orders;
