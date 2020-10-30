@@ -2,5 +2,5 @@
 
 std::string helloFunction()
 {
-    return "Hello from mylib!\n";
+    return "Hello from mylib new!\n";
 }

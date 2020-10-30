@@ -1,6 +1,11 @@
 #include <iostream>
+#include "config.h"
 
-#include <mylib.h>
+#ifdef MYLIB
+
+#include "mylib.h"
+
+#endif
 
 int main(int argc, char **argv)
 {

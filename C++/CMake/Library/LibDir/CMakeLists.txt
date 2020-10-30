@@ -1,7 +1,6 @@
-# Provide an option that the user can optionally select.
-# option(MYLIB "My test library" ON)
+cmake_minimum_required(VERSION 3.10)
 
-# configure_file(config.h.in config.h)
+project(mylib)
 
 # Add a library to the project using the specified source files.
 add_library(mylib mylib.cpp)
