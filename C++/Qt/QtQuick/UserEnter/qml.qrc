@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>RedRect.qml</file>
+        <file>GreenRect.qml</file>
+        <file>BlueRect.qml</file>
+        <file>YellowRect.qml</file>
+    </qresource>
+</RCC>
