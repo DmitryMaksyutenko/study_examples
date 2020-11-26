@@ -1,0 +1,3 @@
+module QmlSource
+GreenRect 1.0 GreenRect.qml
+pinchUpdate 1.0 pinchUpdate.js

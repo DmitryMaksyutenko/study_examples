@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>QmlSource/GreenRect.qml</file>
+        <file>QmlSource/pinchUpdate.js</file>
+        <file>QmlSource/Information.qml</file>
+    </qresource>
+</RCC>
