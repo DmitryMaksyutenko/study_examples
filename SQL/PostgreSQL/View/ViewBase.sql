@@ -1,4 +1,5 @@
 /*
+  Views in PostgreSQL are implemented using the rule system.
   A view is named query stored in database or
   that provides another way to present data in the database tables.
 
