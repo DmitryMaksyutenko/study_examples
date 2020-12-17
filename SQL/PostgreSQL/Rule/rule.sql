@@ -13,7 +13,33 @@
         CREATE [ OR REPLACE ] RULE name AS ON event
             TO table_name [ WHERE condition ]
             DO [ ALSO | INSTEAD ] { NOTHING | command | ( command ; command ... ) }
+
+        where event:
+            SELECT | INSERT | UPDATE | DELETE
+
+        DROP RULE [ IF EXISTS ] name ON table_name [ CASCADE | RESTRICT ]
 */
 
 CREATE OR REPLACE RULE do_nothin AS ON INSERT
 TO actor DO INSTEAD NOTHING;
+
+CREATE RULE counter_update AS ON INSERT
+  TO account
+  DO ALSO
+    SELECT
+      count(account_id) AS ids
+    FROM
+      account;
+
+-- Shows the id count with insertion.
+INSERT INTO
+  account
+  VALUES(
+    default,
+    'Somenewname',
+    'Newsurname',
+    'new@mail.com',
+    'password1234'
+  );
+
+DROP RULE counter_update ON account;
