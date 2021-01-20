@@ -56,3 +56,8 @@ odd_numbers.union(even_numbers)  # {1, 4, 6, 8, 11, 13, 15} equivalent to |
 odd_numbers.issubset(even_numbers)  # False equivalent to <=
 odd_numbers.issuperset(even_numbers)  # False equivalent to >=
 odd_numbers.isdisjoint(even_numbers)  # True
+
+
+# Global table prnting.
+import pprint  # noqa
+pprint.pprint(globals())

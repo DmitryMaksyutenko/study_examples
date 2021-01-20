@@ -45,7 +45,7 @@ list_with_values * 2  # [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
 # indexing.
 numbers[0]  # 1
 numbers[4]  # 5
-numbers[14]  # IndexError
+# numbers[14]  # IndexError
 tuples[1]
 
 # slicing.
@@ -77,3 +77,8 @@ numbers.remove(10)  # [9, 8, 7, 6, 5, 4, 3, 2, 1]
 numbers.remove(1)  # [9, 8, 7, 6, 5, 4, 3, 2]
 
 numbers.reverse()  # [2, 3, 4, 5, 6, 7, 8, 9]
+
+
+# Global table prnting.
+import pprint  # noqa
+pprint.pprint(globals())
