@@ -1,5 +1,5 @@
 import socket
-import pprint
+from bs4 import BeautifulSoup
 import sys
 
 
@@ -43,4 +43,5 @@ if __name__ == "__main__":
     connection.send(http_query)
     response = recv_all(connection)
     connection.close()
-    pprint.pprint(response)
+    soup = BeautifulSoup(response, "html.parser")
+    print(soup.prettify())
