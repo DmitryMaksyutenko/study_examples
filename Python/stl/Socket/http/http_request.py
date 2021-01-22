@@ -25,13 +25,22 @@ def create_http_query(*args):
     return bytes(method + " " + path + " HTTP/1.1\n\n", "ascii")
 
 
+def recv_all(conn):
+    data = bytearray()
+    while not data.endswith(b"\r\n"):
+        try:
+            data += conn.recv(4096)
+        except InterruptedError:
+            pass
+    return str(data)
+
+
 if __name__ == "__main__":
     addr, method = parse_cmd()
     domain, path = split_address(addr)
     connection = socket.create_connection((domain, 80), 2)
     http_query = create_http_query(method, path)
-    print(http_query)
     connection.send(http_query)
-    response = connection.recv(1024, socket.MSG_WAITALL)
+    response = recv_all(connection)
     connection.close()
     pprint.pprint(response)
