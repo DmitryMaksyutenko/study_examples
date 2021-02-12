@@ -4,6 +4,9 @@
   The role with login rights is called user.
   A role that keeps the other roles is named group.
 
+  Database roles are global across a database cluster. It is completely separate
+  from operating system users.
+
   The attributes of a database role defines the privileges.
   LOGIN
   PASSWORD
@@ -13,7 +16,7 @@
   REPLICATION
 
   The members of group can use the privileges of the role in two ways.
-  SET ROLE "pemporarily become the group role, rather then original."
+  SET ROLE "temporarily become the group role, rather then original."
   INHERIT "role that have this attribute automatically have use the privileges
            of roles of which they are members."
   RESET ROLE "Restore the original privilege."
