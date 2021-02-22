@@ -1,7 +1,7 @@
 import itertools
-# count()
-# cycle()
-# repeat()
+# count(start=0, step=1)
+# cycle(iterable)
+# repeat(object[, items])
 
 
 def from_num_to_infinite(num: int) -> iter:
