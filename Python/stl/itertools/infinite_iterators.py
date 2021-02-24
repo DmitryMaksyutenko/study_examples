@@ -14,7 +14,7 @@ def collection_by_cycle(collection) -> iter:
     return itertools.cycle(collection)
 
 
-def repeat_message_n_times(message: str, n: int) -> iter:
+def repeat_message_n_times(message: str, n: int) -> None:
     """Prints the message n times."""
     for mess in itertools.repeat(message, n):
         print(mess)
