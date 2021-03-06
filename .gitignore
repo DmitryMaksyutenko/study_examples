@@ -67,3 +67,6 @@ __pycache__/
 # Pipenv
 Pipfile
 Pipfile.loc
+
+# JavaScript
+node_modules/
