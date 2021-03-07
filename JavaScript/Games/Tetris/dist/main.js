@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("foooooooo"),new class{constructor(){this.elem=document.createElement("div")}get elem(){return this.elem}set elem(e){}}})();
