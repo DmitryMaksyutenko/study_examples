@@ -7,4 +7,6 @@ test("Rectangle object creation.", () => {
 
 test("Rectangle creates <div>", () => {
     const rect = new Rectangle()
+    document.body.appendChild(rect.elem)
+    expect(document.body.innerHTML).toBe("<div class=\"rectangle\"></div>")
 })
