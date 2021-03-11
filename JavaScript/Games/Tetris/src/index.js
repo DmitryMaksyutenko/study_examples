@@ -1,8 +1,10 @@
-import { foo, Rectangle } from "./gameObjects/rectangle.js"
+import { GameField } from "../src/gameObjects/gameField"
+
+import "./styles/base.css"
 
 window.onload = () => {
 
-    const r = new Rectangle()
-    document.body.appendChild(r.elem)
-
+    var gameField = new GameField()
+    document.body.appendChild(gameField.getField())
+    
 }
